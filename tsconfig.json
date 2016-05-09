@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES6",
+    "module": "commonjs",
     "jsx": "preserve",
     "experimentalDecorators": true,
     "allowJs": true,
     "outDir": "tmp",
     "noImplicitAny": true
   },
-  "exclude": ["node_modules", "config", "dev-server.js"]
+  "exclude": ["node_modules", "config", "dev-server.js", "typings"]
 }

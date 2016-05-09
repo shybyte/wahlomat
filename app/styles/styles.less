@@ -1,9 +1,32 @@
-.count {
-    color: red;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    button {
-        color: blue;
-    }
+button {
+  color: #fff;
+  background: #333;
+  border: none;
+  padding: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  &.selected {
+    background: #b60;
+  }
+}
+
+.linkButton {
+  background: none;
+  color: #44f;
+  border: none;
+}
+
+.buttonGroup {
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.skipButton {
+  display: block;
+  margin: 0 0 0 auto;
 }

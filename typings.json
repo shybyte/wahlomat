@@ -1,0 +1,13 @@
+{
+  "name": "wahlomat",
+  "version": false,
+  "dependencies": {
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958"
+  },
+  "ambientDependencies": {
+    "classnames": "registry:dt/classnames#0.0.0+20160316155526",
+    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160505171433",
+    "react": "registry:dt/react#0.14.0+20160423065914",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  }
+}

@@ -11,10 +11,8 @@
   },
   "author": "Marco Stahl",
   "license": "APGL",
-  "repository": {
-  },
-  "bugs": {
-  },
+  "repository": {},
+  "bugs": {},
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -38,6 +36,9 @@
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "es6-promise": "^3.1.2",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "ts-loader": "^0.8.1",

@@ -1,17 +1,21 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { App } from './components/app';
 import { loadCss } from './styles/styles';
+import { loadData , DataBase} from './database';
 
 loadCss();
 
-class Main extends React.Component<{}, {}> {
+
+class Main extends React.Component<DataBase, {}> {
   public render() {
-    return <App />;
+    return <App questions={this.props.questions} />;
   }
 }
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+loadData().then(data => {
+  ReactDOM.render(<Main questions={data.questions} />, document.getElementById('app'));
+});
