@@ -19,9 +19,14 @@ export class App extends React.Component<DataBase, AppState> {
   };
 
   onAnswer = (answer: Answer) => {
+    const s = this.state;
+    const answers = s.answers;
+    const question = this.question();
     this.setState({
-      answers: replaceEntry(this.state.answers, this.question().id, answer),
-      questionIndex: (this.state.questionIndex + 1) % this.props.questions.length,
+      answers: (answer !== skipped || !answers[question.id]) ?
+        replaceEntry(s.answers, question.id, answer)
+        : s.answers,
+      questionIndex: (s.questionIndex + 1) % this.props.questions.length,
     });
   };
 
@@ -44,4 +49,6 @@ export class App extends React.Component<DataBase, AppState> {
     </div>
     );
   }
+
+
 }
