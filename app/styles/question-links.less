@@ -1,0 +1,27 @@
+.questionLinks {
+  margin: 1em;
+}
+
+.questionLink {
+  display: inline-block;
+  background: #eee;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.5s;
+ 
+  &:not(:first-child) {
+    margin-left: 0.5em;
+  }
+ 
+  &:hover {
+    transform: scale(1.3);
+  }
+  &.hasAnswer {
+    background: #fea;
+  }
+  &.selected {
+    font-weight: bold;
+    background: #fa0;
+  }
+}
