@@ -10,6 +10,12 @@ export interface Question {
 }
 
 export type Answer = 'yes'| 'no' | 'neutral' | 'skipped';
+export const ANSWER = {
+  neutral: 'neutral' as Answer,
+  no: 'no' as Answer,
+  skipped: 'skipped' as Answer,
+  yes: 'yes' as Answer,
+};
 
 export type AnswerMap = {[querstionId: string]: Answer};
 

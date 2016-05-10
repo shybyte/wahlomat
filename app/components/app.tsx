@@ -1,10 +1,11 @@
 /// <reference path="../../typings/main.d.ts" />
 
 import * as React from 'react';
-import { DataBase, Answer, AnswerMap } from '../database';
+import { DataBase, Answer, AnswerMap, ANSWER } from '../database';
 import { replaceEntry } from '../utils';
 import * as classNames from 'classnames';
 
+const {skipped, yes, no, neutral} = ANSWER;
 
 interface AppState {
   questionIndex?: number;
@@ -34,11 +35,11 @@ export class App extends React.Component<DataBase, AppState> {
     return (<div>
       <h2 className='title'>{question.title}</h2>
       <p className='title'>{question.text}</p>
-      <button className='linkButton skipButton' onClick={() => this.onAnswer('yes') }>These überspringen</button>
+      <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>These überspringen</button>
       <div className='buttonGroup'>
-        <button className={buttonClass('yes') } onClick={() => this.onAnswer('yes') }>stimme  zu</button>
-        <button className={buttonClass('neutral') } onClick={() => this.onAnswer('neutral') }>neutral</button>
-        <button className={buttonClass('no') } onClick={() => this.onAnswer('no') }>stimme nicht zu</button>
+        <button className={buttonClass(yes) } onClick={() => this.onAnswer(yes) }>stimme  zu</button>
+        <button className={buttonClass(neutral) } onClick={() => this.onAnswer(neutral) }>neutral</button>
+        <button className={buttonClass(no) } onClick={() => this.onAnswer(no) }>stimme nicht zu</button>
       </div>
     </div>
     );
