@@ -26,8 +26,10 @@ export class App extends React.Component<DataBase, AppState> {
       answers: (answer !== skipped || !answers[question.id]) ?
         replaceEntry(s.answers, question.id, answer)
         : s.answers,
-      questionIndex: (s.questionIndex + 1) % this.props.questions.length,
     });
+    setTimeout(() => {
+      this.gotoQuestion((s.questionIndex + 1) % this.props.questions.length);
+    }, 200);
   };
 
   question = () => this.props.questions[this.state.questionIndex];

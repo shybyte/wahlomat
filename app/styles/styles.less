@@ -10,9 +10,17 @@ button {
   padding: 0.5em;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
   &.selected {
     background: #fa0;
   }
+  
+  transition: all 0.2s;
+ 
+  &:hover {
+    transform: scale(1.1);
+  }
+  
 }
 
 .linkButton {
