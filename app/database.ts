@@ -24,6 +24,6 @@ export interface DataBase {
 }
 
 export function loadData(): Promise<DataBase> {
-  return fetch('data/data.json')
+  return fetch('/data/data.json')
     .then(response => response.json() as Promise<DataBase>);
 };

@@ -16,6 +16,11 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use(express.static('.'));
 
+// "404" page is the main page in order to allow client side routing.
+app.use(function(req, res, next) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.listen(port, 'localhost', err => {
   if (err) {
     console.log(err);

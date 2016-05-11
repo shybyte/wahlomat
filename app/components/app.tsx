@@ -1,9 +1,10 @@
 /// <reference path="../../typings/main.d.ts" />
 
 import * as React from 'react';
+import * as classNames from 'classnames';
+
 import { DataBase, Answer, AnswerMap, ANSWER, Question } from '../database';
 import { replaceEntry } from '../utils';
-import * as classNames from 'classnames';
 
 const {skipped, yes, no, neutral} = ANSWER;
 
