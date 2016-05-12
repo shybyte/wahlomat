@@ -5,34 +5,14 @@ import * as ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 
-import { App } from './components/app';
+import { QuestionsWizard } from './components/QuestionsWizard';
 import { Results } from './components/Results';
 import { StartPage } from './components/StartPage';
 import { NotFound } from './components/NotFound';
 import { loadCss } from './styles/styles';
-import { loadData, DataBase} from './database';
+import * as AppState from './app-state';
 
 loadCss();
-
-class QuestionsLoader extends React.Component<{}, { dataBase?: DataBase }> {
-  state = {
-    dataBase: null as DataBase
-  };
-
-  componentDidMount() {
-    loadData().then(dataBase => {
-      this.setState({ dataBase });
-    });
-  }
-
-  public render() {
-    if (!this.state.dataBase) {
-      return <div>Loading</div>;
-    }
-    return <App questions={this.state.dataBase.questions} />;
-  }
-}
-
 
 class Layout extends React.Component<{}, {}> {
   public render() {
@@ -45,13 +25,18 @@ class Layout extends React.Component<{}, {}> {
   }
 }
 
-ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route path='/' component={Layout}>
-      <IndexRoute component={StartPage} />
-      <Route path='questions' component={QuestionsLoader}/>
-      <Route path='results' component={Results}/>
-      <Route path='*' component={NotFound}/>
-    </Route>
-  </Router>
-), document.getElementById('app'));
+AppState.subscribe(appState => {
+  console.log('Render', appState);
+  ReactDOM.render((
+    <Router history={browserHistory}>
+      <Route path='/' component={Layout}>
+        <IndexRoute component={StartPage} />
+        <Route path='questions' component={QuestionsWizard}/>
+        <Route path='results' component={Results}/>
+        <Route path='*' component={NotFound}/>
+      </Route>
+    </Router>
+  ), document.getElementById('app'));
+});
+
+AppState.init();

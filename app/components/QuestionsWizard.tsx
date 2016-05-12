@@ -3,52 +3,55 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 
-import { DataBase, Answer, AnswerMap, ANSWER, Question } from '../database';
+import { Answer, ANSWER, Question } from '../app-state';
+import * as AppState from '../app-state';
 import { replaceEntry } from '../utils';
 
 const {skipped, yes, no, neutral} = ANSWER;
 
-interface AppState {
+interface WizardState {
   questionIndex?: number;
-  answers?: AnswerMap;
 }
 
-export class App extends React.Component<DataBase, AppState> {
+export class QuestionsWizard extends React.Component<{}, WizardState> {
   state = {
-    answers: {} as AnswerMap,
     questionIndex: 0
   };
 
   onAnswer = (answer: Answer) => {
     const s = this.state;
-    const answers = s.answers;
+    const appState = AppState.getState();
+    const answers = appState.answers;
     const question = this.question();
-    this.setState({
-      answers: (answer !== skipped || !answers[question.id]) ?
-        replaceEntry(s.answers, question.id, answer)
-        : s.answers,
-    });
+    if ((answer !== skipped || !answers[question.id])) {
+      AppState.swapState(ast => {
+        ast.answers = replaceEntry(answers, question.id, answer);
+      });
+    }
     setTimeout(() => {
-      this.gotoQuestion((s.questionIndex + 1) % this.props.questions.length);
+      this.gotoQuestion((s.questionIndex + 1) % appState.questions.length);
     }, 200);
   };
 
-  question = () => this.props.questions[this.state.questionIndex];
+  question = () => AppState.getState().questions[this.state.questionIndex];
 
   gotoQuestion = (questionIndex: number) => {
     this.setState({ questionIndex });
   };
 
   hasNonSkippedAnswer = (q: Question) => {
-    const answer = this.state.answers[q.id];
+    const answer = AppState.getState().answers[q.id];
     return answer && answer !== skipped;
   }
 
   render() {
-    const s = this.state;
     const question = this.question();
-    const buttonClass = (a: Answer) => classNames({ selected: s.answers[question.id] === a });
 
+    if (!question) {
+      return (<div>Loading</div>);
+    }
+
+    const buttonClass = (a: Answer) => classNames({ selected: AppState.getState().answers[question.id] === a });
     return (
       <div>
         <h2 className='title'>{question.title}</h2>
@@ -68,7 +71,7 @@ export class App extends React.Component<DataBase, AppState> {
     return (
       <div className='questionLinks'>
         {
-          this.props.questions.map((question, i) => (
+          AppState.getState().questions.map((question, i) => (
             <span key={question.id}
               onClick={() => this.gotoQuestion(i) }
               className={classNames('questionLink', {
