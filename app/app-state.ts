@@ -28,8 +28,12 @@ interface AppState {
   answers: AnswerMap;
 }
 
+const LOCAL_STORAGE_KEYS = {
+  answers: 'answers'
+};
+
 let appState: AppState = {
-  answers: {},
+  answers: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEYS.answers) || '{}'),
   initialized: false,
   questions: [],
 };
@@ -45,9 +49,14 @@ export function subscribe(subscriber: Subscriber) {
 
 export function swapState(changeState: (appState: AppState) => void) {
   appState = swap(appState, changeState);
+  localStorage.setItem(LOCAL_STORAGE_KEYS.answers, JSON.stringify(appState.answers));
   subscribers.forEach(subscriber => {
     subscriber(appState);
   });
+}
+
+export function getState() {
+  return appState;
 }
 
 export function init() {
@@ -59,6 +68,4 @@ export function init() {
   });
 }
 
-export function getState() {
-  return appState;
-}
+
