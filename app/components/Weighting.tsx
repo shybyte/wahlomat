@@ -4,15 +4,31 @@ import * as React from 'react';
 
 import * as AppState from '../app-state';
 
+
 interface WeightingState {
 }
 
-const QuestionLine = (props: { question: AppState.Question }) => (
-  <tr>
-    <td>{props.question.title}</td>
-    <td>{AppState.getState().answers[props.question.id]}</td>
-  </tr>
-);
+const QuestionLine = (props: { question: AppState.Question }) => {
+  const questionId = props.question.id;
+  const weight = AppState.getState().weights[questionId];
+
+  function onChange(ev: Event) {
+    const inputEl = ev.target as HTMLInputElement;
+    AppState.setWeight(questionId, inputEl.checked ? AppState.Weight.IMPORTANT : AppState.Weight.NORMAL);
+  }
+
+  return (
+    <tr>
+      <td>{props.question.title}</td>
+      <td>{AppState.getState().answers[props.question.id]}</td>
+      <td>
+        <input type='checkbox'
+          checked={weight === AppState.Weight.IMPORTANT}
+          onChange={onChange}/>
+      </td>
+    </tr>
+  );
+};
 
 export class Weighting extends React.Component<{}, WeightingState> {
   state = {
@@ -24,8 +40,15 @@ export class Weighting extends React.Component<{}, WeightingState> {
       <div>
         <h2>Gewichtung</h2>
         <table>
+          <thead>
+            <tr>
+              <th>Frage</th>
+              <th>Meine Antwort</th>
+              <th>Wichtig</th>
+            </tr>
+          </thead>
           <tbody>
-            {ast.questions.map(q => <QuestionLine question={q} />) }
+            {ast.questions.map(q => <QuestionLine key={q.id} question={q} />) }
           </tbody>
         </table>
       </div>

@@ -2,10 +2,12 @@
 
 import * as React from 'react';
 import * as classNames from 'classnames';
+import { browserHistory } from 'react-router';
+
 
 import { Answer, ANSWER, Question } from '../app-state';
+import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
-import { replaceEntry } from '../utils';
 
 const {skipped, yes, no, neutral} = ANSWER;
 
@@ -24,12 +26,16 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     const answers = appState.answers;
     const question = this.question();
     if ((answer !== skipped || !answers[question.id])) {
-      AppState.swapState(ast => {
-        ast.answers = replaceEntry(answers, question.id, answer);
-      });
+      AppState.setAnswer(question.id, answer);
     }
     setTimeout(() => {
-      this.gotoQuestion((s.questionIndex + 1) % appState.questions.length);
+      const nextQuestionIndex = s.questionIndex + 1;
+      if (nextQuestionIndex < appState.questions.length) {
+        this.gotoQuestion(nextQuestionIndex);
+      } else {
+        browserHistory.push(ROUTES.weighting);
+        AppState.setQuestionsDone();
+      }
     }, 200);
   };
 

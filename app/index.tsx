@@ -12,33 +12,40 @@ import { StartPage } from './components/StartPage';
 import { NotFound } from './components/NotFound';
 import { loadCss } from './styles/styles';
 import * as AppState from './app-state';
+import {ROUTES} from './routes';
 
 loadCss();
 
 class Layout extends React.Component<{}, {}> {
   public render() {
+    const appState = AppState.getState();
     return (
       <div>
         <h1>Wahlomat</h1>
-        <Link to={`/questions/`}>Questions</Link> <Link to={`/weighting/`}>Weighting</Link>
+        <div className='menu'>
+          <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
+          {appState.questionsDone ?
+            <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
+            : null}
+        </div>
         {this.props.children}
       </div>
     );
   }
 }
 
+const routes = <Route path='/' component={Layout}>
+  <IndexRoute component={StartPage} />
+  <Route path={ROUTES.questions} component={QuestionsWizard}/>
+  <Route path={ROUTES.weighting} component={Weighting}/>
+  <Route path={ROUTES.results} component={Results}/>
+  <Route path='*' component={NotFound}/>
+</Route>;
+
 AppState.subscribe(appState => {
   console.log('Render', appState);
   ReactDOM.render((
-    <Router history={browserHistory}>
-      <Route path='/' component={Layout}>
-        <IndexRoute component={StartPage} />
-        <Route path='questions' component={QuestionsWizard}/>
-        <Route path='weighting' component={Weighting}/>
-        <Route path='results' component={Results}/>
-        <Route path='*' component={NotFound}/>
-      </Route>
-    </Router>
+    <Router history={browserHistory} routes={routes}/>
   ), document.getElementById('app'));
 });
 
