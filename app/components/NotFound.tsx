@@ -1,4 +1,4 @@
-/// <reference path="../../typings/main.d.ts" />
+/// <reference path="../../typings/main/index.d.ts" />
 import * as React from 'react';
 
 export class NotFound extends React.Component<{}, {}> {

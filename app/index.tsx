@@ -1,4 +1,4 @@
-/// <reference path="../typings/main.d.ts" />
+/// <reference path="../typings/main/index.d.ts" />
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -22,12 +22,14 @@ class Layout extends React.Component<{}, {}> {
     return (
       <div>
         <h1>Wahlomat</h1>
-        <div className='menu'>
-          <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
-          {appState.questionsDone ?
+        {appState.questionsDone ?
+          <div className='menu'>
+            <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
             <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
-            : null}
-        </div>
+            <Link to={ROUTES.results} activeClassName='active'>Ergebnis</Link>
+          </div>
+          : null
+        }
         {this.props.children}
       </div>
     );

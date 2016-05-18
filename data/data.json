@@ -15,5 +15,34 @@
       "title": "Frage 3",
       "text": "Wir brauchen noch mehr Fragen"
     }
+  ],
+  "parties": [
+    {
+      "id": "LINKE",
+      "name": "DIE LINKE",
+      "answers": {
+        "toiletten": "yes",
+        "frage-2": "no",
+        "frage-3": "skipped"
+      }
+    },
+    {
+      "id": "PARTEI",
+      "name": "Die PARTEI",
+      "answers": {
+        "toiletten": "neutral",
+        "frage-2": "no",
+        "frage-3": "yes"
+      }
+    },
+    {
+      "id": "Bergpartei",
+      "name": "Bergpartei",
+      "answers": {
+        "toiletten": "no",
+        "frage-2": "yes",
+        "frage-3": "no"
+      }
+    }
   ]
 }

@@ -1,5 +1,5 @@
 import {loadData} from './web-service';
-import {swap, loadObjectFromLocalStorage, extend, replaceEntry} from './utils';
+import {swap, loadObjectFromLocalStorage, extend, replaceEntry, assign} from './utils';
 
 export interface Question {
   id: string;
@@ -17,9 +17,11 @@ export const ANSWER = {
 
 export type AnswerMap = { [querstionId: string]: Answer };
 export type WeightMap = { [querstionId: string]: Weight };
+export type NumberMap = { [id: string]: number };
 
 export interface InitialData {
   questions: Question[];
+  parties: Party[];
 }
 
 export enum Weight {
@@ -27,6 +29,11 @@ export enum Weight {
   IMPORTANT = 2
 }
 
+export interface Party {
+  id: string;
+  name: string;
+  answers: AnswerMap;
+}
 
 interface StoredAppState {
   answers: AnswerMap;
@@ -36,8 +43,13 @@ interface StoredAppState {
 
 interface AppState extends StoredAppState {
   questions: Question[];
+  parties: Party[];
   initialized: boolean;
 }
+
+
+
+/* Store  */
 
 const LOCAL_STORAGE_KEY = 'wahlomat';
 
@@ -49,6 +61,7 @@ let restoredAppState: StoredAppState = loadObjectFromLocalStorage(LOCAL_STORAGE_
 
 let appState: AppState = extend(restoredAppState, {
   initialized: false,
+  parties: [],
   questions: [],
 });
 
@@ -62,7 +75,11 @@ export function subscribe(subscriber: Subscriber) {
 }
 
 function swapState(changeState: (appState: AppState) => void) {
-  appState = swap(appState, changeState);
+  setState(swap(appState, changeState));
+}
+
+function setState(newAppState: AppState) {
+  appState = newAppState;
   if (appState.initialized) {
     storeAppState();
   }
@@ -89,9 +106,9 @@ export function getState() {
 /* Actions */
 
 export function init() {
-  loadData().then(dataBase => {
+  loadData().then(initialData => {
+    setState(assign(appState, initialData));
     swapState(s => {
-      s.questions = dataBase.questions;
       s.initialized = true;
     });
   });

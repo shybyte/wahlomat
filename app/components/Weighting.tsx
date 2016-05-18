@@ -1,4 +1,4 @@
-/// <reference path="../../typings/main.d.ts" />
+/// <reference path="../../typings/main/index.d.ts" />
 
 import * as React from 'react';
 
@@ -38,7 +38,7 @@ export class Weighting extends React.Component<{}, WeightingState> {
     const ast = AppState.getState();
     return (
       <div>
-        <h2>Gewichtung</h2>
+        <h2>Welche Fragen sind Ihnen wichtig?</h2>
         <table>
           <thead>
             <tr>
