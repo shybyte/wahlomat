@@ -20,7 +20,7 @@ class Layout extends React.Component<{}, {}> {
   public render() {
     const appState = AppState.getState();
     return (
-      <div>
+      <div className='wahlomat'>
         <h1>Wahlomat</h1>
         {appState.questionsDone ?
           <div className='menu'>

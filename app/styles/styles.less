@@ -2,6 +2,15 @@
 @import './menu';
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #51b9d4
+}
+
+.wahlomat {
+  max-width: 400px;
+  padding: 10px 30px 20px;
+  border-radius: 10px;
+  margin: 5em auto;
+  background:  white;
 }
 
 button {
@@ -12,12 +21,12 @@ button {
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
+  
   &.selected {
     background: #fa0;
   }
   
   transition: all 0.2s;
- 
   &:hover {
     transform: scale(1.1);
   }
@@ -38,5 +47,4 @@ button {
 
 .skipButton {
   display: block;
-  margin: 0 0 0 auto;
 }
