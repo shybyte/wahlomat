@@ -19,7 +19,7 @@ const QuestionLine = (props: { question: AppState.Question }) => {
 
   return (
     <tr>
-      <td>{props.question.title}</td>
+      <td>{props.question.text}</td>
       <td>{AppState.getState().answers[props.question.id]}</td>
       <td>
         <input type='checkbox'
@@ -43,7 +43,7 @@ export class Weighting extends React.Component<{}, WeightingState> {
           <thead>
             <tr>
               <th>Frage</th>
-              <th>Meine Antwort</th>
+              <th>Ihre Antwort</th>
               <th>Wichtig</th>
             </tr>
           </thead>

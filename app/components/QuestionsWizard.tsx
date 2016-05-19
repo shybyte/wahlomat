@@ -60,14 +60,14 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     const buttonClass = (a: Answer) => classNames({ selected: AppState.getState().answers[question.id] === a });
     return (
       <div>
-        <h2 className='title'>{question.title}</h2>
-        <p className='title'>{question.text}</p>
-        <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>These überspringen</button>
+        <p className='initiative'>Initiative: {question.initiative}</p>
+        <p className='questionText'>{question.text}</p>
         <div className='buttonGroup'>
           <button className={buttonClass(yes) } onClick={() => this.onAnswer(yes) }>stimme  zu</button>
           <button className={buttonClass(neutral) } onClick={() => this.onAnswer(neutral) }>neutral</button>
           <button className={buttonClass(no) } onClick={() => this.onAnswer(no) }>stimme nicht zu</button>
         </div>
+        <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
         {this.renderQuestionLinks() }
       </div>
     );

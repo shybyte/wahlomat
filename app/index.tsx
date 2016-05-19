@@ -10,6 +10,7 @@ import { Results } from './components/Results';
 import { Weighting } from './components/Weighting';
 import { StartPage } from './components/StartPage';
 import { NotFound } from './components/NotFound';
+import { ReasonsWizard } from './components/ReasonsWizard';
 import { loadCss } from './styles/styles';
 import * as AppState from './app-state';
 import {ROUTES} from './routes';
@@ -27,6 +28,7 @@ class Layout extends React.Component<{}, {}> {
             <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
             <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
             <Link to={ROUTES.results} activeClassName='active'>Ergebnis</Link>
+            <Link to={ROUTES.reasons} activeClassName='active'>Begründungen</Link>
           </div>
           : null
         }
@@ -41,6 +43,7 @@ const routes = <Route path='/' component={Layout}>
   <Route path={ROUTES.questions} component={QuestionsWizard}/>
   <Route path={ROUTES.weighting} component={Weighting}/>
   <Route path={ROUTES.results} component={Results}/>
+  <Route path={ROUTES.reasons} component={ReasonsWizard}/>
   <Route path='*' component={NotFound}/>
 </Route>;
 

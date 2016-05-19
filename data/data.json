@@ -1,47 +1,121 @@
 {
   "questions": [
     {
-      "id": "toiletten",
-      "title": "Mehr öffentliche Toiletten",
-      "text": "Wir brauchen mehr öffentliche Toiletten"
+      "id": "0",
+      "text": "Sollten nicht-kommerzielle Nachbarschaft verbindende Veranstaltungen bessere Unterstützung finden?",
+      "initiative": "Polly & Bob",
+      "initiativeReason": "Nicht-kommerzielle Nachbarschaft verbindende Veranstaltungen sollten wesentlich einfacher zu beantragen und wohlwollender vom Ordnungsamt angenommen und entschieden werden. In der Vergangenheit hat es hier erhebliche Probleme gegeben. Gerade nicht kommerzielle und Veranstaltungen für die Menschen die hier leben müssen unterstützt werden.   "
     },
     {
-      "id": "frage-2",
-      "title": "Frage 2",
-      "text": "Wir brauchen mehr Fragen"
+      "id": "1",
+      "text": "In 2020 werden 1.000 Schulplätze, drei mittelgroße Schulen in Friedrichshain gebracht. (Quelle: Bezirksamt). Neue Schulen müssen jetzt gebaut werden, und müssen im Haushalt priorisiert werden?  ",
+      "initiative": "Einzelanfrage eines Anwohners",
+      "initiativeReason": "Wenn wir das nicht machen, werden unsere Kinder die schlechtesten Bedingungn in ganz deutschland vorfinden. "
     },
     {
-      "id": "frage-3",
-      "title": "Frage 3",
-      "text": "Wir brauchen noch mehr Fragen"
+      "id": "2",
+      "text": "Sollten öffentliche Einrichtungen besser Zugänglich sein für Nachbarschaftliche Initiativen. ",
+      "initiative": "Polly & Bob",
+      "initiativeReason": "Gemeinschaftsförderung muss auf der polititschen Agenda eine höhere Stellung bekommen. "
+    },
+    {
+      "id": "3",
+      "text": "Die Müllsituation in Friedrichsahain verschärft sich. Egal ob am Lehnbachplatz, Boxhagener Platz oder am Gleisbeet, der Müll ist unübersehbar. Die Stadtreinigung muss verbessert werden. ",
+      "initiative": "Einzelanfrage eines Anwohners",
+      "initiativeReason": "es ist einfach nicht schön"
+    },
+    {
+      "id": "4",
+      "text": "Der Friedrichshainer Partytoursimus nimmt überhand: Lärm, Müll, Sicherheit, Gewerbe-Monokult. Die Politik muss Konzept liefern und umsetzen. ",
+      "initiative": "Die Anrainer",
+      "initiativeReason": "Aktuell gibt es keine Steuerung. Man sucht ausschließlich nach Einnahmequellen ohne die Nebeneffekte zubetrachten, welche neben einer vollen Kasse entstehen. Die bissherige Erfahrung der Anwohner ist Ignoranz seitens der Politik. Es wird Zeit für wirkliche Konzepte "
+    },
+    {
+      "id": "5",
+      "text": "Zur lösung der Probleme um den Partytoursimus soll die Clubcommission (Lobbyverband der Clubszene) eingesetzt werden. Damit macht man den Bock zum Gärtner.",
+      "initiative": "Die Anrainer",
+      "initiativeReason": "Was schlimmeres kann es nicht geben, Diese Intiative von Grünen und SpD enttäuscht uns maßlos. Wann hört ihr endlich auf die Leute die hier wohnen. Unsere Forderungen sind macht a , macht b, und c ."
     }
   ],
   "parties": [
     {
-      "id": "LINKE",
-      "name": "DIE LINKE",
+      "id": "cdu",
+      "name": "CDU",
       "answers": {
-        "toiletten": "yes",
-        "frage-2": "no",
-        "frage-3": "skipped"
+        "0": "no",
+        "1": "yes",
+        "2": "yes",
+        "3": "yes",
+        "4": "yes",
+        "5": "yes"
+      },
+      "reasons": {
+        "0": "Es gibt bereits genügend Veranstaltungen in Friedrichshain. ",
+        "1": "Muss aber finanzierbar sein. ",
+        "2": "auch der Jagdverein soll davon profitieren",
+        "3": "Grüne und Spd verschandeln unseren Kiez.",
+        "4": "Grüne und SPD sind schlecht für den Kiez, Party bis 10 Uhr dann muss schluss sein! Mehr durchgreifen in Gefahrengebieten",
+        "5": "Grüne und SPD sind schlecht für den Kiez, Party bis 10 Uhr dann muss schluss sein!"
       }
     },
     {
-      "id": "PARTEI",
-      "name": "Die PARTEI",
+      "id": "die grünen",
+      "name": "die Grünen",
       "answers": {
-        "toiletten": "neutral",
-        "frage-2": "no",
-        "frage-3": "yes"
+        "0": "yes",
+        "1": "yes",
+        "2": "yes",
+        "3": "yes",
+        "4": "no",
+        "5": "no"
+      },
+      "reasons": {
+        "0": "Eine Stelle soll geschaffen werden, die gerade diese noicht-kommerziellen Veranstaltungen unterstützt, weil die Gemeinschaft gestärkt werden muss.  ",
+        "1": "Unser Plan sieht so und so aus",
+        "2": "Wir wollen die Räume des Bürgeramtes und anderer Räume öffnen. Kleine Büros einrichten. ",
+        "3": "die Kosten …",
+        "4": "wir haben doch schon Mülleimer, und Haschischfreiverkauf und mehr Henkel Polizei gefordert. ",
+        "5": "Die clubcommsion löst uns das. "
       }
     },
     {
-      "id": "Bergpartei",
-      "name": "Bergpartei",
+      "id": "die linke",
+      "name": "die Linke",
       "answers": {
-        "toiletten": "no",
-        "frage-2": "yes",
-        "frage-3": "no"
+        "0": "yes",
+        "1": "yes",
+        "2": "yes",
+        "3": "yes",
+        "4": "yes",
+        "5": "no"
+      },
+      "reasons": {
+        "0": "insbesondere Minderbemittelten soll geholfen werden.",
+        "1": "Insbesondere kleine Schuleinheiten sollen gebaut werden.",
+        "2": "Wir nehmen ein haus und richten es ein für Initiativen.",
+        "3": "weniger Party im Kiez ist mehr",
+        "4": "die Anwohner müssen gehört werden",
+        "5": "die sind so gut bei der clubcommission, viel besser als grüne Pantomime "
+      }
+    },
+    {
+      "id": "spd",
+      "name": "SPD",
+      "answers": {
+        "0": "yes",
+        "1": "yes",
+        "2": "yes",
+        "3": "yes",
+        "4": "no",
+        "5": "neutral"
+      },
+      "reasons": {
+        "0": "Das Ordnungsamt funktioniert ja schon prächtig, da brauchen wir gar nichts zu machen. ",
+        "1": "Das haben die Grünen verkackt…",
+        "2": "Solange keine Arbeitsplätze wegfallen",
+        "3": "Das haben die Grünen verkackt…",
+        "4": "wir müssen auch an das Gewerbegeld denken",
+        "5": ""
       }
     }
   ]

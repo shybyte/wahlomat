@@ -1,12 +1,13 @@
 @import './question-links';
 @import './menu';
+@import './questions-wizard';
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #51b9d4
 }
 
 .wahlomat {
-  max-width: 400px;
+  max-width: 1024px;
   padding: 10px 30px 20px;
   border-radius: 10px;
   margin: 5em auto;
@@ -30,6 +31,10 @@ button {
   &:hover {
     transform: scale(1.1);
   }
+  &:focus {
+    border: none;
+    outline: 0;
+  }
   
 }
 
@@ -37,6 +42,7 @@ button {
   background: none;
   color: #44f;
   border: none;
+  padding-left: 0px 
 }
 
 .buttonGroup {
@@ -47,4 +53,18 @@ button {
 
 .skipButton {
   display: block;
+}
+
+
+table {
+  border-spacing: 1em;
+  margin: 0 -1em 0 -1em;
+  
+  th {
+    white-space: nowrap
+  }
+  
+  td {
+    vertical-align: top
+  }
 }

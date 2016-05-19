@@ -7,7 +7,8 @@ export class StartPage extends React.Component<{}, {}> {
     return (
       <div>
         <h2>StartPage</h2>
-        <Link to={`/questions/`}>Start</Link>
+        <p>Hier steht ein sehr interessanter einführender Text.</p>
+        <Link to={`/questions/`}>Los geht's! Ab zu den Fragen!</Link>
       </div>
     );
   }

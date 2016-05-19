@@ -3,7 +3,7 @@ import {swap, loadObjectFromLocalStorage, extend, replaceEntry, assign} from './
 
 export interface Question {
   id: string;
-  title: string;
+  initiative: string;
   text: string;
 }
 
