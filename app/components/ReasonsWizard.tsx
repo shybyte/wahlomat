@@ -62,7 +62,7 @@ export class ReasonsWizard extends QuestionsWizard {
   renderReason(key: string, name: String, answer: Answer, reason: string) {
     return (
       <div key={key} className='reason'>
-        <div><AnswerDisplay answer={answer}/> {name}</div>
+        <div><AnswerDisplay answer={answer}/> <strong> {name}</strong></div>
         <blockquote>{reason}</blockquote>
       </div>
     );
