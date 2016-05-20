@@ -1,19 +1,10 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
-import * as React from 'react';
-import * as classNames from 'classnames';
-import { browserHistory } from 'react-router';
-
-
-import { Answer, ANSWER, Question, Party } from '../app-state';
-import { ROUTES } from '../routes';
+import { Answer } from '../app-state';
 import * as AppState from '../app-state';
 import {QuestionsWizard} from './QuestionsWizard';
 import {AnswerDisplay} from './AnswerDisplay';
 
-
-
-const {skipped, yes, no, neutral} = ANSWER;
 
 export class ReasonsWizard extends QuestionsWizard {
   onPrevButton = () => {

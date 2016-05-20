@@ -21,22 +21,19 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
   };
 
   onAnswer = (answer: Answer) => {
-    const s = this.state;
     const appState = AppState.getState();
     const answers = appState.answers;
     const question = this.question();
     if ((answer !== skipped || !answers[question.id])) {
       AppState.setAnswer(question.id, answer);
-    };
+    }
     this.onAfterAnswer();
   };
 
   onAfterAnswer() {
-    const appState = AppState.getState();
-    const s = this.state;
     setTimeout(() => {
-      const nextQuestionIndex = s.questionIndex + 1;
-      if (nextQuestionIndex < appState.questions.length) {
+      const nextQuestionIndex = this.state.questionIndex + 1;
+      if (nextQuestionIndex < AppState.getState().questions.length) {
         this.gotoQuestion(nextQuestionIndex);
       } else {
         browserHistory.push(ROUTES.weighting);
@@ -85,7 +82,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
         <button className={buttonClass(neutral) } onClick={() => this.onAnswer(neutral) }>neutral</button>
         <button className={buttonClass(no) } onClick={() => this.onAnswer(no) }>stimme nicht zu</button>
       </div>
-    )
+    );
   }
 
   renderQuestionLinks() {
