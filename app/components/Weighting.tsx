@@ -1,8 +1,11 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
 import * as React from 'react';
+import { Link } from 'react-router';
+
 
 import * as AppState from '../app-state';
+import {ROUTES} from '../routes';
 import { AnswerDisplay } from './AnswerDisplay';
 
 
@@ -40,11 +43,13 @@ export class Weighting extends React.Component<{}, WeightingState> {
     return (
       <div>
         <h2>Welche Fragen sind Ihnen wichtig?</h2>
+        <p>Der Wahlomat wertet markierte Fragen bei der Auswertung doppelt.</p>
+        <Link to={ROUTES.results} activeClassName='active'>Weiter zum Ergebnis</Link>
         <table>
           <thead>
             <tr>
               <th>Frage</th>
-              <th>Ihre Antwort</th>
+              <th>Ihre Position</th>
               <th>Wichtig</th>
             </tr>
           </thead>

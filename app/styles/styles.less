@@ -1,6 +1,7 @@
 @import './question-links';
 @import './menu';
 @import './questions-wizard';
+@import './answer';
 @import './results';
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,10 +24,6 @@ button {
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  
-  &.selected {
-    background: #fa0;
-  }
   
   transition: all 0.2s;
   &:hover {
@@ -71,31 +68,4 @@ table {
   td {
     vertical-align: top
   }
-}
-
-.answer {
-  padding: 0.4em;
-  border-radius: 5px
-  
-}
-
-.answer-yes {
-  .answer();
-  background: #af0;
-}
-
-.answer-no {
-  .answer();
-  background: #fa0;
-}
-
-.answer-neutral {
-  .answer();
-  background: #eee;
-}
-
-
-blockquote {
-  margin: 0.5em 0;
-  font-style: italic;
 }

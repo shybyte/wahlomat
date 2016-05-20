@@ -1,5 +1,6 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
+import * as React from 'react';
 import { Answer } from '../app-state';
 import * as AppState from '../app-state';
 import {QuestionsWizard} from './QuestionsWizard';
@@ -44,13 +45,13 @@ export class ReasonsWizard extends QuestionsWizard {
             : null}
         </div>
         <div className='reasons'>
-          {this.renderReason(
+          {this.renderReason('initiative',
             `Initiative "${question.initiative}"`,
             question.initiativeAnswer,
             question.initiativeReason)
           }
-          {parties.map(party =>
-            this.renderReason(party.name, party.answers[question.id], party.reasons[question.id]))
+          {parties.map((party, i) =>
+            this.renderReason(i + '', party.name, party.answers[question.id], party.reasons[question.id]))
           }
         </div>
       </div>
@@ -58,9 +59,9 @@ export class ReasonsWizard extends QuestionsWizard {
   }
 
 
-  renderReason(name: String, answer: Answer, reason: string) {
+  renderReason(key: string, name: String, answer: Answer, reason: string) {
     return (
-      <div className='reason'>
+      <div key={key} className='reason'>
         <div><AnswerDisplay answer={answer}/> {name}</div>
         <blockquote>{reason}</blockquote>
       </div>

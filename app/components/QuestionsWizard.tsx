@@ -75,7 +75,9 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   renderAnswerButtons() {
     const question = this.question();
-    const buttonClass = (a: Answer) => classNames({ selected: AppState.getState().answers[question.id] === a });
+    const buttonClass = (a: Answer) => classNames('answerButton-' + a, {
+      selected: AppState.getState().answers[question.id] === a
+    });
     return (
       <div className='buttonGroup'>
         <button className={buttonClass(yes) } onClick={() => this.onAnswer(yes) }>stimme  zu</button>

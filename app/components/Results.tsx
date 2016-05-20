@@ -2,6 +2,10 @@
 
 import * as React from 'react';
 import * as R from 'ramda';
+import { Link } from 'react-router';
+import {ROUTES} from '../routes';
+
+
 
 import { Party, getState } from '../app-state';
 import { getSimilarities } from '../results';
@@ -23,6 +27,8 @@ export class Results extends React.Component<{}, {}> {
     return (
       <div>
         <h1>Ergebnis</h1>
+        <p>
+        </p>
         <table>
           <thead>
             <tr>
@@ -34,6 +40,7 @@ export class Results extends React.Component<{}, {}> {
             {sortedParties.map(renderParty) }
           </tbody>
         </table>
+        <Link to={ROUTES.reasons} activeClassName='active'>Was sagen eigentlich die Parteien zu den einzelen Fragen und warum?</Link>
       </div>
     );
   }
