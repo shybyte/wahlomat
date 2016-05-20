@@ -5,6 +5,8 @@ export interface Question {
   id: string;
   initiative: string;
   text: string;
+  initiativeAnswer: Answer;
+  initiativeReason: string;
 }
 
 export type Answer = 'yes' | 'no' | 'neutral' | 'skipped';
@@ -33,6 +35,7 @@ export interface Party {
   id: string;
   name: string;
   answers: AnswerMap;
+  reasons: AnswerMap;
 }
 
 interface StoredAppState {

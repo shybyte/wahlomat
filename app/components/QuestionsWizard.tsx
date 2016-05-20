@@ -27,7 +27,13 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     const question = this.question();
     if ((answer !== skipped || !answers[question.id])) {
       AppState.setAnswer(question.id, answer);
-    }
+    };
+    this.onAfterAnswer();
+  };
+
+  onAfterAnswer() {
+    const appState = AppState.getState();
+    const s = this.state;
     setTimeout(() => {
       const nextQuestionIndex = s.questionIndex + 1;
       if (nextQuestionIndex < appState.questions.length) {
@@ -37,7 +43,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
         AppState.setQuestionsDone();
       }
     }, 200);
-  };
+  }
 
   question = () => AppState.getState().questions[this.state.questionIndex];
 
@@ -57,20 +63,29 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       return (<div>Loading</div>);
     }
 
-    const buttonClass = (a: Answer) => classNames({ selected: AppState.getState().answers[question.id] === a });
     return (
       <div>
         <p className='initiative'>Initiative: {question.initiative}</p>
         <p className='questionText'>{question.text}</p>
-        <div className='buttonGroup'>
-          <button className={buttonClass(yes) } onClick={() => this.onAnswer(yes) }>stimme  zu</button>
-          <button className={buttonClass(neutral) } onClick={() => this.onAnswer(neutral) }>neutral</button>
-          <button className={buttonClass(no) } onClick={() => this.onAnswer(no) }>stimme nicht zu</button>
+        {this.renderAnswerButtons() }
+        <div className='questionNavigation'>
+          {this.renderQuestionLinks() }
+          <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
         </div>
-        <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
-        {this.renderQuestionLinks() }
       </div>
     );
+  }
+
+  renderAnswerButtons() {
+    const question = this.question();
+    const buttonClass = (a: Answer) => classNames({ selected: AppState.getState().answers[question.id] === a });
+    return (
+      <div className='buttonGroup'>
+        <button className={buttonClass(yes) } onClick={() => this.onAnswer(yes) }>stimme  zu</button>
+        <button className={buttonClass(neutral) } onClick={() => this.onAnswer(neutral) }>neutral</button>
+        <button className={buttonClass(no) } onClick={() => this.onAnswer(no) }>stimme nicht zu</button>
+      </div>
+    )
   }
 
   renderQuestionLinks() {

@@ -3,6 +3,7 @@
 import * as React from 'react';
 
 import * as AppState from '../app-state';
+import { AnswerDisplay } from './AnswerDisplay';
 
 
 interface WeightingState {
@@ -20,7 +21,7 @@ const QuestionLine = (props: { question: AppState.Question }) => {
   return (
     <tr>
       <td>{props.question.text}</td>
-      <td>{AppState.getState().answers[props.question.id]}</td>
+      <td><AnswerDisplay answer={AppState.getState().answers[props.question.id]} /></td>
       <td>
         <input type='checkbox'
           checked={weight === AppState.Weight.IMPORTANT}

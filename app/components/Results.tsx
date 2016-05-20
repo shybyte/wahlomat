@@ -13,17 +13,27 @@ export class Results extends React.Component<{}, {}> {
     const sortedParties = R.reverse(R.sortBy(q => similarities[q.id], parties));
     function renderParty(party: Party) {
       return (
-        <div key={party.id}>
-          <h3>{party.name}</h3>
-          <span>{Math.round(similarities[party.id] * 100) } %</span>
-        </div>
+        <tr key={party.id}>
+          <td>{party.name}</td>
+          <td className='percent'>{Math.round(similarities[party.id] * 100) } %</td>
+        </tr>
       );
     }
 
     return (
       <div>
         <h1>Ergebnis</h1>
-        {sortedParties.map(renderParty) }
+        <table>
+          <thead>
+            <tr>
+              <th>Partei</th>
+              <th>Übereinstimmung</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedParties.map(renderParty) }
+          </tbody>
+        </table>
       </div>
     );
   }

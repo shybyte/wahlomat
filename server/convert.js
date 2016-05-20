@@ -21,7 +21,7 @@ const questions = body.map((row, i) => {
     id: i.toString(),
     text: row[1],
     initiative: row[0],
-    initiativeAnswer: toAnswer[row[2]],
+    initiativeAnswer: toAnswer(row[2]),
     initiativeReason: row[3]
   };
 })

@@ -1,6 +1,7 @@
 @import './question-links';
 @import './menu';
 @import './questions-wizard';
+@import './results';
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #51b9d4
@@ -10,7 +11,7 @@ body {
   max-width: 1024px;
   padding: 10px 30px 20px;
   border-radius: 10px;
-  margin: 5em auto;
+  margin: 1em auto;
   background:  white;
 }
 
@@ -42,7 +43,10 @@ button {
   background: none;
   color: #44f;
   border: none;
-  padding-left: 0px 
+  padding-left: 0px; 
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .buttonGroup {
@@ -67,4 +71,31 @@ table {
   td {
     vertical-align: top
   }
+}
+
+.answer {
+  padding: 0.4em;
+  border-radius: 5px
+  
+}
+
+.answer-yes {
+  .answer();
+  background: #af0;
+}
+
+.answer-no {
+  .answer();
+  background: #fa0;
+}
+
+.answer-neutral {
+  .answer();
+  background: #eee;
+}
+
+
+blockquote {
+  margin: 0.5em 0;
+  font-style: italic;
 }
