@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "wahlomat",
+      "script": "tmp/server/server.js",
+      "watch": [
+        "tmp/server"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

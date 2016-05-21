@@ -39,9 +39,13 @@ export interface Party {
   reasons: ReasonMap;
 }
 
-interface StoredAppState {
+export interface Vote {
   answers: AnswerMap;
   weights: WeightMap;
+}
+
+interface StoredAppState extends Vote {
+
   questionsDone: boolean;
 }
 
