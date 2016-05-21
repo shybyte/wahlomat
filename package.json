@@ -9,7 +9,7 @@
     "start": "node dev-server.js",
     "start:server": "pm2 start tmp/server.js --watch -n wahlomat && pm2 logs wahlomat",
     "stop:server": "pm2 stop wahlomat --watch",
-    "start:prod": "pm2 start tmp/server.js -n wahlomat",
+    "start:prod": "pm2 start tmp/server/server.js -n wahlomat",
     "stop:prod": "pm2 stop wahlomat",
     "logs": "pm2 logs all",
     "test": "echo \"Error: no test specified\" && exit 1",
