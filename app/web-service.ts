@@ -6,6 +6,6 @@ import {InitialData} from './app-state.ts';
 
 
 export function loadData(): Promise<InitialData> {
-  return fetch('/data/data.json')
+  return fetch('data/data.json')
     .then(response => response.json() as Promise<InitialData>);
 };

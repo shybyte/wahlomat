@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Router, Route, browserHistory, IndexRoute, Link } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
 
 
 import { QuestionsWizard } from './components/QuestionsWizard';
@@ -50,7 +50,7 @@ const routes = <Route path='/' component={Layout}>
 AppState.subscribe(appState => {
   console.log('Render', appState);
   ReactDOM.render((
-    <Router history={browserHistory} routes={routes}/>
+    <Router history={hashHistory} routes={routes}/>
   ), document.getElementById('app'));
 });
 

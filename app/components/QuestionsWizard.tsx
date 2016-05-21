@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as classNames from 'classnames';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 
 
 import { Answer, ANSWER, Question } from '../app-state';
@@ -36,7 +36,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       if (nextQuestionIndex < AppState.getState().questions.length) {
         this.gotoQuestion(nextQuestionIndex);
       } else {
-        browserHistory.push(ROUTES.weighting);
+        hashHistory.push(ROUTES.weighting);
         AppState.setQuestionsDone();
       }
     }, 200);

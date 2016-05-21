@@ -19,6 +19,7 @@ export const ANSWER = {
 
 export type AnswerMap = { [querstionId: string]: Answer };
 export type WeightMap = { [querstionId: string]: Weight };
+export type ReasonMap = { [querstionId: string]: string };
 export type NumberMap = { [id: string]: number };
 
 export interface InitialData {
@@ -35,7 +36,7 @@ export interface Party {
   id: string;
   name: string;
   answers: AnswerMap;
-  reasons: AnswerMap;
+  reasons: ReasonMap;
 }
 
 interface StoredAppState {

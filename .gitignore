@@ -6,5 +6,6 @@ typings
 *.log
 
 build
+tmp
 
 .private

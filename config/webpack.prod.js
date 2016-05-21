@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var APP_DIR = path.join(__dirname, '..', 'app');
 
 module.exports = {
-  devtool: 'source-map',
+  // devtool: 'source-map',
   entry: './app/index.tsx',
   module: {
     preLoaders: [{
@@ -22,7 +22,7 @@ module.exports = {
       }]
   },
   output: {
-    path: path.join(__dirname, '..', 'build'),
+    path: path.join(__dirname, '..', 'public/build'),
     filename: 'app.js',
     publicPath: '/static/'
   },
