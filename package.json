@@ -13,7 +13,7 @@
     "stop:prod": "pm2 stop wahlomat",
     "logs": "pm2 logs all",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "./node_modules/.bin/typings install"
+    "install": "typings install"
   },
   "author": "Marco Stahl",
   "license": "APGL",
@@ -37,6 +37,7 @@
     "style-loader": "^0.13.1",
     "tslint": "^3.3.0",
     "tslint-loader": "^2.1.0",
+    "typings": "^1.0.4",
     "webpack": "^1.12.15",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4"
