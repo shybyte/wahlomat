@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 
 
 import * as AppState from '../app-state';
+import {Question, Weight} from '../app-state-interfaces';
 import {ROUTES} from '../routes';
 import { AnswerDisplay } from './AnswerDisplay';
 
@@ -12,13 +13,13 @@ import { AnswerDisplay } from './AnswerDisplay';
 interface WeightingState {
 }
 
-const QuestionLine = (props: { question: AppState.Question }) => {
+const QuestionLine = (props: { question: Question }) => {
   const questionId = props.question.id;
   const weight = AppState.getState().weights[questionId];
 
   function onChange(ev: Event) {
     const inputEl = ev.target as HTMLInputElement;
-    AppState.setWeight(questionId, inputEl.checked ? AppState.Weight.IMPORTANT : AppState.Weight.NORMAL);
+    AppState.setWeight(questionId, inputEl.checked ? Weight.IMPORTANT : Weight.NORMAL);
   }
 
   return (
@@ -27,7 +28,7 @@ const QuestionLine = (props: { question: AppState.Question }) => {
       <td><AnswerDisplay answer={AppState.getState().answers[props.question.id]} /></td>
       <td>
         <input type='checkbox'
-          checked={weight === AppState.Weight.IMPORTANT}
+          checked={weight === Weight.IMPORTANT}
           onChange={onChange}/>
       </td>
     </tr>

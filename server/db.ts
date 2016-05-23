@@ -2,7 +2,7 @@
 
 import * as mongodb from 'mongodb';
 
-import {Vote} from '../app/app-state';
+import {Vote} from '../app/app-state-interfaces';
 
 const VOTE_COLLECTION = 'vote';
 

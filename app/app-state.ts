@@ -1,61 +1,8 @@
-import {loadData} from './web-service';
+import {Answer, AnswerMap, WeightMap, Weight,
+  StoredAppState, AppState} from './app-state-interfaces';
+
+import * as webService from './web-service';
 import {swap, loadObjectFromLocalStorage, extend, replaceEntry, assign} from './utils';
-
-export interface Question {
-  id: string;
-  initiative: string;
-  text: string;
-  initiativeAnswer: Answer;
-  initiativeReason: string;
-}
-
-export type Answer = 'yes' | 'no' | 'neutral' | 'skipped';
-export const ANSWER = {
-  neutral: 'neutral' as Answer,
-  no: 'no' as Answer,
-  skipped: 'skipped' as Answer,
-  yes: 'yes' as Answer,
-};
-
-export type AnswerMap = { [querstionId: string]: Answer };
-export type WeightMap = { [querstionId: string]: Weight };
-export type ReasonMap = { [querstionId: string]: string };
-export type NumberMap = { [id: string]: number };
-
-export interface InitialData {
-  questions: Question[];
-  parties: Party[];
-}
-
-export enum Weight {
-  NORMAL = 1,
-  IMPORTANT = 2
-}
-
-export interface Party {
-  id: string;
-  name: string;
-  answers: AnswerMap;
-  reasons: ReasonMap;
-}
-
-export interface Vote {
-  answers: AnswerMap;
-  weights: WeightMap;
-}
-
-interface StoredAppState extends Vote {
-
-  questionsDone: boolean;
-}
-
-interface AppState extends StoredAppState {
-  questions: Question[];
-  parties: Party[];
-  initialized: boolean;
-}
-
-
 
 /* Store  */
 
@@ -64,6 +11,7 @@ const LOCAL_STORAGE_KEY = 'wahlomat';
 let restoredAppState: StoredAppState = loadObjectFromLocalStorage(LOCAL_STORAGE_KEY, {
   answers: {} as AnswerMap,
   questionsDone: false,
+  sessionId: Math.random().toString(36).substring(7),
   weights: {} as WeightMap,
 });
 
@@ -100,6 +48,8 @@ function storeAppState() {
   const storedState: StoredAppState = {
     answers: appState.answers,
     questionsDone: appState.questionsDone,
+    savedVote: appState.savedVote,
+    sessionId: appState.sessionId,
     weights: appState.weights,
   };
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(storedState));
@@ -110,11 +60,18 @@ export function getState() {
   return appState;
 }
 
+export function getCurrentVote() {
+  return {
+    answers: appState.answers,
+    sessionId: appState.sessionId,
+    weights: appState.weights,
+  };
+}
 
 /* Actions */
 
 export function init() {
-  loadData().then(initialData => {
+  webService.loadData().then(initialData => {
     setState(assign(appState, initialData));
     swapState(s => {
       s.initialized = true;
@@ -140,4 +97,13 @@ export function setWeight(questionId: string, weight: Weight) {
   });
 }
 
+export function saveVote() {
+  const vote = getCurrentVote();
+  webService.saveVote(vote).then(() => {
+    swapState(ast => {
+      ast.savedVote = vote;
+    });
+  });
+
+}
 

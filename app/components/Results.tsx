@@ -2,17 +2,18 @@
 
 import * as React from 'react';
 import * as R from 'ramda';
+import * as classNames from 'classnames';
 import { Link } from 'react-router';
 import {ROUTES} from '../routes';
 
 
-
-import { Party, getState } from '../app-state';
+import { Party } from '../app-state-interfaces';
+import { getState, getCurrentVote, saveVote } from '../app-state';
 import { getSimilarities } from '../results';
 
 export class Results extends React.Component<{}, {}> {
   render() {
-    const {answers, weights, parties} = getState();
+    const {answers, weights, parties, savedVote} = getState();
     const similarities = getSimilarities(answers, weights, parties);
     const sortedParties = R.reverse(R.sortBy(q => similarities[q.id], parties));
     function renderParty(party: Party) {
@@ -27,7 +28,10 @@ export class Results extends React.Component<{}, {}> {
     return (
       <div>
         <h1>Ergebnis</h1>
-        <p>
+        <p className={classNames('saveVoteSection', {
+          saved: R.equals(savedVote, getCurrentVote()) ? true : false
+        }) }>
+          <button onClick={saveVote}>Speicher</button> mein Ergebnis für die Statistik.
         </p>
         <table>
           <thead>

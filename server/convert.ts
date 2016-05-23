@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as R from 'ramda';
 const parse = require('csv-parse/lib/sync');
 
-import {Question, Party, Answer, AnswerMap, ReasonMap, InitialData} from '../app/app-state';
+import {Question, Party, Answer, AnswerMap, ReasonMap, InitialData} from '../app/app-state-interfaces';
 
 const fileContent = fs.readFileSync('data/data.csv', 'utf8');
 const rows = parse(fileContent);

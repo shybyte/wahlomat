@@ -16,10 +16,10 @@ export function extend<T, P>(o1: T, o2: P): T & P {
   return Object.assign({}, o1, o2) as T & P;
 }
 
-export function loadObjectFromLocalStorage<T>(key: string, defaultValue: T): T {
+export function loadObjectFromLocalStorage<T extends {}>(key: string, defaultValue: T): T {
   const valueString = localStorage.getItem(key);
   if (valueString) {
-    return JSON.parse(valueString);
+    return assign(defaultValue, JSON.parse(valueString));
   } else {
     return defaultValue;
   }

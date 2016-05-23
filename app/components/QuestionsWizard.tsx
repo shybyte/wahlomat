@@ -5,7 +5,7 @@ import * as classNames from 'classnames';
 import { hashHistory } from 'react-router';
 
 
-import { Answer, ANSWER, Question } from '../app-state';
+import { Answer, ANSWER, Question } from '../app-state-interfaces';
 import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
 

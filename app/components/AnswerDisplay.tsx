@@ -1,7 +1,7 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
 import * as React from 'react';
-import { ANSWER } from '../app-state';
+import { ANSWER } from '../app-state-interfaces';
 
 const TRANSLATION = {
   [ANSWER.yes]: 'Ja',
