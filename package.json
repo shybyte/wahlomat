@@ -8,10 +8,11 @@
     "clean": "rimraf public/build && rimraf tmp",
     "start": "node dev-server.js",
     "watch:ts:server": "tsc -p server/tsconfig.json -w",
-    "start:server": "pm2 start process.json && pm2 logs wahlomat",
+    "start:server": "pm2 start config/process.json && pm2 logs wahlomat",
     "stop:server": "pm2 stop wahlomat --watch",
-    "start:prod": "pm2 start tmp/server/server.js -n wahlomat",
+    "start:prod": "pm2 start config/process-prod.json",
     "stop:prod": "pm2 stop wahlomat",
+    "post:update": "npm install && build",
     "logs": "pm2 logs all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "typings install"

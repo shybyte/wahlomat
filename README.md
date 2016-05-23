@@ -10,6 +10,6 @@
 
 ## Start Producion
 
-    ./start-prod.sh
+    npm run start:prod
     
     

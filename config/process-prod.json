@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "wahlomat",
+      "script": "tmp/server/server.js",
+      "post_update": ["npm run post:update"],
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    }
+  ]
+}
