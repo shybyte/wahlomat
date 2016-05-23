@@ -18,6 +18,6 @@ app.post('/vote', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Wahlomat server listening on port %d in %s mode', port, app.settings.env);
+  console.log('Wahlomat server listening on port %d in %s mode.', port, app.settings.env);
   console.log('StartTime: ', new Date());
 });
