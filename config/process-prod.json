@@ -3,7 +3,7 @@
     {
       "name": "wahlomat",
       "script": "tmp/server/server.js",
-      "post_update": ["npm run post:update"],
+      "post_update": ["echo App has been updated"],
       "env": {
         "NODE_ENV": "production",
         "PORT": 3000
