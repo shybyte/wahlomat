@@ -1,9 +1,10 @@
 /// <reference path="../typings/main/index.d.ts" />
 
+import * as R from 'ramda';
+
 import {ANSWER, Party, AnswerMap, WeightMap, NumberMap, Answer } from './app-state-interfaces';
 import {QuestionStats, Weight, Stats} from '../app/app-state-interfaces';
 
-import * as R from 'ramda';
 
 const ANSWER_TO_NUMBER: { [key: string]: number } = {
   [ANSWER.no]: -1,
