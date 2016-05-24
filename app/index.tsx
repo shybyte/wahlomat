@@ -12,6 +12,7 @@ import { Weighting } from './components/Weighting';
 import { StartPage } from './components/StartPage';
 import { NotFound } from './components/NotFound';
 import { ReasonsWizard } from './components/ReasonsWizard';
+import { StatsPage } from './components/StatsPage';
 import { loadCss } from './styles/styles';
 import * as AppState from './app-state';
 import {ROUTES} from './routes';
@@ -24,15 +25,18 @@ class Layout extends React.Component<{}, {}> {
     return (
       <div className='wahlomat'>
         <h1>Wahlomat</h1>
-        {appState.questionsDone ?
-          <div className='menu'>
-            <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
-            <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
-            <Link to={ROUTES.results} activeClassName='active'>Ergebnis</Link>
-            <Link to={ROUTES.reasons} activeClassName='active'>Begründungen</Link>
-          </div>
-          : null
-        }
+        <div className='menu'>
+          <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
+          {appState.questionsDone ?
+            <span className='menuSection'>
+              <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
+              <Link to={ROUTES.results} activeClassName='active'>Ergebnis</Link>
+              <Link to={ROUTES.reasons} activeClassName='active'>Begründungen</Link>
+            </span>
+            : null
+          }
+          <Link to={ROUTES.stats} activeClassName='active'>Statistiken</Link>
+        </div>
         {this.props.children}
       </div>
     );
@@ -45,6 +49,7 @@ const routes = <Route path='/' component={Layout}>
   <Route path={ROUTES.weighting} component={Weighting}/>
   <Route path={ROUTES.results} component={Results}/>
   <Route path={ROUTES.reasons} component={ReasonsWizard}/>
+  <Route path={ROUTES.stats} component={StatsPage}/>
   <Route path='*' component={NotFound}/>
 </Route>;
 

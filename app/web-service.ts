@@ -1,5 +1,5 @@
 
-import {Vote} from './app-state-interfaces';
+import {Vote, Stats} from './app-state-interfaces';
 declare const require: (name: String) => any;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
@@ -21,4 +21,9 @@ export async function saveVote(vote: Vote) {
     method: 'POST',
   });
   return response.json();
+};
+
+
+export async function loadStats(): Promise<Stats> {
+  return (await fetch('stats')).json();
 };
