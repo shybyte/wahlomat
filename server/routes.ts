@@ -5,15 +5,26 @@ import * as express from 'express';
 import {Express} from 'express';
 import * as bodyParser from 'body-parser';
 import * as db from './db';
+import * as stats from './stats';
 
 
-export function initRoutes(app: Express) {
+export async function initRoutes(app: Express) {
   app.use(bodyParser.json());
 
   app.use(express.static('public'));
 
+  await db.init();
+  stats.init();
+
   app.post('/vote', (req, res) => {
-    db.saveVote(req.body);
+    const vote = req.body;
+    stats.addVote(vote);
+    db.saveVote(vote);
     res.json({});
   });
+
+  app.get('/stats', (req, res) => {
+    res.json(stats.getStats());
+  });
+
 };

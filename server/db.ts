@@ -9,7 +9,6 @@ const VOTE_COLLECTION = 'vote';
 const server = new mongodb.Server('localhost', 27017, { reconnectTries: 3 });
 const db = new mongodb.Db('wahlomat', server, { w: 1 });
 
-
 async function openDB() {
   try {
     await db.open();
@@ -19,10 +18,20 @@ async function openDB() {
   }
 }
 
-
 export function saveVote(vote: Vote) {
   return db.collection(VOTE_COLLECTION).insert(vote);
 }
 
+export async function forEachVote(f: (vote: Vote) => void) {
+  const cursor = db.collection(VOTE_COLLECTION).find();
+  cursor.forEach(f, () => {
+    cursor.close();
+  });
+}
 
-openDB();
+/**
+ * Must be called first.
+ */
+export async function init() {
+  await openDB();
+}

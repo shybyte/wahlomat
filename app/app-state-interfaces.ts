@@ -55,7 +55,24 @@ export interface AppState extends StoredAppState {
   initialized: boolean;
 }
 
+/**
+ * key: Answer
+ */
+export type AnswerStats = { [answer: string]: number };
 
+/**
+ * key: Weight
+ */
+export type WeightStats = { [weight: number]: number };
 
+export interface QuestionStats {
+  answerStats: AnswerStats;
+  weightStats: WeightStats;
+}
 
+export type QuestionsStats = { [questionId: string]: QuestionStats };
+
+export interface Stats {
+  questionsStats: QuestionsStats;
+}
 
