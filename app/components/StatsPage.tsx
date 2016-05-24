@@ -43,6 +43,10 @@ const TableRow = (props: { rowValues: RowValues }) => {
   );
 };
 
+function sortKey(row: RowValues) {
+  return [row.meanAgreement.toFixed(3), (row.important / 1e10).toFixed(10)].join('-');
+}
+
 export class StatsPage extends React.Component<{}, StatsPageState> {
   state = {
     stats: null,
@@ -67,13 +71,11 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
       const answerStats = questionStats.answerStats;
       const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a] || 0);
       const meanAgreement = (yes + no > 0) ? yes / (yes + no) : 0.5;
-      return {
-        question, meanAgreement, yes, no, neutral,
-        important: questionStats.weightStats[Weight.IMPORTANT]
-      };
+      const important = questionStats.weightStats[Weight.IMPORTANT];
+      return { question, meanAgreement, yes, no, neutral, important };
     });
 
-    const sortedRows = R.reverse(R.sortBy(row => row.meanAgreement, rows));
+    const sortedRows = R.reverse(R.sortBy(sortKey, rows));
 
     return (
       <div>
