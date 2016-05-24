@@ -7,18 +7,18 @@ require('isomorphic-fetch');
 import {InitialData} from './app-state-interfaces.ts';
 
 
-export function loadData(): Promise<InitialData> {
-  return fetch('data/data.json')
-    .then(response => response.json() as Promise<InitialData>);
+export async function loadData(): Promise<InitialData> {
+  return (await fetch('data/data.json')).json();
 };
 
 
-export function saveVote(vote: Vote): Promise<any> {
+export async function saveVote(vote: Vote) {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
-  return fetch('vote', {
+  const response = await fetch('vote', {
     body: JSON.stringify(vote),
     headers,
     method: 'POST',
-  }).then(response => response.json() as Promise<any>);
+  });
+  return response.json();
 };

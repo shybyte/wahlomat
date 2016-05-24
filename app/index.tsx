@@ -3,6 +3,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Link } from 'react-router';
+require('babel-polyfill');
 
 
 import { QuestionsWizard } from './components/QuestionsWizard';
