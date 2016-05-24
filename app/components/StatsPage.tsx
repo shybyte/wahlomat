@@ -65,8 +65,8 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
     const rows = ast.questions.map((question): RowValues => {
       const questionStats = getQuestionStats(s.stats, question.id);
       const answerStats = questionStats.answerStats;
-      const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a]);
-      const meanAgreement = yes / (yes + no);
+      const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a] || 0);
+      const meanAgreement = (yes + no > 0) ? yes / (yes + no) : 0.5;
       return {
         question, meanAgreement, yes, no, neutral,
         important: questionStats.weightStats[Weight.IMPORTANT]
