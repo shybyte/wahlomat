@@ -1,0 +1,29 @@
+@import './colors';
+
+.valueBar {
+  width: 100px;
+  height: 1.5em;
+  line-height: 1.6em;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: @no;
+  
+  .valueBarValue, .valueBarLabel {
+    position: absolute;
+    height: 100%;
+  }
+  
+  .valueBarValue {
+    background: @yes;
+    width: 25%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .valueBarLabel {
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+  }
+}

@@ -1,31 +1,44 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
 import * as React from 'react';
+import * as R from 'ramda';
+
 
 import * as AppState from '../app-state';
 import {loadStats} from '../web-service';
 import {Question, Weight, Stats, ANSWER} from '../app-state-interfaces';
+import {getQuestionStats} from '../model';
 import { AnswerDisplay } from './AnswerDisplay';
 
+
+interface RowValues {
+  question: Question;
+  meanAgreement: number;
+  yes: number;
+  no: number;
+  neutral: number;
+  important: number;
+}
 
 interface StatsPageState {
   stats: Stats;
 }
 
-const QuestionLine = (props: { question: Question, stats: Stats }) => {
-  const {question, stats} = props;
-  const questionId = question.id;
-  const answerStats = stats.questionsStats[questionId].answerStats;
-
+const TableRow = (props: { rowValues: RowValues }) => {
+  const {question, meanAgreement, yes, no, neutral, important} = props.rowValues;
   return (
     <tr>
-      <td>{props.question.text}</td>
-      <td>{answerStats[ANSWER.yes]}</td>
-      <td>{answerStats[ANSWER.no]}</td>
-      <td>{answerStats[ANSWER.neutral]}</td>
+      <td>{question.text}</td>
       <td>
-        {stats.questionsStats[questionId].weightStats[Weight.IMPORTANT]}
+        <div className='valueBar' title={'' + meanAgreement}>
+          <div className='valueBarValue' style={{ width: meanAgreement * 100 + '%' }}></div>
+          <div className='valueBarLabel'>{Math.round(meanAgreement * 100) } %</div>
+        </div>
       </td>
+      <td>{yes}</td>
+      <td>{no}</td>
+      <td>{neutral}</td>
+      <td>{important}</td>
     </tr>
   );
 };
@@ -44,9 +57,24 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
   render() {
     const ast = AppState.getState();
     const s = this.state;
+
     if (!s.stats) {
       return <div></div>;
     }
+
+    const rows = ast.questions.map((question): RowValues => {
+      const questionStats = getQuestionStats(s.stats, question.id);
+      const answerStats = questionStats.answerStats;
+      const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a]);
+      const meanAgreement = yes / (yes + no);
+      return {
+        question, meanAgreement, yes, no, neutral,
+        important: questionStats.weightStats[Weight.IMPORTANT]
+      };
+    });
+
+    const sortedRows = R.reverse(R.sortBy(row => row.meanAgreement, rows));
+
     return (
       <div>
         <h2>Statistik</h2>
@@ -55,6 +83,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
           <thead>
             <tr>
               <th>Frage</th>
+              <th>Gesamtposition</th>
               <th><AnswerDisplay answer={ANSWER.yes}/></th>
               <th><AnswerDisplay answer={ANSWER.no}/></th>
               <th><AnswerDisplay answer={ANSWER.neutral}/></th>
@@ -62,7 +91,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
             </tr>
           </thead>
           <tbody>
-            {ast.questions.map(q => <QuestionLine key={q.id} question={q} stats={s.stats} />) }
+            {sortedRows.map(row => <TableRow key={row.question.id} rowValues={row} />) }
           </tbody>
         </table>
       </div>

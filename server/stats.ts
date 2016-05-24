@@ -1,27 +1,13 @@
 import * as db from './db';
-import {Stats, QuestionStats, ANSWER, Weight, Vote} from '../app/app-state-interfaces';
+import {Stats, QuestionStats, Vote} from '../app/app-state-interfaces';
+import {getQuestionStats} from '../app/model';
 
 const stats: Stats = {
   questionsStats: {}
 };
 
-function getQuestionStats(questionId: string): QuestionStats {
-  return stats.questionsStats[questionId] || {
-    answerStats: {
-      [ANSWER.yes]: 0,
-      [ANSWER.no]: 0,
-      [ANSWER.neutral]: 0,
-      [ANSWER.skipped]: 0,
-    },
-    weightStats: {
-      [Weight.NORMAL]: 0,
-      [Weight.IMPORTANT]: 0,
-    },
-  };
-}
-
 function modifyQuestionStats(questionId: string, f: (questionStats: QuestionStats) => void) {
-  const questionStats = getQuestionStats(questionId);
+  const questionStats = getQuestionStats(stats, questionId);
   f(questionStats);
   stats.questionsStats[questionId] = questionStats;
 }

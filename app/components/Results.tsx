@@ -9,7 +9,7 @@ import {ROUTES} from '../routes';
 
 import { Party } from '../app-state-interfaces';
 import { getState, getCurrentVote, saveVote } from '../app-state';
-import { getSimilarities } from '../results';
+import { getSimilarities } from '../model';
 
 export class Results extends React.Component<{}, {}> {
   render() {
