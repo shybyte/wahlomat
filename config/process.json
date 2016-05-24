@@ -2,9 +2,9 @@
   "apps": [
     {
       "name": "wahlomat",
-      "script": "tmp/server/server.js",
+      "script": "dev-server.js",
       "watch": [
-        "tmp/server"
+        "tmp/server", "dev-server.js"
       ],
       "env": {
         "NODE_ENV": "development"
