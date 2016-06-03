@@ -31,13 +31,13 @@ class Layout extends React.Component<{}, {}> {
             <span className='menuSection'>
               <Link to={ROUTES.weighting} activeClassName='active'>Gewichtung</Link>
               <Link to={ROUTES.results} activeClassName='active'>Ergebnis</Link>
-              <Link to={ROUTES.reasons} activeClassName='active'>Begründungen</Link>
             </span>
             : null
           }
-          <Link to={ROUTES.stats} activeClassName='active'>Statistiken</Link>
+          <Link to={ROUTES.stats} activeClassName='active'>Kiezbarometer</Link>
         </div>
         {this.props.children}
+        <img className='kiezbarometerLogo' src='img/kiezbarometer-logo.png' alt=''/>
       </div>
     );
   }

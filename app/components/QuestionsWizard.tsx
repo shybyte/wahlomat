@@ -5,19 +5,24 @@ import * as classNames from 'classnames';
 import { hashHistory } from 'react-router';
 
 
+
 import { Answer, ANSWER, Question } from '../app-state-interfaces';
 import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
+import {AnswerDisplay} from './AnswerDisplay';
+
 
 const {skipped, yes, no, neutral} = ANSWER;
 
 interface WizardState {
   questionIndex?: number;
+  showReasons?: boolean;
 }
 
 export class QuestionsWizard extends React.Component<{}, WizardState> {
   state = {
-    questionIndex: 0
+    questionIndex: 0,
+    showReasons: false
   };
 
   onAnswer = (answer: Answer) => {
@@ -48,6 +53,10 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     this.setState({ questionIndex });
   };
 
+  toggleShowReasons = () => {
+    this.setState({ showReasons: !this.state.showReasons });
+  };
+
   hasNonSkippedAnswer = (q: Question) => {
     const answer = AppState.getState().answers[q.id];
     return answer && answer !== skipped;
@@ -55,7 +64,12 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   render() {
     const question = this.question();
-
+    const {parties} = AppState.getState();
+    const {showReasons} = this.state;
+    const toggleReasonsButtonText = showReasons ?
+      'Verstecke die Antworten der Parteien und Initiativen'
+      : 'Zeige die Antworten der Parteien und Initiativen';
+    const reasonsStyles = classNames('reasons', { visible: showReasons });
     if (!question) {
       return (<div>Loading</div>);
     }
@@ -69,6 +83,19 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
           {this.renderQuestionLinks() }
           <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
         </div>
+
+        <button className='linkButton' onClick={() => this.toggleShowReasons() }>{toggleReasonsButtonText}</button>
+        <div className={reasonsStyles}>
+          {this.renderReason('initiative',
+            `Initiative "${question.initiative}"`,
+            question.initiativeAnswer,
+            question.initiativeReason)
+          }
+          {parties.map((party, i) =>
+            this.renderReason(i + '', party.name, party.answers[question.id], party.reasons[question.id]))
+          }
+        </div>
+
       </div>
     );
   }
@@ -107,7 +134,14 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     );
   }
 
-
+  renderReason(key: string, name: String, answer: Answer, reason: string) {
+    return (
+      <div key={key} className='reason'>
+        <div><AnswerDisplay answer={answer}/> <strong> {name}</strong></div>
+        <blockquote>{reason}</blockquote>
+      </div>
+    );
+  }
 
 
 }

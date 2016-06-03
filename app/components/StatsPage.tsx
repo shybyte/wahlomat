@@ -79,7 +79,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
 
     return (
       <div>
-        <h2>Statistik</h2>
+        <h2>Kiezbarometer</h2>
         <p>Wie haben andere "gewählt"?</p>
         <table>
           <thead>

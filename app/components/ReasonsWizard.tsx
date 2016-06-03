@@ -1,10 +1,8 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
 import * as React from 'react';
-import { Answer } from '../app-state-interfaces';
 import * as AppState from '../app-state';
 import {QuestionsWizard} from './QuestionsWizard';
-import {AnswerDisplay} from './AnswerDisplay';
 
 
 export class ReasonsWizard extends QuestionsWizard {
@@ -59,12 +57,5 @@ export class ReasonsWizard extends QuestionsWizard {
   }
 
 
-  renderReason(key: string, name: String, answer: Answer, reason: string) {
-    return (
-      <div key={key} className='reason'>
-        <div><AnswerDisplay answer={answer}/> <strong> {name}</strong></div>
-        <blockquote>{reason}</blockquote>
-      </div>
-    );
-  }
+
 }
