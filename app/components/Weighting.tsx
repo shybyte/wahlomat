@@ -80,7 +80,7 @@ export class Weighting extends React.Component<{}, WeightingState> {
         </p>
         <Link to={ROUTES.results} activeClassName='active'>Weiter zum Ergebnis</Link>
       </div>
-    )
+    );
   }
 
 }
