@@ -68,6 +68,7 @@ export type WeightStats = { [weight: number]: number };
 export interface QuestionStats {
   answerStats: AnswerStats;
   weightStats: WeightStats;
+  interest: number;
 }
 
 export type QuestionsStats = { [questionId: string]: QuestionStats };

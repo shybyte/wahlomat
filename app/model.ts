@@ -48,6 +48,7 @@ export function getQuestionStats(stats: Stats, questionId: string): QuestionStat
       [ANSWER.neutral]: 0,
       [ANSWER.skipped]: 0,
     },
+    interest: 0,
     weightStats: {
       [Weight.NORMAL]: 0,
       [Weight.IMPORTANT]: 0,

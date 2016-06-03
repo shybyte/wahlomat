@@ -1,5 +1,5 @@
 import * as db from './db';
-import {Stats, QuestionStats, Vote} from '../app/app-state-interfaces';
+import {Stats, QuestionStats, Vote, ANSWER, Weight} from '../app/app-state-interfaces';
 import {getQuestionStats} from '../app/model';
 
 const stats: Stats = {
@@ -23,13 +23,12 @@ export function addVote(vote: Vote) {
   Object.keys(vote.answers).forEach(questionId => {
     modifyQuestionStats(questionId, questionStats => {
       const answer = vote.answers[questionId];
+      const weight = vote.weights[questionId] || Weight.NORMAL;
       questionStats.answerStats[answer] += 1;
-    });
-  });
-  Object.keys(vote.weights).forEach(questionId => {
-    modifyQuestionStats(questionId, questionStats => {
-      const weight = vote.weights[questionId];
       questionStats.weightStats[weight] += 1;
+      if ((answer === ANSWER.yes || answer === ANSWER.no)) {
+        questionStats.interest += weight;
+      }
     });
   });
 }
