@@ -20,6 +20,9 @@ interface WeightingState {
 const QuestionLine = (props: { question: Question }) => {
   const questionId = props.question.id;
   const weight = AppState.getState().weights[questionId];
+  const importantIconClass = classNames('importantIcon', {
+    visible: weight === Weight.IMPORTANT
+  });
 
   function onChange(ev: Event) {
     const inputEl = ev.target as HTMLInputElement;
@@ -34,6 +37,7 @@ const QuestionLine = (props: { question: Question }) => {
         <input type='checkbox'
           checked={weight === Weight.IMPORTANT}
           onChange={onChange}/>
+        <span className={importantIconClass}>&#215; 2</span>
       </td>
     </tr>
   );
@@ -76,7 +80,7 @@ export class Weighting extends React.Component<{}, WeightingState> {
         <p className={classNames('saveVoteSection', {
           saved: R.equals(savedVote, getCurrentVote()) ? true : false
         }) }>
-          <button onClick={saveVote}>Speicher</button> mein Ergebnis für die Statistik.
+          <button onClick={saveVote}>Speicher</button> meine Anworten für das Kiezbarometer.
         </p>
         <Link to={ROUTES.results} activeClassName='active'>Weiter zum Ergebnis</Link>
       </div>
