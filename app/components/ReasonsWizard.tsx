@@ -20,7 +20,7 @@ export class ReasonsWizard extends QuestionsWizard {
   render() {
     const questionIndex = this.state.questionIndex;
     const question = this.question();
-    const {questions, parties} = AppState.getState();
+    const {questions, candidates} = AppState.getState();
 
     if (!question) {
       return (<div>Loading</div>);
@@ -47,8 +47,8 @@ export class ReasonsWizard extends QuestionsWizard {
             question.initiativeAnswer,
             question.initiativeReason)
           }
-          {parties.map((party, i) =>
-            this.renderReason(i + '', party.name, party.answers[question.id], party.reasons[question.id]))
+          {candidates.map((candidate, i) =>
+            this.renderReason(i + '', candidate.name, candidate.answers[question.id], candidate.reasons[question.id]))
           }
         </div>
       </div>

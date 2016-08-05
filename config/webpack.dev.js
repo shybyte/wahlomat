@@ -31,7 +31,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      "React": "react",
+    }),
   ],
   resolve: {
     root: [path.resolve('../app')],

@@ -22,7 +22,7 @@ export type NumberMap = { [id: string]: number };
 
 export interface InitialData {
   questions: Question[];
-  parties: Party[];
+  candidates: Candidate[];
 }
 
 export enum Weight {
@@ -30,7 +30,7 @@ export enum Weight {
   IMPORTANT = 2
 }
 
-export interface Party {
+export interface Candidate {
   id: string;
   name: string;
   answers: AnswerMap;
@@ -51,7 +51,7 @@ export interface StoredAppState extends Vote {
 
 export interface AppState extends StoredAppState {
   questions: Question[];
-  parties: Party[];
+  candidates: Candidate[];
   initialized: boolean;
 }
 

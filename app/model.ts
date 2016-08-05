@@ -2,7 +2,7 @@
 
 import * as R from 'ramda';
 
-import {ANSWER, Party, AnswerMap, WeightMap, NumberMap, Answer } from './app-state-interfaces';
+import {ANSWER, Candidate, AnswerMap, WeightMap, NumberMap, Answer } from './app-state-interfaces';
 import {QuestionStats, Weight, Stats} from '../app/app-state-interfaces';
 
 
@@ -20,22 +20,22 @@ function getNotSkippedQuestionIDs(answerMap: AnswerMap) {
   return Object.keys(answerMap).filter(id => answerMap[id] !== ANSWER.skipped);
 }
 
-function getSimilarity(answerMap: AnswerMap, weights: WeightMap, party: Party): number {
+function getSimilarity(answerMap: AnswerMap, weights: WeightMap, candidate: Candidate): number {
   const myQuestionIds = getNotSkippedQuestionIDs(answerMap);
-  const partyQuestionIds = getNotSkippedQuestionIDs(party.answers);
-  const commonQuestionIDs = R.intersection(myQuestionIds, partyQuestionIds);
+  const candidateQuestionIds = getNotSkippedQuestionIDs(candidate.answers);
+  const commonQuestionIDs = R.intersection(myQuestionIds, candidateQuestionIds);
   const weight = (id: string) => weights[id] || 1;
   const maxDeltaSum = R.sum(commonQuestionIDs.map(weight)) * 2;
   const deltas = commonQuestionIDs.map(id => {
     const myValue = answerToNumber(answerMap[id]);
-    const partyValue = answerToNumber(party.answers[id]);
-    return Math.abs(myValue - partyValue) * weight(id);
+    const candidateValue = answerToNumber(candidate.answers[id]);
+    return Math.abs(myValue - candidateValue) * weight(id);
   });
   return 1 - (R.sum(deltas) / maxDeltaSum);
 }
 
-export function getSimilarities(answerMap: AnswerMap, weights: WeightMap, parties: Party[]): NumberMap {
-  const pairs = parties.map(party => [party.id, getSimilarity(answerMap, weights, party)] as [string, number]);
+export function getSimilarities(answerMap: AnswerMap, weights: WeightMap, candidates: Candidate[]): NumberMap {
+  const pairs = candidates.map(candidate => [candidate.id, getSimilarity(answerMap, weights, candidate)] as [string, number]);
   return R.fromPairs(pairs);
 }
 

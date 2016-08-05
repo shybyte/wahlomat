@@ -64,7 +64,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   render() {
     const question = this.question();
-    const {parties} = AppState.getState();
+    const {candidates} = AppState.getState();
     const {showReasons} = this.state;
     const toggleReasonsButtonText = showReasons ?
       'Verstecke die Antworten der Parteien und Initiativen'
@@ -91,8 +91,8 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
             question.initiativeAnswer,
             question.initiativeReason)
           }
-          {parties.map((party, i) =>
-            this.renderReason(i + '', party.name, party.answers[question.id], party.reasons[question.id]))
+          {candidates.map((candidate, i) =>
+            this.renderReason(i + '', candidate.name, candidate.answers[question.id], candidate.reasons[question.id]))
           }
         </div>
 

@@ -16,8 +16,8 @@ let restoredAppState: StoredAppState = loadObjectFromLocalStorage(LOCAL_STORAGE_
 });
 
 let appState: AppState = extend(restoredAppState, {
+  candidates: [],
   initialized: false,
-  parties: [],
   questions: [],
 });
 

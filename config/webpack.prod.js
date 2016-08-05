@@ -37,7 +37,10 @@ module.exports = {
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new webpack.ProvidePlugin({
+      "React": "react",
+    }),
   ],
   resolve: {
     root: [path.resolve('../app')],

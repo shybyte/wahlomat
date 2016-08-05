@@ -4,47 +4,68 @@ import * as fs from 'fs';
 import * as R from 'ramda';
 const parse = require('csv-parse/lib/sync');
 
-import {Question, Party, Answer, AnswerMap, ReasonMap, InitialData} from '../app/app-state-interfaces';
+import {Question, Candidate, Answer, AnswerMap, ReasonMap, InitialData, ANSWER} from '../app/app-state-interfaces';
 
-const fileContent = fs.readFileSync('data/data.csv', 'utf8');
-const rows: string[][] = parse(fileContent);
+type Row = string[];
 
-const header = rows[0];
-const body = rows.slice(1);
+function parseQuestions(fileContent: string): Question[] {
+  const questionRows: Row[] = parse(fileContent);
+  return questionRows.slice(0).map(row => ({
+    id: row[0],
+    initiative: row[3],
+    initiativeAnswer: ANSWER.yes,
+    initiativeReason: row[3],
+    text: row[1],
+  }));
+}
+
+
+// in answers.csv
+const QUESTION_NUMBER_COL = 3;
+const ANSWER_COL = 4;
+const REASONS_COL = 5;
 
 const ANSWER_MAP: { [asnwer: string]: Answer } = {
-  'zustimmung': 'yes',
-  'ablehnung': 'no',
-  'keine zustimmung': 'no'
+  'ja': 'yes',
+  'nein': 'no',
+  'neutral': 'no'
 };
 
 const toAnswer = (inputAnswer: string): Answer => ANSWER_MAP[inputAnswer.toLowerCase()] || 'neutral';
 
-const questions = body.map((row, i): Question => {
-  return {
-    id: i.toString(),
-    initiative: row[0],
-    initiativeAnswer: toAnswer(row[2]),
-    initiativeReason: row[3],
-    text: row[1],
-  };
-});
+function getAnswerMapFromRows(answerRows: string[][]): AnswerMap {
+  const pairs = answerRows.map((answerRow: string[]) =>
+    [answerRow[QUESTION_NUMBER_COL], toAnswer(answerRow[ANSWER_COL])] as [string, Answer]
+  );
+  return R.fromPairs(pairs);
+}
 
-const partyStartRow = 4;
-const parties = R.splitEvery(2, header.slice(partyStartRow)).map((answerReasonTupel: [string, string], partyIndex: number): Party => {
-  const name = answerReasonTupel[0].replace(/\w+\s+/, '');
-  return {
-    answers: R.fromPairs(body.map((row: string[], i: number) =>
-      [i.toString(), toAnswer(row[partyStartRow + partyIndex * 2])]
-    ) as any) as AnswerMap,
-    id: name.toLowerCase(),
-    name,
-    reasons: R.fromPairs(body.map((row: string[], i: number) =>
-      [i.toString(), row[partyStartRow + partyIndex * 2 + 1]]
-    ) as any) as ReasonMap
-  };
-});
+function getReasonsMapFromRows(answerRows: Row[]): ReasonMap {
+  const pairs = answerRows.map((answerRow: string[]) =>
+    [answerRow[QUESTION_NUMBER_COL], answerRow[REASONS_COL]] as [string, string]
+  );
+  return R.fromPairs(pairs);
+}
 
-const initialData: InitialData = { questions, parties };
+function parseCandidateAnswers(fileContent: string): Candidate[] {
+  const NAME_COL = 0;
+  const rows: string[][] = parse(fileContent);
+  const rowsByCandidate = R.groupBy(row => row[NAME_COL], rows.slice(1));
+  const candidateRowPairs: [string, Row[]][] = R.toPairs(rowsByCandidate) as any;
+  return candidateRowPairs.map((candidateAndAnswerRows: [string, Row[]]) => {
+    return {
+      answers: getAnswerMapFromRows(candidateAndAnswerRows[1]),
+      id: candidateAndAnswerRows[0],
+      name: candidateAndAnswerRows[0],
+      reasons: getReasonsMapFromRows(candidateAndAnswerRows[1])
+    };
+  });
+}
+
+
+const questions = parseQuestions(fs.readFileSync('data/questions.csv', 'utf8'));
+const candidates = parseCandidateAnswers(fs.readFileSync('data/answers.csv', 'utf8'));
+
+const initialData: InitialData = { questions, candidates };
 console.log(JSON.stringify(initialData, null, 2));
 
