@@ -23,7 +23,7 @@ interface RowValues {
 }
 
 interface StatsPageState {
-  stats: Stats;
+  stats?: Stats;
 }
 
 const TableRow = (props: { rowValues: RowValues }) => {
@@ -54,9 +54,7 @@ function sortKey(row: RowValues) {
 }
 
 export class StatsPage extends React.Component<{}, StatsPageState> {
-  state: StatsPageState = {
-    stats: null,
-  };
+  state: StatsPageState = {};
 
   componentDidMount() {
     loadStats().then(stats => {
@@ -71,6 +69,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
     if (!s.stats) {
       return <div></div>;
     }
+    const stats = s.stats;
 
 
     const questionsStats: QuestionsStats = s.stats.questionsStats;
@@ -79,7 +78,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
     const maxInterest = interests.reduce(R.max, Number.MIN_VALUE);
 
     const rows = ast.questions.map((question): RowValues => {
-      const questionStats = getQuestionStats(s.stats, question.id);
+      const questionStats = getQuestionStats(stats, question.id);
       const answerStats = questionStats.answerStats;
       const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a] || 0);
       const meanAgreement = (yes + no > 0) ? yes / (yes + no) : 0.5;

@@ -54,10 +54,15 @@ const routes = <Route path='/' component={Layout}>
 </Route>;
 
 AppState.subscribe(appState => {
+  const appElement = document.getElementById('app');
+  if (!appElement) {
+    console.log('Missing element with id "app"');
+    return;
+  }
   console.log('Render', appState);
   ReactDOM.render((
     <Router history={hashHistory} routes={routes}/>
-  ), document.getElementById('app'));
+  ), appElement);
 });
 
 AppState.init();

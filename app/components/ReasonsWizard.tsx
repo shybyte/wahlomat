@@ -1,6 +1,5 @@
 /// <reference path="../../typings/main/index.d.ts" />
 
-import * as React from 'react';
 import * as AppState from '../app-state';
 import {QuestionsWizard} from './QuestionsWizard';
 

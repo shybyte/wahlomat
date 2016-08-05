@@ -23,7 +23,7 @@ export async function initRoutes(app: Express) {
     res.json({});
   });
 
-  app.get('/stats', (req, res) => {
+  app.get('/stats', (_req, res) => {
     res.json(stats.getStats());
   });
 

@@ -3,7 +3,13 @@
     "target": "ES6",
     "module": "commonjs",
     "outDir": "../tmp",
-    "noImplicitAny": false
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
   },
   "exclude": ["node_modules", "config", "dev-server.js", "typings", "tmp"]
 }
