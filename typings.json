@@ -3,9 +3,8 @@
   "version": false,
   "dependencies": {
     "csv-parse": "registry:npm/csv-parse#1.0.2+20160405213407",
-    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958",
     "mime": "registry:npm/mime#1.3.0+20160423043021",
-    "ramda": "registry:npm/ramda#0.19.1+20160323180342"
+    "ramda": "registry:npm/ramda#0.21.0+20160531162943"
   },
   "globalDependencies": {
     "body-parser": "registry:dt/body-parser#0.0.0+20160317120654",
@@ -14,7 +13,7 @@
     "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160322035842",
     "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160505171433",
     "mongodb": "registry:dt/mongodb#2.1.0+20160512045721",
-    "node-4": "registry:dt/node-4#4.0.0+20160514165920",
+    "node-4": "registry:dt/node-4#4.0.0+20160801161248",
     "react": "registry:dt/react#0.14.0+20160423065914",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-router": "registry:dt/react-router#2.0.0+20160501155536",

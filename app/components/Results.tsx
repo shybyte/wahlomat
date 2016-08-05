@@ -14,7 +14,7 @@ export class Results extends React.Component<{}, {}> {
   render() {
     const {answers, weights, parties} = getState();
     const similarities = getSimilarities(answers, weights, parties);
-    const sortedParties = R.reverse(R.sortBy(q => similarities[q.id], parties));
+    const sortedParties = R.reverse(R.sortBy(q => (similarities[q.id] as any as string), parties));
     function renderParty(party: Party) {
       return (
         <tr key={party.id}>
@@ -39,7 +39,7 @@ export class Results extends React.Component<{}, {}> {
             {sortedParties.map(renderParty) }
           </tbody>
         </table>
-        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet? Ab zum Kiezbarometer!</Link>
+        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
       </div>
     );
   }
