@@ -33,6 +33,8 @@ export enum Weight {
 export interface Candidate {
   id: string;
   name: string;
+  party: string;
+  region: string;
   answers: AnswerMap;
   reasons: ReasonMap;
 }

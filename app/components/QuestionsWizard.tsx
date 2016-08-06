@@ -6,7 +6,7 @@ import { hashHistory } from 'react-router';
 
 
 
-import { Answer, ANSWER, Question } from '../app-state-interfaces';
+import { Answer, ANSWER, Question, Candidate } from '../app-state-interfaces';
 import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
 import {AnswerDisplay} from './AnswerDisplay';
@@ -86,13 +86,13 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
         <button className='linkButton' onClick={() => this.toggleShowReasons() }>{toggleReasonsButtonText}</button>
         <div className={reasonsStyles}>
-          {this.renderReason('initiative',
+          {question.initiativeReason ? this.renderReason('initiative',
             `Initiative "${question.initiative}"`,
             question.initiativeAnswer,
-            question.initiativeReason)
+            question.initiativeReason) : ''
           }
-          {candidates.map((candidate, i) =>
-            this.renderReason(i + '', candidate.name, candidate.answers[question.id], candidate.reasons[question.id]))
+          {candidates.map(candidate =>
+            this.renderReasonCandidate(candidate))
           }
         </div>
 
@@ -125,7 +125,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
                 hasAnswer: this.hasNonSkippedAnswer(question),
                 selected: this.question().id === question.id
               }) }>
-              {i}
+              {question.id}
             </span>
           ))
         }
@@ -137,8 +137,22 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
   renderReason(key: string, name: String, answer: Answer, reason: string) {
     return (
       <div key={key} className='reason'>
-        <div><AnswerDisplay answer={answer}/> <strong> {name}</strong></div>
+        <div><AnswerDisplay answer={answer}/> <strong> {name}</strong> </div>
         <blockquote>{reason}</blockquote>
+      </div>
+    );
+  }
+
+  renderReasonCandidate(candidate: Candidate) {
+    const question = this.question();
+    return (
+      <div key={candidate.id} className='reason'>
+        <div>
+          <AnswerDisplay answer={candidate.answers[question.id]}/>
+           <strong> {candidate.name} </strong>
+           ({candidate.party}, {candidate.region})
+        </div>
+        <blockquote>{candidate.reasons[question.id]}</blockquote>
       </div>
     );
   }

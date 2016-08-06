@@ -10,20 +10,20 @@ type Row = string[];
 
 function parseQuestions(fileContent: string): Question[] {
   const questionRows: Row[] = parse(fileContent);
-  return questionRows.slice(0).map(row => ({
+  return questionRows.slice(1).map(row => ({
     id: row[0],
-    initiative: row[3],
+    initiative: row[3] || '',
     initiativeAnswer: ANSWER.yes,
-    initiativeReason: row[3],
+    initiativeReason: row[2],
     text: row[1],
   }));
 }
 
 
 // in answers.csv
-const QUESTION_NUMBER_COL = 3;
-const ANSWER_COL = 4;
-const REASONS_COL = 5;
+enum AnswerFileCols {
+  NAME, PARTY, REGION, QUESTION_NUMBER, ANSWER, REASON
+}
 
 const ANSWER_MAP: { [asnwer: string]: Answer } = {
   'ja': 'yes',
@@ -35,29 +35,33 @@ const toAnswer = (inputAnswer: string): Answer => ANSWER_MAP[inputAnswer.toLower
 
 function getAnswerMapFromRows(answerRows: string[][]): AnswerMap {
   const pairs = answerRows.map((answerRow: string[]) =>
-    [answerRow[QUESTION_NUMBER_COL], toAnswer(answerRow[ANSWER_COL])] as [string, Answer]
+    [answerRow[AnswerFileCols.QUESTION_NUMBER], toAnswer(answerRow[AnswerFileCols.ANSWER])] as [string, Answer]
   );
   return R.fromPairs(pairs);
 }
 
 function getReasonsMapFromRows(answerRows: Row[]): ReasonMap {
   const pairs = answerRows.map((answerRow: string[]) =>
-    [answerRow[QUESTION_NUMBER_COL], answerRow[REASONS_COL]] as [string, string]
+    [answerRow[AnswerFileCols.QUESTION_NUMBER], answerRow[AnswerFileCols.REASON]] as [string, string]
   );
   return R.fromPairs(pairs);
 }
 
 function parseCandidateAnswers(fileContent: string): Candidate[] {
-  const NAME_COL = 0;
   const rows: string[][] = parse(fileContent);
-  const rowsByCandidate = R.groupBy(row => row[NAME_COL], rows.slice(1));
+  const rowsByCandidate = R.groupBy(row => row[AnswerFileCols.NAME], rows.slice(1));
   const candidateRowPairs: [string, Row[]][] = R.toPairs(rowsByCandidate) as any;
   return candidateRowPairs.map((candidateAndAnswerRows: [string, Row[]]) => {
+    const candidateName = candidateAndAnswerRows[0];
+    const answerRows = candidateAndAnswerRows[1];
+    const oneRow = answerRows[0];
     return {
-      answers: getAnswerMapFromRows(candidateAndAnswerRows[1]),
-      id: candidateAndAnswerRows[0],
-      name: candidateAndAnswerRows[0],
-      reasons: getReasonsMapFromRows(candidateAndAnswerRows[1])
+      answers: getAnswerMapFromRows(answerRows),
+      id: candidateName,
+      name: candidateName,
+      party: oneRow[AnswerFileCols.PARTY],
+      reasons: getReasonsMapFromRows(answerRows),
+      region: oneRow[AnswerFileCols.REGION]
     };
   });
 }

@@ -1,13 +1,6 @@
 {
   "questions": [
     {
-      "id": "Nr",
-      "initiative": "Initiative/Person",
-      "initiativeAnswer": "yes",
-      "initiativeReason": "Initiative/Person",
-      "text": "Text der Frage"
-    },
-    {
       "id": "1",
       "initiative": "",
       "initiativeAnswer": "yes",
@@ -18,133 +11,133 @@
       "id": "2",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße mus durch mehr Polizeipräsenz, etwa eine mobile Wache, die speziell an diesen Hotspots agiert, mehr Geld für langfristige Integrationsmaßnahmen sowie Street worker, gelöst werden.",
       "text": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße muss durch mehr Polizeipräsenz, etwa eine mobile Wache, die speziell an diesen Hotspots agiert, gelöst werden."
     },
     {
       "id": "3",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße mus durch mehr Polizeipräsenz, etwa eine mobile Wache, die speziell an diesen Hotspots agiert, mehr Geld für langfristige Integrationsmaßnahmen sowie Street worker, gelöst werden.",
       "text": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße muss mehr Geld für langfristige Integrationsmaßnahmen, gelöst werden "
     },
     {
       "id": "4",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße mus durch mehr Polizeipräsenz, etwa eine mobile Wache, die speziell an diesen Hotspots agiert, mehr Geld für langfristige Integrationsmaßnahmen sowie Street worker, gelöst werden.",
       "text": "Die Drogenproblematik und Antänzer rund um die Warschauer Straße muss durch Street-worker, gelöst werden."
     },
     {
       "id": "5",
       "initiative": "Nico Zippel, ",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Nico Zippel, ",
+      "initiativeReason": "Diese Kosten werden derzeit auf die Anwohner umgelegt, von denen alleine Anbieter touristischen Dienstleistungen profitieren. Straßenreinigungsgebühren dürften nicht höher sein, als in anderen Wohnbezirken wie z.B. in Tempelhof. Der Berliner Senat MUSS die Mehrkosten tragen. Das ist ja wohl das Mindeste. Oder?",
       "text": "Die Mehrkosten der erweiterten Stadtreinigung soll durch die Berliner City-Tax gezahlt werden. "
     },
     {
       "id": "6",
       "initiative": "Maria Haupert",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Maria Haupert",
+      "initiativeReason": "Toll sind die vielen neuen Mülleimer, die aufgestellt worden sind. Aber leider werden diese kaum genutzt. Vielleicht helfen Plakate auf dem Boden über das Thema oder doch Bußgelder? :(",
       "text": "Bei Passanten und Gästen muss ein Bewusstsein dafür geschaffen werden, dass die Anwohner in Szenekiezen nicht im Müll leben wollen. "
     },
     {
       "id": "7",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Natürlich nicht! Weshalb diese Busstrecken zu untersagen sind. ",
       "text": "Ein Touristen-HopOnHopOff- Bus hat in einem Wohnkiez nichts zu suchen. "
     },
     {
       "id": "8",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Wenn es überhaupt Ferienwohnungen geben soll, dann nur mit strengen Sicherheitsauflagen und Führung durch Fachleute (i.e. Hoteliers). 24h Anwesenheit eines Verantwortlichen. Wegen der Belastung von privaten Mietern sollen ihre Nettokaltmiete halbiert werden, und den Verlust für den Vermieter durch den Ferienwohnungsbetreiber ausgeglichen werden.",
       "text": "Ferienwohnungen sollen eingeschränkt werden."
     },
     {
       "id": "9",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Es sollte eine neue Ordnung für die Sitzplätze auf Gehwegen geben. Ein paar Bänke und kleine Tischchen stören niemanden, aber große Strandkörbe und riesige Sitzeinheiten belagern oft mehr als die Hälfte der Gehfläche, so dass kaum ein Durchkommen ist.\nHier geht es nicht darum, wer wie viel beim Ordnungsamt für Fläche auf Gehwegen zahlt, sondern darum, dass der Gehweg kein Restaurant ist.",
       "text": "Das Maß Ist erreicht. Es ist nicht zumutbar, dass mehr Restaurants ihre Sitzflächen auf den Gehwegen ausbreiten."
     },
     {
       "id": "10",
       "initiative": "Anrainer",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Anrainer",
+      "initiativeReason": "Derzeit sind im Bezirk 28 Stellen im AOD besetzt, viel zu wenige, um z.B. Gewerbekontrollen durchzuführen. Außerdem sollten diese Stellen auch nach 22:00 Uhr kontrollieren. Wie sonst sollen Ruhezeiten kontrolliert werden.",
       "text": "Die Mitarbeiterzahl des Allgemeinen Ordnunsdienst (AOD),welcher nicht die Parkraumbewirtschftung überwacht, muss aufgestockt werden."
     },
     {
       "id": "11",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Es müssen mehr Mülleimer aufgestellt werden und die Reinigungsfrequenzen muss erhöht werden. Die Kosten dürfen dabei nicht die Anwohner durch ihre Nebenkosten zahlen! Wir brauchen ein Grillverbot, Leinenzwang und Kottütenpflicht für Hunde auf öffentlichen Plätzen und bessere Kontrolle (aktuell gibt es die nämlich nicht). Die Förderung ehrenamtlichen Engagements (Säubern der Plätze, Eigene Mülltüten mitnehmen, Schilder, seinen Müll mit nach Hause zu nehmen). Die BSR ist für die Grünflächen nicht verantwortlich und so wird fleißíg drum rum geputzt. Das hat zur Folge, dass Boxi und vor allem, der Wühlischpark komplett vermüllt ist und eigentlich kaum genutzt werden kann. Bitte mehr und größere Mülleimer, die vor allem auch geleert werden sollten.",
       "text": "Die Müllsituation muss verbessert werden.  "
     },
     {
       "id": "12",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Wie kann die Club-Lobbyorganisation, also die Lobbyorganisation einer der größten Profiteure des Partytourismus die Probleme der Anwohner lösen?",
       "text": "Die Clubcommission muss ihre Aktivität als Konfliktbefrieder zwischen Nachtökonomie und Anwohner wegen Interessenskonflikten aufgeben."
     },
     {
       "id": "13",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Lokaler Einzelhandel wurde durch Kneipen und Steakrestaurants ersetzt. Das Flair weshalb eigentlich Besucher kamen, ist nahezu verschwunden.",
       "text": "Eine bessere Durchmischung der Gewerbelandschaft soll gefördert werden. "
     },
     {
       "id": "14",
       "initiative": "Polly & Bob",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Polly & Bob",
+      "initiativeReason": "Damit die Arbeit besser kontrolliert werden kann, sollte die Aktivität des Ordnungsamtes also wieviele Anträge es gibt und wie der Fortschritt ist, offen gelegt werden. Auch die Statistik der Beschwerdeeingänge im Ordnungsamt sollte öffentlich gemacht werden.",
       "text": "Die Arbeit des Ordnungsamtes (AOD) in Bezug auf die Nutzung öffentlicher Räume muss transpartener werden."
     },
     {
       "id": "15",
       "initiative": "Polly & Bob",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Polly & Bob",
+      "initiativeReason": "Die Probleme der Anmeldung der Singenden Balkone 2014 hat gezeigt, dass das Ordnungsamt seinen eigenen Willen hat und eigenständig Veranstaltungen blockiert. Hier ist die Politik gefordert dem Ordnungsamt Leitlinien zu setzen.",
       "text": "Die Genehmigung nachbarschaftsverbindender Aktivitäten muss erleichtert werden. "
     },
     {
       "id": "16",
       "initiative": "Polly & Bob",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Polly & Bob",
+      "initiativeReason": "Hier sollte eine Stelle geschaffen werden, die die Bürgerinnen und Bürger informiert und beratend zu Seit steht. ",
       "text": "Das Ordnungsamt muss sich für die Belange der nicht-kommerziellen Kiezkultur- und Nachbarschaft förndernden Veranstaltungen einsetzen. --> Ich befürchte, dass hier Nachfragen kommen und man nichts mit der Frage anfangen kann."
     },
     {
       "id": "17",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": " ",
       "text": "Der Bau der A100 muss gestoppt werden. "
     },
     {
       "id": "18",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Immer mehr der noch wenig zur Verfügung stehenden Parkplätze im Kiez werden mit Anhängern zugeparkt, die Werbebotschaften tragen. Es wird immer schwieriger einen Parkplatz zu finden. Der Anwohner fühlt sich immer in seiner Lebensqualität eingeschränkt, weil auch keine Handhabe geben diese billige Idee der Bewerbung besteht.",
       "text": "Das Abstellen auf Parkplätzen von mit Werbung beschriften Anhängern soll verboten werden."
     },
     {
       "id": "19",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Bis 2020 fehlen allein in Friedrichshain x.000 Schulplätze. Es muss sofort mit dem Neubau von Schulen begonnen werden.  ",
       "text": "Der Bezirk ist gefordert mehr Schulplätze in Form zusätzlicher Schulen und Anbauten zu schaffen."
     },
     {
       "id": "20",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Nein, weil auch die Turnhallen, Pausenhöfe und umliegende Strukturen gleifals ausgebaut werden müssen. Wenn Modularbauten etwa auf dem Schulhof errichtet werden, wird der kleinere Hof von wesentlich mehr Schülern genutzt werden müssen. ",
       "text": "Sind Modularbauten die Lösung für die dringend nötigen Schulplätze?"
     },
     {
@@ -158,7 +151,7 @@
       "id": "22",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Die Parkanlagen alle Menschen zugänglich sein, die kommerzfreien Spaß oder Ruhe haben wollen. Öffentliche Flächen sind NICHT für die private finanzielle Profitmaximierung.",
       "text": "Öffentliche Plätze sollen frei bleiben von kommerzieller Nutzung. "
     },
     {
@@ -172,42 +165,42 @@
       "id": "24",
       "initiative": "PolitSalon - PS und ander",
       "initiativeAnswer": "yes",
-      "initiativeReason": "PolitSalon - PS und ander",
+      "initiativeReason": "Das sog. \"Gefahrengebiet\" muß sofort wieder zurückgenommen und Anwohner_innen müssen dafür entschädigt werden. Rechte Übergriffe, Angriffe und Versammlungen müssen mehr, deutlicher, bekannt und öffentlich gemacht werden.",
       "text": "Die massive Polizeipräsenz in der Rigaer Straße und die Deklaration als Gefahrengebiet muss enden."
     },
     {
       "id": "25",
       "initiative": "PolitSalon - PS und ander",
       "initiativeAnswer": "yes",
-      "initiativeReason": "PolitSalon - PS und ander",
+      "initiativeReason": "",
       "text": "Die Nutzung der Rigaer 94 vor der Besetzung durch die Polizei muss wieder hergestellt werden. "
     },
     {
       "id": "26",
       "initiative": "PolitSalon - PS und andere",
       "initiativeAnswer": "yes",
-      "initiativeReason": "PolitSalon - PS und andere",
+      "initiativeReason": "",
       "text": "Es darf zu keinen rechtswidrgen Zwangsräumungen kommen. Die Fälle sind aufzuarbeiten. Betroffene müssen dafür entschädigt werden."
     },
     {
       "id": "27",
       "initiative": "",
       "initiativeAnswer": "yes",
-      "initiativeReason": "",
+      "initiativeReason": "Es muß offener und unterstützender damit umgegangen werden. Gegen die rechtskonservative Politik von Henkel und Konsorten. Gegen Repression, repressive Schikanen, rassistische Kontrollen, Ordnungsamts- und Polizeiwillkür sowie keine falsche Toleranz gegenüber Neonazis und rechtem Millieu. Mehr Aufklärungsarbeit und soziale Unterstützungsarbeit, wie mobile Jugendarbeit und Sozialarbeit auf der Straße anstatt Inkriminierungen und Kriminalisierungen. Legalisierung und Regulation statt Prohibition.",
       "text": "Basisdemokratische, offene, selbstorganisierte, alternative und linke bis linksradikale Projekte (aus dem Kiez) sollten nicht schikaniert werden."
     },
     {
       "id": "28",
       "initiative": "",
       "initiativeAnswer": "yes",
-      "initiativeReason": "",
+      "initiativeReason": "Ich wünsche mir, dass wir versuchen die Obdachlosen zu integrieren! Besonders auf der Warschauer Brücke ist mir ihr Betteln sehr unangenehm. Ich bin darum dafür, ein Programm zu entwickeln, das sowohl Alkoholentzug und Rehabilitation als auch Hilfe bei der Wohnungs- und Jobbeschaffung beinhaltet.",
       "text": "Es sollten Maßnahmen ergriffen werden, um die Obdachlosenzahlen zu verringern.    "
     },
     {
       "id": "29",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Auf öffentlichen Flächen lassen sich (gerade im Sommer) immer mehr Obdachlose nieder. Die nehmen öffentliches Straßenland ein und mindern die Lebensqualität, weil sie entsprechend Müll erzeugen, keine Toilette haben und sich nicht waschen können. Außerdem betteln immer mehr Leute auf der Straße (AUCH KINDER zum Beispiels an der Warschauer Straße) und in den öffentlichen Verkehrtsmitteln. So gemein wie es klingt, als Anwohner fühlt man sich dadurch immer unwohler und wird nicht gerade toleranter. Das Bezirksamt und der Senat muss das Gespräch und Lösungen auch mit der BVG und der Deutschen Bahn /S-Bahn suchen!",
       "text": "Gegen Obdachlosigkeit und Bettelei muss dringend etwas getan werden. "
     },
     {
@@ -221,14 +214,14 @@
       "id": "31",
       "initiative": "PolitSalon - PS und andere",
       "initiativeAnswer": "yes",
-      "initiativeReason": "PolitSalon - PS und andere",
+      "initiativeReason": "Der Privatisierung ist entgegenzuwirken. Alles gehört in öffentliche Hand und demokratische Kontrolle.",
       "text": "Steigenden Mieten und zunehmender (u.a.) Wohnraum-Privatisierung und Verdrängung (durch Gentrifizierung usw.) ist entgegenzuwirken. "
     },
     {
       "id": "32",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "Ja. Investoren sollen angehalten werden ca 90% sozialen Wohnungsbau zu leisten. Sofern sie dieses nicht tun, sollten gestaffelte Strafen auferlegt.",
       "text": "Leerstände sollen durch die Gemeinschaft genutzt werden können (z.B. für Flüchtlingsunterkünfte oder Sozialwohnungen)."
     },
     {
@@ -256,14 +249,14 @@
       "id": "36",
       "initiative": "annonym",
       "initiativeAnswer": "yes",
-      "initiativeReason": "annonym",
+      "initiativeReason": "",
       "text": "Das RAW Gelände soll auch in Zukunft den Vereinen und Initiativen, die seit Jahren hier zu Hause sind, zur Verfügung stehen. "
     },
     {
       "id": "37",
       "initiative": "Maria Haupert",
       "initiativeAnswer": "yes",
-      "initiativeReason": "Maria Haupert",
+      "initiativeReason": "Ich würde mich sehr freuen, wenn unser Kiez noch fahrradfreundlicher würde. Die neuen Fahrradstellplätze statt der Parkplätze in der Revaler Str. sind super. Mehr davon rund um den Boxi! Im Simon-Dach-Viertel ist es leider ziemlich anstrengend Fahrrad zu fahren, weil die meisten Straßen mit Kopfsteinpflaster bestückt sind. Kann man dort an den Seiten evtl. betonierte Spuren für die Räder einrichten? ",
       "text": "Das Verkehrsmittel Fahhrad soll stärker gefördert werden. "
     },
     {
@@ -318,6 +311,7 @@
       },
       "id": "Marianne Burkert-Eulitz",
       "name": "Marianne Burkert-Eulitz",
+      "party": "Die Grünen / Bündnis 90",
       "reasons": {
         "1": "Wir brauchen einen kiezverträglichen Tourismus, der die Bedürfnisse der Anwohner*innen ernst nimmt statt dem Streben nach immer neuen Besucher*innenrekordzahlen.",
         "2": "Ja! Innensenator Henkel hat die Probleme vor Ort zu lange ignoriert und trotz steigender Kriminalität bei der Polizei an Personal eingespart. Vor allem an den Wochenenden - wo deutliche Anstiege an Delikten zu erkennen sind - brauchen wir eine dauerhafte Präsenz statt Einzelmaßnahmen.",
@@ -357,7 +351,8 @@
         "36": "Das RAW-Gelände ist ein Anlaufpunkt für viele Künstler, Engagierte, Vereine und Kinder aus dem Kiez.  An der Seite der vielen Kultuschaffenden kämpfen wir für eine positive Perspektive, z.B. durch lange Mietverträge. Wir unterstützen ebenfalls den Erhalt des sogenannten \"Soziokulturellen L\"s auf dem RAW.",
         "37": "Unser Bezirk ist Fahrradspitzenreiter - und das nicht wegen der rot-schwarzen, sondern trotz der rot-schwarzen Verkehtspolitik. Berlin muss fahrradfreundlicher werden. Andere Metropolen, wie London oder Kopenhagen machen es vor. Ich unterstütze den Fahrrad-Volksentscheid und kämpfe mit der Abgeordnetenhauswahl auch für eine Verkehrswende.",
         "38": "Politik vor Ort heißt: Politik für die Bezirke. Die Realität in Berlin ist aber: zu wenig Personal, begrenzter Raum, zu wenig Geld oder fehlende Zuständigkeit. Ich möchte starke und politische Bezirke mit genügend Geld und Kompetenzen und auch Behörden, die statt sich mit Zuständigkeitsfragen zu beschäftigen, die Herausforderungen dieser statt meistern können."
-      }
+      },
+      "region": "WK2"
     },
     {
       "answers": {
@@ -402,6 +397,7 @@
       },
       "id": "Felix J. Just",
       "name": "Felix J. Just",
+      "party": "Piraten",
       "reasons": {
         "1": "Grundsätzlich ist es begrüßenswert, dass Friedrichshain-Kreuzberg ein so gutes Image hat, dass es Menschen aus aller Wert und den unterschiedlichsten Kulturkreisen hier herzieht. Leider sind bringt dies nicht nur positive, sondern auch negative Aspekte mit sich. Eine bessere Einhaltung der Tischzahlen und der Standzeiten von Außentischen zum Beispiel könnten den nachvollziehbaren Unmut in der Friedrichshain-Kreuzberger Bevölkerung verringern. Hilfreich hierfür könnte eine Nachtbürgermeisterin sein, die durch die Bewohner des Bezirks gewählt wird und sich um genau diese Probleme kümmern kann.",
         "2": "In den Fragen werden 3 Lösungsansätze angesprochen (Polizei, Integration, Streetworker).\nDie Konzentration auf nur einen dieser Lösungsvorschläge wird keinen Erfolg bringen. \n\nDiebstahls- und Sexualdelikte, sowie der Umgang mit diesen ist im Strafgesetzbuch definiert, und müssen streng verfolgt und geahndet werden. Hierfür ist der Einsatz von Polizeikräften durchaus sinnvoll. Wir würden es begrüßen, wenn die Polizeibeamten sich hier stärker um die Opfer kümmern könnten anstatt sinnlos die Bewohner im Friedrichshainer Nordkiez zu schikanieren. Ob die Einrichtung einer mobilen Polizeiwache den gewünschten Effekt hätte, muss bezweifelt werden – wie der erfolglose Test am Alexanderplatz zeigt.\n\nDer Handel mit Substanzen, die unter das Betäubungsmittelgesetz fallen und verboten sind, fällt jedoch in eine andere Kategorie von Straftaten, da hier weder klar ist wer die Opfer sind noch welches Rechtsgut durch den Handel mit Drogen gefährdet wird.\n\nDa das RAW-Gelände ein nicht bezirkseigenes Grundstück ist, sondern ein im Privatbesitz ist, sind die Handlungsmöglichkeiten für die BVV stark eingeschränkt. Da der Bezirk gegenüber der Polizei nicht weisungsbefugt ist, kann die BVV auch hier keinen Einfluss nehmen. Die Integrations- und Präventionsprogramme sowie die Schaffung von genügend StreetWorker-Stellen, die erforderlich sind um einen vernünftigen Umgang mit Drogen zu lehren und Menschen andere berufliche Perspektiven als illegalen Drogenhandel aufzuzeigen, können nicht aus dem Bezirkshaushalt finanziert werden, sondern müssen von Land, Bund oder EU ausreichende Mittel erhalten.",
@@ -441,7 +437,8 @@
         "36": "Ja, selbstverständlich. Das RAW gehört zu den wichtigsten kulturellen Zentren für Jung und Alt in ganz Berlin. Dazu gehört allerdings nunmal auch Touris, Lautstärke, Leben. Auch nachts. Eigentlich immer. In der Aufzählung fehlen übrigens Clubs und Bars. Wer hier wohnen will, der muss damit klar kommen, dass es in einer Innenstadt von Berlin nun einmal nicht so ruhig zugeht wie in Waldenbuch. Im Zweifel für das bunte Leben!",
         "37": "Das Fahrrad ist bereits das beliebteste Verkehrsmittel. Die hierfür nötige Infrastruktur muss dringend ausgebaut und erweitert werden.\nDämlicherweise ist man auf Senatsebene immer noch der Meinung man müsse eine dieses Betonmonster A100 bauen – bloß weil man die erforderlichen 800 Millionen Euro nicht aus der Berliner Tasche, sondern aus Bundesmitteln nehmen kann. Und das ist in Zeiten in denen Metropolen wie Los Angeles und Moskau Autobahnen zurückbauen, weil man erkannt hat, dass der motorisierten Individualverkehr eine Ding des vergangenen Jahrhunderts und nicht zukunftsfähig ist. \nMan sollte jemanden wählen, der erkannt hat, was für ein Irrsinnsprojekt der Ausbau der Stadt für den Autoverkehr ist – dann würde sich da vielleicht noch etwas tun. \n",
         "38": "Die Art und Weise der Finanzierung der Berliner Bezirke ist so absurd,  dass es jeder Beschreibung spottet. Unmittelbar sichtbar wird das an den  Schulen oder am Bürgeramt. Das liegt nicht unbedingt an einer unfähigen  Bezirksregierung, sondern an den mangelnden wirtschaftlichen  Handlungsmöglichkeiten der Bezirke, die durch die Landesgesetze  vorgegeben werden. Schilda ist im Vergleich dazu ein Hort der Vernunft.  Senat sagt: Bezirk, du musst dies und jenes tun, und kriegst dafür  soviel Geld. Mehr Geld ausgeben darfst du nicht; wenn du Geld einnimmst,  geht das an den Senat; und wenn die Schule nachher verfällt, macht sich  der Senat einen schlanken Schuh. Ist ja nicht seine Aufgabe. Dass die  Mittelzuweisung von vornherein unzureichend war, spielt dann keine Rolle mehr. \n\nJa, es soll mittelfristig eine Verwaltungsreform geben. Insbesondere das Auslagern von unpopulären Aufgaben an die Bezirke (selbstverständlich ohne ausreichende Mittelausstattung) muss ein Ende haben.\n"
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -486,6 +483,7 @@
       },
       "id": "Denis Sabin",
       "name": "Denis Sabin",
+      "party": "Piraten",
       "reasons": {
         "1": "Was reduziert werden muss, ist die Belästigung, nicht der Tourismus an sich. Wir begrüßen es, dass sich Menschen aus anderen Teilen des Landes und der Welt sich für unsere Art zu leben interessieren. Zu wenig Kontrolle bei beispielsweise der Einhaltung von Tischzahlen,  den Standzeiten der Außentische und das bisherige Fehlen eines großen  Signals, welches dann auch in den Reiseführern steht, sorgen für den aktuellen Unmut. Solch ein Signal könnte zum Beispiel der  Nachtbürgermeister sein, der durch die Bewohner*innen des Bezirks gewählt wird  und sich explizit um diese Probleme kümmern kann.",
         "2": "In den Fragen werden 3 Lösungsansätze angesprochen (Polizei, Integration, Streetworker). Keiner dieser Ansätze wird allein ausreichend sein. Im konkreten Falle von Antänzern handelt es sich um Eigentumsdelikte sowie Straftaten gegen die sexuelle Selbstbestimmung. Diesen muss entschlossen entgegengetreten werden. Der Verkauf von nach BTMG verbotenen Substanzen ist anders zu bewerten, da dieser ohne Opfer auskommt und auch unklar ist, welches Rechtsgut hier eigentlich gefährdet sein soll. \n\nDie Einflussmöglichkeiten des Bezirks sind begrenzt, da es sich bei dem RAW-Gelände um ein Privatgrundstück handelt. Des weiteren untersteht die Polizei dem Land und nicht dem Bezirk. Mehr Geld für Integrationsmaßnahmen müssten von Land, Bund oder EU kommen und kann nicht aus dem Bezirkshaushalt genommen werden, auf jeden Fall nicht für die angesprochenen langfristigen und umfassenden Integrationsmaßnahmen.\n\nDas StGB regelt Eigentumsdelikte und Straftaten gegen die sexuelle Selbtsbestimmung. Eine Unterbindung dieser Vorfälle durch das hierzu vorgesehene Organ, d.h. die Polizei, ist sinnvoll. Wir würden es begrüßen, wenn die Polizeibeamten sich hier stärker um die Opfer kümmern könnten anstatt sinnlos die Bewohner im Friedrichshainer Nordkiez zu schikanieren.\n\nEine mobile Wache wurde am Alexanderplatz getestet und hat sich nicht bewährt. Es ist fraglich, ob dieses Konzept an der Warschauer Straße besser funktionieren würde.",
@@ -525,7 +523,8 @@
         "36": "Ja natürlich. Das RAW ist eines der kulturellen Zentren für Jung und Alt. Das bedeutet allerdings auch weiterhin Touris, Lautstärke, Leben. Auch nachts. Eigentlich immer. In der Aufzählung fehlen übrigens Clubs und Bars. Wer hier wohnen will, der muss damit klar kommen, dass es in einer Innenstadt wie Berlin nun einmal nicht  die Frühlingsruhe Gößweinsteins gibt.",
         "37": "Das Verkehrsmittel Fahrrad ist bereits das beliebteste. Die Infrastruktur muss angepasst und ausgebaut werden. Leider will man senatsseitig 800 Mio. in so eine komische Betonfahrbahn namens A100 stecken. Wenn man jetzt jemanden wählen würde, der das nicht befürwortet, würde sich da vielleicht was tun. Wir begrüßen den begonnenen Ausbau der Fahrradinfrastruktur z.B. am Moritzplatz und der Warschauer Straße, drängen aber weiterhin auf eine verstärkte Umsetzung des Radverkehrsplans. Ziel ist eine zusammenhängende Fahrradinfrastruktur, die die Kieze und Stadtteile miteinander verbindet und den Flickenteppich von Radwegen beseitigt. Dazu gehören beispielsweise auch grüne Wellen für Radfahrende. Diese heben die Durchschnittsgeschwindigkeit erheblich an, ändern jedoch die Geschwindigkeit des motorisierten Stadtverkehrs kaum.",
         "38": "Die Art und Weise der Finanzierung der Berliner Bezirke ist so absurd,  dass es jeder Beschreibung spottet. Unmittelbar sichtbar wird das an den  Schulen oder am Bürgeramt. Das liegt nicht unbedingt an einer unfähigen  Bezirksregierung, sondern an den mangelnden wirtschaftlichen  Handlungsmöglichkeiten der Bezirke, die durch die Landesgesetze  vorgegeben werden. Schilda ist im Vergleich dazu ein Hort der Vernunft.  Senat sagt: Bezirk, du musst dies und jenes tun, und kriegst dafür  soviel Geld. Mehr Geld ausgeben darfst du nicht; wenn du Geld einnimmst,  geht das an den Senat; und wenn die Schule nachher verfällt, macht sich  der Senat einen schlanken Schuh. Ist ja nicht seine Aufgabe. Dass die  Mittelzuweisung von vornherein unzureichend war, spielt dann keine Rolle  mehr. \n\nJa, es soll mittelfristig eine Verwaltungsreform geben. Insbesondere das Auslagern von unpopulären Aufgaben an die Bezirke (selbstverständlich ohne ausreichende Mittelausstattung) muss ein Ende haben."
-      }
+      },
+      "region": "WK2"
     },
     {
       "answers": {
@@ -570,6 +569,7 @@
       },
       "id": "Ralf Gerlich",
       "name": "Ralf Gerlich",
+      "party": "Piraten",
       "reasons": {
         "1": "Was reduziert werden muss, ist die Belästigung, nicht der Tourismus an sich. Wir begrüßen es, dass sich Menschen aus anderen Teilen des Landes und der Welt sich für unsere Art zu leben interessieren. Zu wenig Kontrolle bei beispielsweise der Einhaltung von Tischzahlen,  den Standzeiten der Außentische und das bisherige Fehlen eines großen  Signals, welches dann auch in den Reiseführern steht, sorgen für den aktuellen Unmut. Solch ein Signal könnte zum Beispiel der  Nachtbürgermeister sein, der durch die Bewohner*innen des Bezirks gewählt wird  und sich explizit um diese Probleme kümmern kann.",
         "2": "Die Begründung folgt gemeinsam mit den anderen vorgeschlagenen Lösungsmöglichkeiten.",
@@ -609,7 +609,8 @@
         "36": "Ja natürlich. Das RAW ist eines der kulturellen Zentren für Jung und Alt. Das bedeutet allerdings auch weiterhin Touris, Lautstärke, Leben. Auch nachts. Eigentlich immer. In der Aufzählung fehlen übrigens Clubs und Bars. Wer hier wohnen will, der muss damit klar kommen, dass es in einer Innenstadt wie Berlin nun einmal nicht  die Frühlingsruhe Gößweinsteins gibt.",
         "37": "Das Verkehrsmittel Fahrrad ist bereits das beliebteste. Die Infrastruktur muss angepasst und ausgebaut werden. Leider will man senatsseitig 800 Mio. in so eine komische Betonfahrbahn namens A100 stecken. Wenn man jetzt jemanden wählen würde, der das nicht befürwortet, würde sich da vielleicht was tun. ",
         "38": "Die Art und Weise der Finanzierung der Berliner Bezirke ist so absurd,  dass es jeder Beschreibung spottet. Unmittelbar sichtbar wird das an den  Schulen oder am Bürgeramt. Das liegt nicht unbedingt an einer unfähigen  Bezirksregierung, sondern an den mangelnden wirtschaftlichen  Handlungsmöglichkeiten der Bezirke, die durch die Landesgesetze  vorgegeben werden. Schilda ist im Vergleich dazu ein Hort der Vernunft.  Senat sagt: Bezirk, du musst dies und jenes tun, und kriegst dafür  soviel Geld. Mehr Geld ausgeben darfst du nicht; wenn du Geld einnimmst,  geht das an den Senat; und wenn die Schule nachher verfällt, macht sich  der Senat einen schlanken Schuh. Ist ja nicht seine Aufgabe. Dass die  Mittelzuweisung von vornherein unzureichend war, spielt dann keine Rolle  mehr. \n\nJa, es soll mittelfristig eine Verwaltungsreform geben. Insbesondere das Auslagern von unpopulären Aufgaben an die Bezirke (selbstverständlich ohne ausreichende Mittelausstattung) muss ein Ende haben."
-      }
+      },
+      "region": "WK4"
     },
     {
       "answers": {
@@ -654,6 +655,7 @@
       },
       "id": "Peter Beckers",
       "name": "Peter Beckers",
+      "party": "SPD",
       "reasons": {
         "1": "Ich setze mich dafür ein, unsere Kieze zu erhalten. Der Partytourismus führt zu einer gewerblichen Monostruktur. Das Baurecht kann hier entgegenwirken. Ein nichtreglementierter Tourismus führt zu Lärm, vollgestellten Gehwegen und schließlich zum Verlust der Wohnqualität. Ich bin für eine strikte Kontrolle der genehmigten Außenausschankflächen und für eine räumliche Ausweitung der Regelungen der  beiden Clearinggebiete, wenn freiwillige Lösungen nicht funktionieren. Deshalb findet derzeit ein Mediationsverfahren fair kiez statt, das ich initiiert habe.  ",
         "2": "Ja, Kriminalität muss weiter bekämpft werden. Eine mobile Wache mit verläßlichen Präsenzzeit und -ort eignet sich als Anlaufstelle für Hilfesuchende.",
@@ -693,7 +695,8 @@
         "36": "Wir setzten uns dafür ein, dass die Nutzer des  sogenannten soziokulturellen Ls dort verbleiben können und möglichst Erbauurechte eingeräumt werden.",
         "37": "Ja, unbedingt. Daher wurden Fahrradabstellplätze geschaffen, Straßen umgebaut und Fahrradwege gekennzeichnet. Das Ordnungsamt hat Schwerpunktbereiche zur Kontrolle gegen das wiederkehrende Zuparken durch Autos  gebildet und vieles mehr. Ich setze mich dafür ein, dass das Ordnungsamt sein Personal aufstockt und es besonders zum Freihalten von Fahrradwegen nutzt. ",
         "38": "Ja, das finde ich gut und halte es für dringend notwendig. "
-      }
+      },
+      "region": "BVV"
     },
     {
       "answers": {
@@ -738,6 +741,7 @@
       },
       "id": "Susanne Kitschun",
       "name": "Susanne Kitschun",
+      "party": "SPD",
       "reasons": {
         "1": "Der Partytourismus ist in Teilen von Friedrichshain so groß, dass Gastronomie und Kneipen alt eingesessene Betriebe und Gewerbe verdrängen, da diese sich die hohen Gewerbemieten nicht mehr leisten können. Unsere BVV-Fraktion hat durchgesetzt, dass für große Teile des Bezirks Bebauungspläne aufgestellt werden, mit deren Hilfe die gewerbliche Struktur gesteuert werden soll. Diesen Weg wollen wir fortsetzen.",
         "2": "Ich setze mich für eine stärkere Präsenz der Polizei rund um die Warschauer Straße ein. Kriminalität muss bekämpft werden. Es kann nicht sein, dass sogar schon Kindern die Schulranzen gestohlen werden. Eine mobile Wache ist eine sinnvolle Idee. ",
@@ -777,7 +781,8 @@
         "36": "Gemeinsam mit der SPD in der BVV setze ich mich dafür ein, dass die Vereine und Initiativen auf dem RAW Gelände bleiben können. Wir setzten uns dafür ein, dass die Nutzer des  sogenannten soziokulturellen Ls dort verbleiben können und ihnen möglichst Erbbaurechte eingeräumt werden.",
         "37": "Die Berliner SPD setzt sich für den weiteren Ausbau von Fahrradwegen und Fahrradabstellanlagen ein. Wir haben dabei schon viele Wege neu anlegen lassen und saniert. In Zukunft sollen weitere Radwege folgen und auch das Bike-Sharing ausgebaut werden. Straßen mit Kopfsteinpflaster stehen teilweise unter Denkmalschutz. Bei stark befahrenen Straßen wird das Kopfsteinpflaster bei Modernisierungsmaßnahmen oft durch Asphalt ersetzt. ",
         "38": "Ja, das finde ich gut und notwendig."
-      }
+      },
+      "region": "WK4"
     },
     {
       "answers": {
@@ -822,6 +827,7 @@
       },
       "id": "Sven Heinemann",
       "name": "Sven Heinemann",
+      "party": "SPD",
       "reasons": {
         "1": "Ja, denn langfristig profitiert Berlin nur von einem nachhaltigen Tourismus. Leute, die in unseren Wohnkiezen nur die Sau raus lassen wollen, sind nicht willkommen. Das gilt aber für Alle: Denn Party machen nicht nur Touristen sondern auch viele Berliner. Man kann auch Spaß haben und sich benehmen. Und von billigster Gastfreundlichkeit hat niemand etwas: Nicht die Gäste, nicht die Betreiber und schon gar nicht die Mitarbeiter und Anwohner! ",
         "2": "Ja, mehr Polizeipräsenz ist sehr wichtig. Dieben, Gewalttätern und Dealern muss es unbequem gemacht werden, so dass sie sich gestört fühlen und sich verziehen. Dazu braucht es aber nicht nur eine mobile Wache (kann auch ein Einsatzwagen sein) sondern regelmäßige Streifen. ",
@@ -861,7 +867,8 @@
         "36": "Ja. Ich setze mich mit der SPD Friedrichshain-Kreuzberg dafür ein, dass insbesondere die verschiedenen Projekte in den denkmalgeschützten Altbauten entlang der Revaler Straße langfristig gesichert werden, genauso auch die Sportangebote Kletterkegel und Skaterhalle mit dem dazugehörigen Biergarten und Freiluftkino. Dazu favorisieren wir mit den betroffenen Akteuren als Lösung einen Verkauf der Häuser/Flächen an die NutzerInnen oder ein langfristiges Erbpachtmodell zum Erhalt der schützenswerten Institutionen. Und ich trete dafür ein, wie zahlreiche Anwohner auch, im Gegensatz zu Grünen, Linken und Piraten im Bezirk, für Mietwohnungsbau mit einem festgeschriebenen Sozialanteil auf einer Teilfläche des RAW-Geländes.",
         "37": "Ja, deshalb setze ich mich auch für ein Fahrradparkhaus am Ostkreuz ein. Die Mittel für den Radverkehr haben wir auf Landesebene seit 2014  verdreifacht. Wir geben 2016/17 rund 16 Millionen Euro  für den Radverkehr aus. Wir haben das Radwegenetz erheblich erweitert und zeitgemäße Abstellanlagen errichtet. Diese Politik will ich fortführen.",
         "38": "Nein, die Abläufe müssen effektiver werden. Angesichts der Wachsenden Stadt brauchen wir mehr Personal in den Bereichen, in denen es nötig ist. So haben wir beispielsweise über 100 neue Stellen in den Bürgerämtern geschaffen. Viele Verfahren können auch noch vereinfacht werden."
-      }
+      },
+      "region": "WK2"
     },
     {
       "answers": {
@@ -906,6 +913,7 @@
       },
       "id": "Götz Müller",
       "name": "Götz Müller",
+      "party": "CDU",
       "reasons": {
         "1": "Lärm ist gesundheitsschädlich. Ich werde mich für verstärkte Kontrollen der Nachtruhe im Kiez durch Ordnungsamt und Polizei einsetzen und für rasche Ahndung nächtlicher Ruhestörungen.",
         "2": "Erhöhte Polizeipräsenz sorgt für verminderten Drogenhandel und kann Diebstähle durch die \"Antänzer\"-Masche eindämmen.",
@@ -945,7 +953,8 @@
         "36": "Ich wünsche mir für das RAW-Gelände eine Mischnutzung aus kultureller Nutzung und Wohnungsnutzung. ",
         "37": "Fahrradfahren in Berlin ist noch zu unsicher! Daher ist es erforderlich, das Netz der Fahrradwege sicherer zu machen. Ich halte es darüber hinaus für erforderlich, das Fahrradwegenetz in der Fahrradstadt Berlin auch quantitativ zu erweitern.",
         "38": "Das Modell der Zuständigkeitsverteilung zwischen Senat und Bezirk finde ich zwar nicht optimal. Es ist aus meiner Sicht aber besser geeignet, den politischen Herausforderungen zu begegnen, als die Modelle, denen in den anderen beiden deutschen Stadtstaaten gefolgt wird."
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -990,6 +999,7 @@
       },
       "id": "Marlene Heihsel",
       "name": "Marlene Heihsel",
+      "party": "FDP",
       "reasons": {
         "1": "Tourismus bereichert unseren Bezirk! Friedrichshain-Kreuzberg ist der Inbegriff des weltweit bekannten Berliner (Nacht-)Lebens und zieht jährlich Millionen von Menschen an. Darauf sind wir stolz. Wir freuen uns nicht nur über den Austausch mit Reisenden aus allen Ländern, sondern sehen auch das wirtschaftliche Potenzial dahinter. Tausende Arbeitsplätze hängen in Berlin mittlerweile an der Gastronomie und etliche Betriebe profitieren von der Beliebtheit. Wir setzen uns für eine Prüfung von Freiheitsgebieten in den als besonders lebendig ausgezeichneten Bezirksteilen ein. Hier können Grenzen vom Ordnungsamt weiter gefasst werden, wenn es z.B. um Ruhephasen geht. Diese größeren Freiheiten machen sie schließlich besonders attraktiv für kreativ Schaffende und können auch von Anwohner*innen wertgeschätzt werden. So kann es beispielsweise bei Neuvermietungen oder Straßenkennzeichnungen entsprechende Hinweise zu den Freiheitsgebieten geben. Natürlich müssen auch hier Regeln gelten; insbesondere familiäre Wohngegenden kommen nicht infrage. Die FDP erkennt jedoch auch die Probleme, die mit der zunehmenden Zahl an BesucherInnen entstehen. Die Stadtreinigung muss dementsprechend ausgeweitet und Konzepte gegen die wachsende Kriminalität erstellt werden.",
         "2": "Das Gewaltmonopol übt die Polizei aus. Sie ist dabei Partnerin und nicht Gegner der Bevölkerung. Eine gute Kommunikation und Zusammenarbeit ist zwingend notwendig, um die Probleme im Bezirk zu lösen. Wir setzen uns für eine Ausweitung der polizeilichen Fußstreife um Brennpunkte herum und somit für mehr Polizeipräsenz ein. Dies sorgt lokal für mehr Sicherheit vor Raubüberfällen und Taschendiebstahl und dämpft das Problem des Vandalismus.",
@@ -1029,7 +1039,8 @@
         "36": "Kulturgelände wie das RAW bereichern unseren Kiez und machen ihn einzigartig. Allerdings lehnen wir eine Konservierung des Geländes ab. Eine Entwicklung des Geländes, unter Einbezug der Mieter, muss grundsätzlich möglich sein.",
         "37": "Die FDP Friedrichshain-Kreuzberg setzt sich für eine Gleichberechtigung aller Verkehrsteilnehmer ein. Hier steht insbesondere das Fahrrad noch zurück. Deshalb unterstützen wir auch den Volksentscheid Fahrrad.",
         "38": ""
-      }
+      },
+      "region": "BVV"
     },
     {
       "answers": {
@@ -1074,6 +1085,7 @@
       },
       "id": "Bernd Schlömer",
       "name": "Bernd Schlömer",
+      "party": "FDP",
       "reasons": {
         "1": "Tourismus bereichert unseren Bezirk! Friedrichshain-Kreuzberg ist der Inbegriff des weltweit bekannten Berliner (Nacht-)Lebens und zieht jährlich Millionen von Menschen an. Darauf sind wir stolz. Wir freuen uns nicht nur über den Austausch mit Reisenden aus allen Ländern, sondern sehen auch das wirtschaftliche Potenzial dahinter. Tausende Arbeitsplätze hängen in Berlin mittlerweile an der Gastronomie und etliche Betriebe profitieren von der Beliebtheit. Wir setzen uns für eine Prüfung von Freiheitsgebieten in den als besonders lebendig ausgezeichneten Bezirksteilen ein. Hier können Grenzen vom Ordnungsamt weiter gefasst werden, wenn es z.B. um Ruhephasen geht. Diese größeren Freiheiten machen sie schließlich besonders attraktiv für kreativ Schaffende und können auch von Anwohner*innen wertgeschätzt werden. So kann es beispielsweise bei Neuvermietungen oder Straßenkennzeichnungen entsprechende Hinweise zu den Freiheitsgebieten geben. Natürlich müssen auch hier Regeln gelten; insbesondere familiäre Wohngegenden kommen nicht infrage. Die FDP erkennt jedoch auch die Probleme, die mit der zunehmenden Zahl an BesucherInnen entstehen. Die Stadtreinigung muss dementsprechend ausgeweitet und Konzepte gegen die wachsende Kriminalität erstellt werden.",
         "2": "Das Gewaltmonopol übt die Polizei aus. Sie ist dabei Partnerin und nicht Gegner der Bevölkerung. Eine gute Kommunikation und Zusammenarbeit ist zwingend notwendig, um die Probleme im Bezirk zu lösen. Wir setzen uns für eine Ausweitung der polizeilichen Fußstreife um Brennpunkte herum und somit für mehr Polizeipräsenz ein. Dies sorgt lokal für mehr Sicherheit vor Raubüberfällen und Taschendiebstahl und dämpft das Problem des Vandalismus.",
@@ -1113,7 +1125,8 @@
         "36": "Kulturgelände wie das RAW bereichern unseren Kiez und machen ihn einzigartig. Allerdings lehnen wir eine Konservierung des Geländes ab. Eine Entwicklung des Geländes, unter Einbezug der Mieter, muss grundsätzlich möglich sein.",
         "37": "Die FDP Friedrichshain-Kreuzberg setzt sich für eine Gleichberechtigung aller Verkehrsteilnehmer ein. Hier steht insbesondere das Fahrrad noch zurück. Deshalb unterstützen wir auch den Volksentscheid Fahrrad.",
         "38": ""
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -1158,6 +1171,7 @@
       },
       "id": "Steffen Zillich",
       "name": "Steffen Zillich",
+      "party": "die Linke",
       "reasons": {
         "1": "Wir treten dafür ein, die massive Anhäufung von Gastronomie in bestimmten Gebieten wie z.B. am Boxhagener Platz zu verhindern bzw. zu verringern. Zudem fordern wir für hochbelastete Wohngebiete Lärmschutz- und Verkehrsmessungen ein und wo notwendig konsequente Maßnahmen zum Schutz der Anwohner/innen.",
         "2": "DIE LINKE will, dass die Bewohnerinnen und Bewohner, aber auch Touristinnen und Touristen in unserem Bezirk ohne Angst vor Kriminalität leben können. Die Erfahrung zeigt: Nur durch polizeiliche Repression lassen sich die Probleme nicht lösen. Nichtsdestotrotz ist an Hotspots wie der Revaler Straße/Warschauer Straße zumindest temporär mehr Polizei unvermeidbar. Die Sicherheitslage lässt sich allerdings nur durch ein zwischen Bezirk und Polizei abgestimmtes Gesamtkonzept verbessern. Ob dazu auch eine mobile Wache gehört, ist bei der Erarbeitung eines solchen Konzeptes zu klären. Eine Ausweitung der Videoüberwachung lehnt DIE LINKE ab. Sie gaukelt ein Sicherheitsgefühl vor, ohne eine einzige Straftat verhindern zu können, die alltägliche Überwachung hingegen trifft uns alle. \nZudem reicht die Forderung nach mehr Polizei im öffentlichen Raum alleine nicht aus. Wer Kriminalität wirksam vorbeugen und die Sicherheit für Bürgerinnen und Bürger verbessern will, muss auf die Stärkung des sozialen Zusammenhalts setzen. Außerdem wollen wir so genannte „Angsträume“ – also unbelebte Straßen oder dunkle Parks – reduzieren. Wo sinnvoll soll zudem eine verstärkte und verstetigte Straßensozialarbeit etabliert werden, die auch vorbeugend gegen Straftaten wirken kann.\n",
@@ -1197,7 +1211,8 @@
         "36": "Wir möchten das RAW als Kulturstandort langfristig sichern. DIE LINKE setzt sich für die weitere Nutzung des RAW als Ort von Erholungs- und Freizeitangeboten für die Anwohnerinnen und Anwohner sowie als Ort für bezahlbare Produktionsräume für Künstlerinnen und Künstler ein.",
         "37": "DIE LINKE unterstützt den Ausbau des bezirklichen Fahrradroutensystems und dabei insbesondere neue Fahrradstreifen auf der Straße. Gerade entlang der Hauptverkehrsstraßen wie der Skalitzer Straße oder dem Tempelhofer Ufer muss es möglich sein, ungehindert und sicher mit dem Fahrrad unterwegs zu sein. Die Abstellmöglichkeiten für Fahrräder müssen nicht nur vor Bahnhöfen und Einkaufsbereichen, sondern auch in Wohngebieten ausgebaut werden.",
         "38": "DIE LINKE setzt sich für starke und leistungsfähige Bezirke ein. Das kann nur funktionieren, wenn die Aufgaben von Bezirken und Senatsverwaltung klar definiert und abgegrenzt sind. Ob dafür eine Verfassungsänderung notwenig ist, wird sich zeigen."
-      }
+      },
+      "region": "WK2"
     },
     {
       "answers": {
@@ -1242,6 +1257,7 @@
       },
       "id": "Knut Mildner-Spindler",
       "name": "Knut Mildner-Spindler",
+      "party": "die Linke",
       "reasons": {
         "1": "Wir treten dafür ein, die massive Anhäufung von Gastronomie in bestimmten Gebieten wie z.B. am Boxhagener Platz reduziert wird. Zudem fordern wir für hochbelastete Wohngebiete Lärmschutz- und Verkehrsmessungen ein und wo notwendig konsequente Maßnahmen zum Schutz der Anwohner/innen.",
         "2": "DIE LINKE will, dass die Bewohnerinnen und Bewohner, aber auch Touristinnen und Touristen in unserem Bezirk ohne Angst vor Kriminalität leben können. Die Erfahrung zeigt: Nur durch polizeiliche Repression lassen sich die Probleme nicht lösen. Nichtsdestotrotz ist an Hotspots wie der Revaler Straße/Warschauer Straße zumindest temporär mehr Polizei unvermeidbar. Die Sicherheitslage lässt sich allerdings nur durch ein zwischen Bezirk und Polizei abgestimmtes Gesamtkonzept verbessern. Ob dazu auch eine mobile Wache gehört, ist bei der Erarbeitung eines solchen Konzeptes zu klären. Eine Ausweitung der Videoüberwachung lehnt DIE LINKE ab. Sie gaukelt ein Sicherheitsgefühl vor, ohne eine einzige Straftat verhindern zu können, die alltägliche Überwachung hingegen trifft uns alle. \nZudem reicht die Forderung nach mehr Polizei im öffentlichen Raum alleine nicht aus. Wer Kriminalität wirksam vorbeugen und die Sicherheit für Bürgerinnen und Bürger verbessern will, muss auf die Stärkung des sozialen Zusammenhalts setzen. Außerdem wollen wir so genannte „Angsträume“ – also unbelebte Straßen oder dunkle Parks – reduzieren. Wo sinnvoll soll zudem eine verstärkte und verstetigte Straßensozialarbeit etabliert werden, die auch vorbeugend gegen Straftaten wirken kann.\n",
@@ -1281,7 +1297,8 @@
         "36": "Das RAW muss als Kulturstandort langfristig gesichert werden. DIE LINKE setzt sich für die weitere Nutzung des RAW als Ort von Erholungs- und Freizeitangeboten für die Anwohnerinnen und Anwohner sowie als Ort für bezahlbare Produktionsräume für Künstlerinnen und Künstler ein.",
         "37": "DIE LINKE unterstützt den Ausbau des bezirklichen Fahrradroutensystems und dabei insbesondere neue Fahrradstreifen auf der Straße. Gerade entlang der Hauptverkehrsstraßen wie der Skalitzer Straße, Tempelhofer Ufer oder auch Frankfurter Allee muss es möglich sein, ungehindert und sicher mit dem Fahrrad unterwegs zu sein. Dazu gehört die Überprüfung von Falschparkern auf Radstreifen. Die Abstellmöglichkeiten für Fahrräder müssen nicht nur vor Bahnhöfen und Einkaufsbereichen, sondern auch in Wohngebieten ausgebaut werden.",
         "38": "Für DIE LINKE sind starke und leistungsfähige Bezirke die Basis für eine funktionsfähige Stadt. Die Aufgaben von Bezirken und Senatsverwaltung müssen klar definiert und abgegrenzt sein. Dies sollte auch ohne Verfassungsänderung gehen, aber wenn notwenig muss die Verfassung geändert werden."
-      }
+      },
+      "region": "BVV"
     },
     {
       "answers": {
@@ -1326,6 +1343,7 @@
       },
       "id": "Peggy Hochstätter",
       "name": "Peggy Hochstätter",
+      "party": "SPD",
       "reasons": {
         "1": "Ich habe gar nichts gegen Clubs, auch nicht gegen TouristInnen. Allerdings darf der Tourismus nicht dazuführen, dass wir nur noch Shishakneipen, Gastroketten u.ä. haben. Zuerst muss es um die BewohnerInnen der Kieze gehen und die brauchen mehr als diese öde Monostruktur.",
         "2": "Leider haben die Vorkommnisse gezeigt, dass wir ohne eine mobile Wache dort nicht auskommen. Ich würde es ratsam finden, die Polizei aus dem Nordkiez abzuziehen, sie dafür dort einzusetzen, wo sie wirklich gebraucht werden - z:B. an der Warschauer Brücke und am Kotti.",
@@ -1365,7 +1383,8 @@
         "36": "Ich setze mich dafür ein, dass das 'soziokulturelle L' gesichert wird. Das brauchen wir in Fhain, da wir viel zu wenig öffentlichen Raum, Sportmöglichkeiten und günstige Angebote für Kinder, Jugendliche und ältere Menschen und auch insgesamt für Begegnungen außerhalb von Gastronomie haben.",
         "37": "Ich habe beim Aufruf für den Fahrradvolksentscheid mitgezeichnet. Nicht weil ich jede Maßnahme für mach- und bezahlbar in der kurzen Zeit halte, da muss man auch ehrlich bleiben, aber weil ich mich dafür einsetze, dass die Verkehrspolitik ihr Augenmerk nun endlich auf die schwächeren Verkehrsteilnehmer richten muss. Darum setz ich mich auch seit Jahren dafür ein, dass Schulwegsicherheit prioritär behandelt wird. Da ist mir deshalb auf  Bezirksebene auch schon in einigen Fällen gelungen.Dann muss auch der Fußverkehr insgesamt gestärkt werden, z.B.mit verlängerten Ampelphasen auf der Frankfurter Allee, besseren Querungsmöglichkeiten auf der Boxhagener, Wühlisch/Kopernikus, Tempo 30 in Wohngebieten usw.",
         "38": ""
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -1410,6 +1429,7 @@
       },
       "id": "Canan Bayram",
       "name": "Canan Bayram",
+      "party": "Die Grünen / Bündnis 97",
       "reasons": {
         "1": "",
         "2": "Der Einsatz von Polizei muss einher gehen mit einer Strategie, die an den Ursachen ansetzt",
@@ -1449,7 +1469,8 @@
         "36": "",
         "37": "",
         "38": "Ich sehe die Gefahr, dass solche Forderungen schnell in einer Zentralisierungsdebatte enden. Dabei braucht es starke Bezirke und ein starkes Land, für eine Veränderung der besseren Kommunikation und einem Miteinander braucht es keine Verfassungsänderung, außer mir kann jemand Beispiele nennen, wo es ohne Änderung keinen Ausweg gäbe. Dann würde ich mich dem Anliegen nicht verschließen"
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -1494,6 +1515,7 @@
       },
       "id": "Clara Herrmann",
       "name": "Clara Herrmann",
+      "party": "Die Grünen / Bündnis 97",
       "reasons": {
         "1": "Neben positiven wirtschaftlichen Effekten des Tourismus ist der Bezirk auch mit negativen Auswirkungen des zunehmenden Tourismus in Friedrichshain konfrontiert. Was wir brauchen, ist ein kiezverträglicher Tourismus: Ein Tourismus, der den Kiez nicht nur belastet und die Anwohner*innen nicht verdrängt. Dafür braucht es vielfältige Maßnahmen, um den Interessenausgleich zwischen Anwohner*innen und Tourist*innen zu schaffen. Dazu gehören zum Beispiel mehr öffentliche Toiletten, häufigere Straßenreinigungen oder zusätzliche Mülleimer. Um Konflikte kooperativ zu lösen, können Moderationsverfahren zwischen Anwohner*innen und beispielsweise Clubbesitzer*innen oder Gewerbebetreibenden eingeführt werden.",
         "2": "Die Drogenproblematik rund um die Warschauer Straße kann nur mit einem vielfältigen Maßnahmenpaket bearbeitet werden. Die Polizei muss an diesen Hotspots dafür sorgen, dass Gesetze eingehalten werden und muss auf diese Situation auch mit mehr Präsenz reagieren. Mehr Polizeipräsenz kann aber nicht das einzige Mittel zur Lösung der Problematiken rund um die Warschauer Straße sein. Wir benötigen für diese Hotspots Sicherheitskonzepte, die von der Polizei, Politik, den Anwohner*innen und lokalen Akteuren (z.b. RAW-Initiativen, Clubbesitzer) gemeinsam erarbeitet werden. Auch sozialpolitische Maßnahmen wie Streetworker sind wichtig und müssen zu einem Lösungspaket gehören.",
@@ -1533,7 +1555,8 @@
         "36": "Die vielfältigen Kultur-, Sport- und Freizeitangebote sind der Ursprung des RAW-Geländes. Wir unterstützen den langfristigen Erhalt der Angebote auf dem RAW-Gelände sowie das „Soziokulturelle L“ und setzen uns dafür ein, dass diese langfristige Mietverträge erhalten. ",
         "37": "Wir setzen auf klimafreundliche Mobilität. Die Fahrradinfrastruktur in Berlin kann nicht mit anderen Großstädten in Europa mithalten. Das muss dringend geändert werden. Immer mehr Berliner*innen steigen aufs Rad. Wir müssen dafür sorgen, dass die Radfahrer*innen sicher durch die Stadt fahren können. Der Ausbau der Radinfrastruktur ist eine zentrale Aufgabe in den nächsten Jahren.",
         "38": "Wir brauchen in Berlin eine moderne Verwaltung mit klaren Zuständigkeiten."
-      }
+      },
+      "region": "WK4"
     },
     {
       "answers": {
@@ -1578,6 +1601,7 @@
       },
       "id": "Monika Herrmann",
       "name": "Monika Herrmann",
+      "party": "Die Grünen / Bündnis 97",
       "reasons": {
         "1": "Die Belastung der Kieze ist in der momentane Form zu hoch.",
         "2": "Da es sich um organsierte Kriminalität handelt, ist die Polizei zur Bekämpfung zuständig.",
@@ -1617,7 +1641,8 @@
         "36": "Daran wird auf den unterschiedlichsten Ebenen intensiv gearbeitet.",
         "37": "Es braucht ein Verkehrskonzept: Fahrradstadt Berlin",
         "38": "Es braucht erstmal eine Idee. Die Bezirke sind das Fundament der Stadt. Nur ein gutes, solides Fundament hält diese Stadt zusammen. Allerdings wurde das Fundament in den letzten 15 Jahren zerbröselt wie trockene Kekse. Nun braucht es Jahre, bis es wieder gut aufgebaut ist..."
-      }
+      },
+      "region": "BVV"
     },
     {
       "answers": {
@@ -1662,6 +1687,7 @@
       },
       "id": "Damiano Valgolio",
       "name": "Damiano Valgolio",
+      "party": "die Linke",
       "reasons": {
         "1": "Wir treten dafür ein, die massive Anhäufung von Gastronomie in bestimmten Gebieten wie z.B. am Boxhagener Platz zu verhindern bzw. zu verringern. Zudem fordern wir für hochbelastete Wohngebiete Lärmschutz- und Verkehrsmessungen ein und wo notwendig konsequente Maßnahmen zum Schutz der Anwohner/innen.",
         "2": "DIE LINKE will, dass die Bewohnerinnen und Bewohner, aber auch Touristinnen und Touristen in unserem Bezirk ohne Angst vor Kriminalität leben können. Die Erfahrung zeigt: Nur durch polizeiliche Repression lassen sich die Probleme nicht lösen. Nichtsdestotrotz ist an Hotspots wie der Revaler Straße/Warschauer Straße zumindest temporär mehr Polizei unvermeidbar. Die Sicherheitslage lässt sich allerdings nur durch ein zwischen Bezirk und Polizei abgestimmtes Gesamtkonzept verbessern. Ob dazu auch eine mobile Wache gehört, ist bei der Erarbeitung eines solchen Konzeptes zu klären. Eine Ausweitung der Videoüberwachung lehnt DIE LINKE ab. Sie gaukelt ein Sicherheitsgefühl vor, ohne eine einzige Straftat verhindern zu können, die alltägliche Überwachung hingegen trifft uns alle. \nZudem reicht die Forderung nach mehr Polizei im öffentlichen Raum alleine nicht aus. Wer Kriminalität wirksam vorbeugen und die Sicherheit für Bürgerinnen und Bürger verbessern will, muss auf die Stärkung des sozialen Zusammenhalts setzen. Außerdem wollen wir so genannte „Angsträume“ – also unbelebte Straßen oder dunkle Parks – reduzieren. Wo sinnvoll soll zudem eine verstärkte und verstetigte Straßensozialarbeit etabliert werden, die auch vorbeugend gegen Straftaten wirken kann.\n",
@@ -1701,7 +1727,8 @@
         "36": "Wir möchten das RAW als Kulturstandort langfristig sichern. DIE LINKE setzt sich für die weitere Nutzung des RAW als Ort von Erholungs- und Freizeitangeboten für die Anwohnerinnen und Anwohner sowie als Ort für bezahlbare Produktionsräume für Künstlerinnen und Künstler ein.",
         "37": "DIE LINKE unterstützt den Ausbau des bezirklichen Fahrradroutensystems und dabei insbesondere neue Fahrradstreifen auf der Straße. Gerade entlang der Hauptverkehrsstraßen wie der Skalitzer Straße oder dem Tempelhofer Ufer muss es möglich sein, ungehindert und sicher mit dem Fahrrad unterwegs zu sein. Die Abstellmöglichkeiten für Fahrräder müssen nicht nur vor Bahnhöfen und Einkaufsbereichen, sondern auch in Wohngebieten ausgebaut werden.",
         "38": "DIE LINKE setzt sich für starke und leistungsfähige Bezirke ein. Das kann nur funktionieren, wenn die Aufgaben von Bezirken und Senatsverwaltung klar definiert und abgegrenzt sind. Ob dafür eine Verfassungsänderung notwenig ist, wird sich zeigen."
-      }
+      },
+      "region": "WK5"
     },
     {
       "answers": {
@@ -1746,6 +1773,7 @@
       },
       "id": "Pascal Meiser",
       "name": "Pascal Meiser",
+      "party": "die Linke",
       "reasons": {
         "1": "Wir treten dafür ein, die massive Anhäufung von Gastronomie in bestimmten Gebieten wie zum Beispiel am Boxhagener Platz zu verringern, zumindest aber zu verhindern, dass es zu einer Ausweitung kommt. Zudem fordern wir für hochbelastete Wohngebiete Lärmschutz- und Verkehrsmessungen ein und wo notwendig konsequente Maßnahmen zum Schutz der Anwohner/innen.",
         "2": "DIE LINKE will, dass die Bewohnerinnen und Bewohner, aber auch Touristinnen und Touristen in unserem Bezirk ohne Angst vor Kriminalität leben können. Die Erfahrung zeigt: Nur durch polizeiliche Repression lassen sich die Probleme nicht lösen. Nichtsdestotrotz ist an \"Hotspots\" wie der Revaler Straße/Warschauer Straße zumindest temporär mehr Polizei unvermeidbar. Die Sicherheitslage lässt sich allerdings nur durch ein zwischen Bezirk und Polizei abgestimmtes Gesamtkonzept verbessern. Ob dazu auch eine mobile Wache gehört, ist bei der Erarbeitung eines solchen Konzeptes zu klären. Eine Ausweitung der Videoüberwachung lehnt DIE LINKE ab. Sie gaukelt ein Sicherheitsgefühl vor, ohne eine einzige Straftat verhindern zu können, die alltägliche Überwachung hingegen trifft uns alle. Zudem reicht die Forderung nach mehr Polizei im öffentlichen Raum alleine nicht aus. Wer Kriminalität wirksam vorbeugen und die Sicherheit für Bürgerinnen und Bürger verbessern will, muss auf die Stärkung des sozialen Zusammenhalts setzen. Außerdem wollen wir so genannte „Angsträume“ – also unbelebte Straßen oder dunkle Parks – reduzieren. Wo sinnvoll soll zudem eine verstärkte und verstetigte Straßensozialarbeit etabliert werden, die auch vorbeugend gegen Straftaten wirken kann.",
@@ -1785,7 +1813,8 @@
         "36": "Wir möchten das RAW als Kulturstandort langfristig sichern. DIE LINKE setzt sich für die weitere Nutzung des RAW als Ort von Erholungs- und Freizeitangeboten für die Anwohnerinnen und Anwohner sowie als Ort für bezahlbare Produktionsräume für Künstlerinnen und Künstler ein.",
         "37": "DIE LINKE unterstützt den Ausbau des bezirklichen Fahrradroutensystems und dabei insbesondere neue Fahrradstreifen auf der Straße. Gerade entlang der Hauptverkehrsstraßen wie der Skalitzer Straße oder dem Tempelhofer Ufer muss es möglich sein, ungehindert und sicher mit dem Fahrrad unterwegs zu sein. Die Abstellmöglichkeiten für Fahrräder müssen nicht nur vor Bahnhöfen und Einkaufsbereichen, sondern auch in Wohngebieten ausgebaut werden.",
         "38": "DIE LINKE setzt sich für starke und handlungsfähige Bezirke ein. Das kann nur funktionieren, wenn die Aufgaben der Bezirke und der Senatsverwaltungen klar definiert und abgegrenzt sind. Ob dafür eine Verfassungsänderung notwendig ist, muss sich zeigen."
-      }
+      },
+      "region": "WK2"
     }
   ]
 }

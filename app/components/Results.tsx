@@ -12,26 +12,43 @@ import { getSimilarities } from '../model';
 
 export class Results extends React.Component<{}, {}> {
   render() {
+    const {candidates} = getState();
+    const regions = R.uniq(candidates.map(c => c.region)).sort();
+    return (
+      <div>
+        <h1>Ergebnis</h1>
+        <div>
+        {regions.map(region => <RegionalResult region={region} />)}
+        </div>
+        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
+      </div>
+    );
+  }
+}
+
+export class RegionalResult extends React.Component<{region: string}, {}> {
+  render() {
     const {answers, weights, candidates} = getState();
-    const similarities = getSimilarities(answers, weights, candidates);
-    const sortedParties = R.reverse(R.sortBy(q => (similarities[q.id] as any as string), candidates));
+    const regionCanidates = candidates.filter(candidate => candidate.region === this.props.region);
+    const similarities = getSimilarities(answers, weights, regionCanidates);
+    const sortedParties = R.reverse(R.sortBy(q => (similarities[q.id] as any as string), regionCanidates));
+
     function renderCandidate(candidate: Candidate) {
       return (
         <tr key={candidate.id}>
-          <td>{candidate.name}</td>
+          <td>{candidate.name} <br/>({candidate.party})</td>
           <td className='percent'>{Math.round(similarities[candidate.id] * 100) } %</td>
         </tr>
       );
     }
 
     return (
-      <div>
-        <h1>Ergebnis</h1>
-
+      <div className='resultByRegion'>
+        <h2>{this.props.region}</h2>
         <table>
           <thead>
             <tr>
-              <th>Partei</th>
+              <th>Kandidat</th>
               <th>Übereinstimmung</th>
             </tr>
           </thead>
@@ -39,7 +56,6 @@ export class Results extends React.Component<{}, {}> {
             {sortedParties.map(renderCandidate) }
           </tbody>
         </table>
-        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
       </div>
     );
   }

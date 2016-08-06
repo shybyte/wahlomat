@@ -27,7 +27,7 @@ interface StatsPageState {
 }
 
 const TableRow = (props: { rowValues: RowValues }) => {
-  const {question, interest, relativeInterest, meanAgreement, yes, no, neutral, important} = props.rowValues;
+  const {question, interest, relativeInterest, meanAgreement, yes, no, neutral} = props.rowValues;
   return (
     <tr>
       <td>{question.text}</td>
@@ -44,7 +44,6 @@ const TableRow = (props: { rowValues: RowValues }) => {
       <td>{yes}</td>
       <td>{no}</td>
       <td>{neutral}</td>
-      <td>{important}</td>
     </tr>
   );
 };
@@ -103,7 +102,6 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
               <th><AnswerDisplay answer={ANSWER.yes}/></th>
               <th><AnswerDisplay answer={ANSWER.no}/></th>
               <th><AnswerDisplay answer={ANSWER.neutral}/></th>
-              <th>Wichtig</th>
             </tr>
           </thead>
           <tbody>
