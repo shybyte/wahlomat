@@ -12,7 +12,7 @@ function parseQuestions(fileContent: string): Question[] {
   const questionRows: Row[] = parse(fileContent);
   return questionRows.slice(1).map(row => ({
     id: row[0],
-    initiative: row[3] || '',
+    initiative: (row[3] || 'anonym').replace('annonym', 'anonym'),
     initiativeAnswer: ANSWER.yes,
     initiativeReason: row[2],
     text: row[1],
