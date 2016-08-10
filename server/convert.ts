@@ -68,7 +68,7 @@ function parseCandidateAnswers(fileContent: string): Candidate[] {
 
 
 const questions = parseQuestions(fs.readFileSync('data/questions.csv', 'utf8'));
-const candidates = parseCandidateAnswers(fs.readFileSync('data/answers.csv', 'utf8'));
+const candidates = R.sortBy(c => c.region, parseCandidateAnswers(fs.readFileSync('data/answers.csv', 'utf8')));
 
 const initialData: InitialData = { questions, candidates };
 console.log(JSON.stringify(initialData, null, 2));
