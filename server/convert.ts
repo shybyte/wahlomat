@@ -26,9 +26,9 @@ enum AnswerFileCols {
 }
 
 const ANSWER_MAP: { [asnwer: string]: Answer } = {
-  'ja': 'yes',
-  'nein': 'no',
-  'neutral': 'no'
+  'ja': ANSWER.yes,
+  'nein': ANSWER.no,
+  'neutral': ANSWER.neutral
 };
 
 const toAnswer = (inputAnswer: string): Answer => ANSWER_MAP[inputAnswer.toLowerCase()] || 'neutral';
