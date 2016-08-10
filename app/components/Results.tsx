@@ -18,7 +18,7 @@ export class Results extends React.Component<{}, {}> {
       <div>
         <h1>Ergebnis</h1>
         <div>
-        {regions.map(region => <RegionalResult region={region} />)}
+        {regions.map(region => <RegionalResult key={region} region={region} />)}
         </div>
         <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
       </div>
@@ -28,7 +28,7 @@ export class Results extends React.Component<{}, {}> {
 
 export class RegionalResult extends React.Component<{region: string}, {}> {
   render() {
-    const {answers, weights, candidates} = getState();
+    const {answers, weights, candidates, regions} = getState();
     const regionCanidates = candidates.filter(candidate => candidate.region === this.props.region);
     const similarities = getSimilarities(answers, weights, regionCanidates);
     const sortedParties = R.reverse(R.sortBy(q => (similarities[q.id] as any as string), regionCanidates));
@@ -44,7 +44,7 @@ export class RegionalResult extends React.Component<{region: string}, {}> {
 
     return (
       <div className='resultByRegion'>
-        <h2>{this.props.region}</h2>
+        <h2>{regions[this.props.region].name}</h2>
         <table>
           <thead>
             <tr>

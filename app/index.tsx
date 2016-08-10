@@ -11,7 +11,6 @@ import { Results } from './components/Results';
 import { Weighting } from './components/Weighting';
 import { StartPage } from './components/StartPage';
 import { NotFound } from './components/NotFound';
-import { ReasonsWizard } from './components/ReasonsWizard';
 import { StatsPage } from './components/StatsPage';
 import { loadCss } from './styles/styles';
 import * as AppState from './app-state';
@@ -48,7 +47,6 @@ const routes = <Route path='/' component={Layout}>
   <Route path={ROUTES.questions} component={QuestionsWizard}/>
   <Route path={ROUTES.weighting} component={Weighting}/>
   <Route path={ROUTES.results} component={Results}/>
-  <Route path={ROUTES.reasons} component={ReasonsWizard}/>
   <Route path={ROUTES.stats} component={StatsPage}/>
   <Route path='*' component={NotFound}/>
 </Route>;

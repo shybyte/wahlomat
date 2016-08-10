@@ -1,4 +1,4 @@
-import {Answer, AnswerMap, WeightMap, Weight,
+import {Answer, AnswerMap, WeightMap, RegionMap, Weight,
   StoredAppState, AppState} from './app-state-interfaces';
 
 import * as webService from './web-service';
@@ -19,6 +19,7 @@ let appState: AppState = extend(restoredAppState, {
   candidates: [],
   initialized: false,
   questions: [],
+  regions: {} as RegionMap
 });
 
 type Subscriber = (appState: AppState) => void;

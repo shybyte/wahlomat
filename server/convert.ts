@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as R from 'ramda';
 const parse = require('csv-parse/lib/sync');
 
-import {Question, Candidate, Answer, AnswerMap, ReasonMap, InitialData, ANSWER} from '../app/app-state-interfaces';
+import {Question, Candidate, Answer, AnswerMap, ReasonMap, RegionMap, InitialData, ANSWER} from '../app/app-state-interfaces';
 
 type Row = string[];
 
@@ -66,10 +66,20 @@ function parseCandidateAnswers(fileContent: string): Candidate[] {
   });
 }
 
+function parseRegions(fileContent: string): RegionMap {
+  const questionRows: Row[] = parse(fileContent);
+  const regions = questionRows.slice(1).map(row => ({
+    id: row[0],
+    name: row[1]
+  }));
+  return R.indexBy(r => r.id, regions) as RegionMap;
+}
+
 
 const questions = parseQuestions(fs.readFileSync('data/questions.csv', 'utf8'));
 const candidates = R.sortBy(c => c.region, parseCandidateAnswers(fs.readFileSync('data/answers.csv', 'utf8')));
+const regions = parseRegions(fs.readFileSync('data/regions.csv', 'utf8'));
 
-const initialData: InitialData = { questions, candidates };
+const initialData: InitialData = { questions, candidates, regions };
 console.log(JSON.stringify(initialData, null, 2));
 

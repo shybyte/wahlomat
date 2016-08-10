@@ -1816,5 +1816,23 @@
       },
       "region": "WK5"
     }
-  ]
+  ],
+  "regions": {
+    "BVV": {
+      "id": "BVV",
+      "name": "Bezirksverordnetenversammlung"
+    },
+    "WK2": {
+      "id": "WK2",
+      "name": "Wahlkreis 2"
+    },
+    "WK4": {
+      "id": "WK4",
+      "name": "Wahlkreis 4"
+    },
+    "WK5": {
+      "id": "WK5",
+      "name": "Wahlkreis 5"
+    }
+  }
 }

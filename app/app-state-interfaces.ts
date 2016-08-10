@@ -17,12 +17,14 @@ export const ANSWER = {
 
 export type AnswerMap = { [querstionId: string]: Answer };
 export type WeightMap = { [querstionId: string]: Weight };
+export type RegionMap = { [querstionId: string]: Region };
 export type ReasonMap = { [querstionId: string]: string };
 export type NumberMap = { [id: string]: number };
 
 export interface InitialData {
   questions: Question[];
   candidates: Candidate[];
+  regions: RegionMap;
 }
 
 export enum Weight {
@@ -37,6 +39,11 @@ export interface Candidate {
   region: string;
   answers: AnswerMap;
   reasons: ReasonMap;
+}
+
+export interface Region {
+  id: string;
+  name: string;
 }
 
 export interface Vote {
@@ -54,6 +61,7 @@ export interface StoredAppState extends Vote {
 export interface AppState extends StoredAppState {
   questions: Question[];
   candidates: Candidate[];
+  regions: RegionMap;
   initialized: boolean;
 }
 
