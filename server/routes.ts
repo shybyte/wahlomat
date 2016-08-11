@@ -2,16 +2,24 @@
 /// <reference path="../typings/main/globals/body-parser/index.d.ts" />
 
 import * as express from 'express';
-import {Express} from 'express';
+import {Express, Response} from 'express';
 import * as bodyParser from 'body-parser';
 import * as db from './db';
 import * as stats from './stats';
+const exphbs = require('express-handlebars');
+
+function renderWithClientToken(template: string, res: Response) {
+  res.render(template, {
+    clientToken: 'myToken2',
+    layout: false,
+  });
+}
 
 
 export async function initRoutes(app: Express) {
   app.use(bodyParser.json());
 
-  app.use(express.static('public'));
+  console.log('Init routes');
 
   await db.init();
   stats.init();
@@ -25,6 +33,20 @@ export async function initRoutes(app: Express) {
 
   app.get('/stats', (_req, res) => {
     res.json(stats.getStats());
+  });
+
+  app.use(express.static('public'));
+
+  app.set('views', './server/views');
+  app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+  app.set('view engine', 'handlebars');
+
+  app.get(/^\/$|\/index.html/, (_req, res) => {
+    renderWithClientToken('index', res);
+  });
+
+  app.get('/iframe.html', (_req, res) => {
+    renderWithClientToken('iframe', res);
   });
 
 };

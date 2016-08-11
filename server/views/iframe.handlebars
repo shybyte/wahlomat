@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- For webpack dev server -->
 <head>
   <meta charset="UTF-8">
   <title>Wahlomat</title>
 </head>
-<body>
+<body class="iframe">
   <div id="app"></div>
-  <script src="/static/app.js"></script>
+  <script>
+    var clientToken = "{{clientToken}}";
+  </script>
+  <script src="build/app.js"></script>
 </body>
 </html>

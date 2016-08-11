@@ -16,7 +16,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use(express.static('.'));
 app.use(express.static(__dirname + '/public'));
 
 routes.initRoutes(app);

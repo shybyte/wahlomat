@@ -7,6 +7,7 @@
     "build": "npm run clean && npm run build:dirty",
     "build:dirty": "tsc -p server/tsconfig.json && npm run build:webpack",
     "clean": "rimraf public/build && rimraf tmp",
+    "start:dev": "nodejs ./dev-server.js",
     "start": "pm2 start config/process.json && pm2 logs wahlomat",
     "stop": "pm2 stop wahlomat --watch",
     "watch:ts:server": "tsc -p server/tsconfig.json -w",
@@ -28,7 +29,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "classnames": "^2.2.5",    
+    "classnames": "^2.2.5",
     "css-loader": "^0.23.1",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
@@ -55,9 +56,10 @@
     "csv": "^1.1.0",
     "es6-promise": "^3.1.2",
     "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
     "isomorphic-fetch": "^2.2.1",
     "mongodb": "^2.1.19",
     "pm2": "^1.1.3",
-    "ramda": "^0.21.0"        
+    "ramda": "^0.21.0"
   }
 }
