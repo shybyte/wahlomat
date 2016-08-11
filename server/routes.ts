@@ -6,11 +6,12 @@ import {Express, Response} from 'express';
 import * as bodyParser from 'body-parser';
 import * as db from './db';
 import * as stats from './stats';
-const exphbs = require('express-handlebars');
+import * as exphbs from 'express-handlebars';
+import * as shortid from 'shortid';
 
 function renderWithClientToken(template: string, res: Response) {
   res.render(template, {
-    clientToken: 'myToken2',
+    clientToken: shortid.generate(),
     layout: false,
   });
 }
