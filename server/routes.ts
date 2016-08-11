@@ -2,22 +2,30 @@
 /// <reference path="../typings/main/globals/body-parser/index.d.ts" />
 
 import * as express from 'express';
-import {Express, Response} from 'express';
+import {Express, Request, Response} from 'express';
 import * as bodyParser from 'body-parser';
 import * as db from './db';
 import * as stats from './stats';
 import * as exphbs from 'express-handlebars';
 import * as shortid from 'shortid';
 
-function renderWithClientToken(template: string, res: Response) {
+function renderWithClientToken(template: string, req: Request, res: Response) {
+  const token = shortid.generate();
+  db.saveToken({
+    date: new Date(),
+    token,
+    ip: req.ip,
+    userAgent: req.get('User-Agent')
+  });
   res.render(template, {
-    clientToken: shortid.generate(),
+    clientToken: token,
     layout: false,
   });
 }
 
 
 export async function initRoutes(app: Express) {
+  app.set('trust proxy', 'loopback');
   app.use(bodyParser.json());
 
   console.log('Init routes');
@@ -42,12 +50,12 @@ export async function initRoutes(app: Express) {
   app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
   app.set('view engine', 'handlebars');
 
-  app.get(/^\/$|\/index.html/, (_req, res) => {
-    renderWithClientToken('index', res);
+  app.get(/^\/$|\/index.html/, (req, res) => {
+    renderWithClientToken('index', req, res);
   });
 
-  app.get('/iframe.html', (_req, res) => {
-    renderWithClientToken('iframe', res);
+  app.get('/iframe.html', (req, res) => {
+    renderWithClientToken('iframe', req, res);
   });
 
 };

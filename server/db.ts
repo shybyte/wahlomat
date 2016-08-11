@@ -5,6 +5,15 @@ import * as mongodb from 'mongodb';
 import {Vote} from '../app/app-state-interfaces';
 
 const VOTE_COLLECTION = 'vote';
+const TOKEN_COLLECTION = 'token';
+
+interface TokenEntry {
+  token: string;
+  ip: string;
+  userAgent: string;
+  date: Date;
+}
+
 
 const server = new mongodb.Server('localhost', 27017, { reconnectTries: 3 });
 const db = new mongodb.Db('wahlomat', server, { w: 1 });
@@ -27,6 +36,10 @@ export async function forEachVote(f: (vote: Vote) => void) {
   cursor.forEach(f, () => {
     cursor.close();
   });
+}
+
+export function saveToken(tokenEntry: TokenEntry) {
+  return db.collection(TOKEN_COLLECTION).insert(tokenEntry);
 }
 
 /**
