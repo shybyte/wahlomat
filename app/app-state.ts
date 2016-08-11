@@ -4,16 +4,21 @@ import {Answer, AnswerMap, WeightMap, RegionMap, Weight,
 import * as webService from './web-service';
 import {swap, loadObjectFromLocalStorage, extend, replaceEntry, assign} from './utils';
 
+declare const clientToken: string;
+
 /* Store  */
 
 const LOCAL_STORAGE_KEY = 'wahlomat';
 
-let restoredAppState: StoredAppState = loadObjectFromLocalStorage(LOCAL_STORAGE_KEY, {
+let restoredAppState: StoredAppState = assign(loadObjectFromLocalStorage(LOCAL_STORAGE_KEY, {
   answers: {} as AnswerMap,
+  clientToken: clientToken,
   questionsDone: false,
-  sessionId: Math.random().toString(36).substring(7),
+  sessionId: clientToken,
   weights: {} as WeightMap,
-});
+}), { sessionId: clientToken});
+
+
 
 let appState: AppState = extend(restoredAppState, {
   candidates: [],
@@ -48,6 +53,7 @@ function setState(newAppState: AppState) {
 function storeAppState() {
   const storedState: StoredAppState = {
     answers: appState.answers,
+    clientToken: appState.clientToken,
     questionsDone: appState.questionsDone,
     savedVote: appState.savedVote,
     sessionId: appState.sessionId,
@@ -64,6 +70,7 @@ export function getState() {
 export function getCurrentVote() {
   return {
     answers: appState.answers,
+    clientToken: appState.clientToken,
     sessionId: appState.sessionId,
     weights: appState.weights,
   };

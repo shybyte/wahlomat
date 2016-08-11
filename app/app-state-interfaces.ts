@@ -50,6 +50,7 @@ export interface Vote {
   answers: AnswerMap;
   weights: WeightMap;
   sessionId: string;
+  clientToken: string;
 }
 
 
