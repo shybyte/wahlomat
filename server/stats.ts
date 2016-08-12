@@ -1,4 +1,5 @@
 import * as db from './db';
+import * as R from 'ramda';
 import {Stats, QuestionStats, Vote, ANSWER, Weight} from '../app/app-state-interfaces';
 import {getQuestionStats} from '../app/model';
 
@@ -12,28 +13,31 @@ function modifyQuestionStats(questionId: string, f: (questionStats: QuestionStat
   stats.questionsStats[questionId] = questionStats;
 }
 
+enum CountDirection { ADD = 1, REMOVE = -1 }
+
+const countVote = R.curry((countDirection: CountDirection, vote: Vote) => {
+  Object.keys(vote.answers).forEach(questionId => {
+    modifyQuestionStats(questionId, questionStats => {
+      const answer = vote.answers[questionId];
+      const weight = vote.weights[questionId] || Weight.NORMAL;
+      questionStats.answerStats[answer] += countDirection;
+      questionStats.weightStats[weight] += countDirection;
+      if ((answer === ANSWER.yes || answer === ANSWER.no)) {
+        questionStats.interest += weight * countDirection;
+      }
+    });
+  });
+})
+
+export const addVote = countVote(CountDirection.ADD);
+export const removeVote = countVote(CountDirection.REMOVE);
+
+export const getStats = () => stats;
+
+
 /**
  * Must be callledd after db is available.
  */
 export function init() {
   db.forEachVote(addVote);
 }
-
-export function addVote(vote: Vote) {
-  Object.keys(vote.answers).forEach(questionId => {
-    modifyQuestionStats(questionId, questionStats => {
-      const answer = vote.answers[questionId];
-      const weight = vote.weights[questionId] || Weight.NORMAL;
-      questionStats.answerStats[answer] += 1;
-      questionStats.weightStats[weight] += 1;
-      if ((answer === ANSWER.yes || answer === ANSWER.no)) {
-        questionStats.interest += weight;
-      }
-    });
-  });
-}
-
-
-export const getStats = () => stats;
-
-

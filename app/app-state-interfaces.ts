@@ -82,9 +82,9 @@ export interface QuestionStats {
   interest: number;
 }
 
-export type QuestionsStats = { [questionId: string]: QuestionStats };
+export type QuestionsStatsMap = { [questionId: string]: QuestionStats };
 
 export interface Stats {
-  questionsStats: QuestionsStats;
+  questionsStats: QuestionsStatsMap;
 }
 

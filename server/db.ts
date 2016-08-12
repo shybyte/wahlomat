@@ -1,11 +1,18 @@
 /// <reference path="../typings/main/globals/mongodb/index.d.ts" />
 
 import * as mongodb from 'mongodb';
+import {} from 'mongodb';
 
 import {Vote} from '../app/app-state-interfaces';
 
 const VOTE_COLLECTION = 'vote';
 const TOKEN_COLLECTION = 'token';
+
+interface VoteDBEntry extends Vote {
+  ip: string;
+  userAgent: string;
+  date: Date;
+}
 
 interface TokenEntry {
   token: string;
@@ -27,11 +34,20 @@ async function openDB() {
   }
 }
 
-export function saveVote(vote: Vote) {
-  return db.collection(VOTE_COLLECTION).insert(vote);
+/**
+ * @return the old Vote if there is any
+ */
+export async function saveVote(vote: VoteDBEntry): Promise<VoteDBEntry | null> {
+  const voteCollection = db.collection(VOTE_COLLECTION);
+  const oldVote = await voteCollection.findOne({ clientToken: vote.clientToken });
+  if (oldVote) {
+    voteCollection.deleteOne(oldVote);
+  }
+  voteCollection.insertOne(vote);
+  return oldVote;
 }
 
-export async function forEachVote(f: (vote: Vote) => void) {
+export async function forEachVote(f: (vote: VoteDBEntry) => void) {
   const cursor = db.collection(VOTE_COLLECTION).find();
   cursor.forEach(f, () => {
     cursor.close();
@@ -39,7 +55,7 @@ export async function forEachVote(f: (vote: Vote) => void) {
 }
 
 export function saveToken(tokenEntry: TokenEntry) {
-  return db.collection(TOKEN_COLLECTION).insert(tokenEntry);
+  return db.collection(TOKEN_COLLECTION).insertOne(tokenEntry);
 }
 
 /**

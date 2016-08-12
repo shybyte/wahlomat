@@ -4,6 +4,7 @@
 import * as express from 'express';
 import {Express, Request, Response} from 'express';
 import {Vote} from '../app/app-state-interfaces';
+import {extend} from '../app/utils';
 import * as bodyParser from 'body-parser';
 import * as db from './db';
 import * as stats from './stats';
@@ -37,7 +38,15 @@ export async function initRoutes(app: Express) {
   app.post('/vote', (req, res) => {
     const vote: Vote = req.body;
     stats.addVote(vote);
-    db.saveVote(vote);
+    db.saveVote(extend(vote, {
+      date: new Date(),
+      ip: req.ip,
+      userAgent: req.get('User-Agent')
+    })).then(oldVote => {
+      if (oldVote) {
+        stats.removeVote(oldVote);
+      }
+    });
     res.json({});
   });
 

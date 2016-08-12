@@ -6,7 +6,7 @@ import * as R from 'ramda';
 
 import * as AppState from '../app-state';
 import {loadStats} from '../web-service';
-import {Question, QuestionsStats, Weight, Stats, ANSWER} from '../app-state-interfaces';
+import {Question, QuestionsStatsMap, Weight, Stats, ANSWER} from '../app-state-interfaces';
 import {getQuestionStats} from '../model';
 import { AnswerDisplay } from './AnswerDisplay';
 
@@ -71,7 +71,7 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
     const stats = s.stats;
 
 
-    const questionsStats: QuestionsStats = s.stats.questionsStats;
+    const questionsStats: QuestionsStatsMap = s.stats.questionsStats;
     const interests = R.values(questionsStats).map(qs => qs.interest);
     // const minInterest = interests.reduce(R.min, Number.MAX_VALUE);
     const maxInterest = interests.reduce(R.max, Number.MIN_VALUE);

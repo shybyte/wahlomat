@@ -75,10 +75,11 @@ export class Weighting extends React.Component<{}, WeightingState> {
 
   renderNextSteps() {
     const {savedVote} = AppState.getState();
+    const omitSession = R.omit(['sessionId']);
     return (
       <div>
         <p className={classNames('saveVoteSection', {
-          saved: R.equals(savedVote, getCurrentVote()) ? true : false
+          saved: R.equals(omitSession(savedVote), omitSession(getCurrentVote())) ? true : false
         }) }>
           <button onClick={saveVote}>Speicher</button> meine Anworten für das Kiezbarometer.
         </p>
