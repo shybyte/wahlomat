@@ -25,6 +25,7 @@ class Layout extends React.Component<{}, {}> {
       <div className='wahlomat'>
         <h1>Wahlomat</h1>
         <div className='menu'>
+          <Link to={ROUTES.start}>Willkommen</Link>
           <Link to={ROUTES.questions} activeClassName='active'>Fragen</Link>
           {appState.questionsDone ?
             <span className='menuSection'>
