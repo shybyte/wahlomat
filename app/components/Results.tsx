@@ -20,7 +20,7 @@ export class Results extends React.Component<{}, {}> {
         <div>
         {regions.map(region => <RegionalResult key={region} region={region} />)}
         </div>
-        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
+        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet? Ab zum Kiezbarometer!</Link>
       </div>
     );
   }
