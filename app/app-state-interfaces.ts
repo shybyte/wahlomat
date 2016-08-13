@@ -36,7 +36,7 @@ export interface Candidate {
   id: string;
   name: string;
   party: string;
-  region: string;
+  regions: string[];
   answers: AnswerMap;
   reasons: ReasonMap;
 }

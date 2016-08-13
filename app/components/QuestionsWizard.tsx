@@ -145,13 +145,14 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   renderReasonCandidate(candidate: Candidate) {
     const question = this.question();
-    const regionName = AppState.getState().regions[candidate.region].name;
+    const regionById = AppState.getState().regions;
+    const regionNames = candidate.regions.map(id => regionById[id].name);
     return (
       <div key={candidate.id} className='reason'>
         <div>
           <AnswerDisplay answer={candidate.answers[question.id]}/>
            <strong> {candidate.name} </strong>
-           ({candidate.party}, {regionName})
+           ({candidate.party}, {regionNames.join(', ')})
         </div>
         <blockquote>{candidate.reasons[question.id]}</blockquote>
       </div>

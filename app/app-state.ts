@@ -2,6 +2,7 @@ import {Answer, AnswerMap, WeightMap, RegionMap, Weight,
   StoredAppState, AppState} from './app-state-interfaces';
 
 import * as webService from './web-service';
+import * as R from 'ramda';
 import {swap, loadObjectFromLocalStorage, extend, replaceEntry, assign} from './utils';
 
 declare const clientToken: string;
@@ -16,7 +17,7 @@ let restoredAppState: StoredAppState = assign(loadObjectFromLocalStorage(LOCAL_S
   questionsDone: false,
   sessionId: clientToken,
   weights: {} as WeightMap,
-}), { sessionId: clientToken});
+}), { sessionId: clientToken });
 
 
 
@@ -66,6 +67,11 @@ function storeAppState() {
 export function getState() {
   return appState;
 }
+
+export function getSortedRegions() {
+  return R.sortBy(r => r.name, R.values(appState.regions));
+}
+
 
 export function getCurrentVote() {
   return {

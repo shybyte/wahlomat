@@ -61,7 +61,7 @@ function parseCandidateAnswers(fileContent: string): Candidate[] {
       name: candidateName,
       party: oneRow[AnswerFileCols.PARTY],
       reasons: getReasonsMapFromRows(answerRows),
-      region: oneRow[AnswerFileCols.REGION]
+      regions: oneRow[AnswerFileCols.REGION].split(/,\s+/)
     };
   });
 }
