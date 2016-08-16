@@ -51,6 +51,7 @@ export async function initRoutes(app: Express) {
   });
 
   app.get('/stats', (_req, res) => {
+    res.set('Cache-Control', 'max-age=' + 1);
     res.json(stats.getStats());
   });
 
