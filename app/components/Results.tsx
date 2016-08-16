@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as R from 'ramda';
 import { Link } from 'react-router';
 import {ROUTES} from '../routes';
+import {WahlkreiseMap} from './WahlkreiseMap';
 
 
 import { Candidate, Region } from '../app-state-interfaces';
@@ -19,7 +20,8 @@ export class Results extends React.Component<{}, {}> {
         <div>
           {regions.map(region => <RegionalResult key={region.id} region= {region} />) }
         </div>
-        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet?Ab zum Kiezbarometer!</Link>
+        <Link to={ROUTES.stats} activeClassName='active'>Was haben andere Wahlomat-Benutzer geantwortet? Ab zum Kiezbarometer!</Link>
+        <WahlkreiseMap/>
       </div>
     );
   }

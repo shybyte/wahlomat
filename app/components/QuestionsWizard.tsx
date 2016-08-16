@@ -10,6 +10,8 @@ import { Answer, ANSWER, Question, Candidate } from '../app-state-interfaces';
 import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
 import {AnswerDisplay} from './AnswerDisplay';
+import {WahlkreiseMap} from './WahlkreiseMap';
+
 
 
 const {skipped, yes, no, neutral} = ANSWER;
@@ -94,8 +96,8 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
           {candidates.map(candidate =>
             this.renderReasonCandidate(candidate))
           }
+          <WahlkreiseMap/>
         </div>
-
       </div>
     );
   }
@@ -151,8 +153,8 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       <div key={candidate.id} className='reason'>
         <div>
           <AnswerDisplay answer={candidate.answers[question.id]}/>
-           <strong> {candidate.name} </strong>
-           ({candidate.party}, {regionNames.join(', ')})
+          <strong> {candidate.name} </strong>
+          ({candidate.party}, {regionNames.join(', ') })
         </div>
         <blockquote>{candidate.reasons[question.id]}</blockquote>
       </div>
