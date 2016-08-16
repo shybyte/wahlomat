@@ -10,6 +10,7 @@ import * as db from './db';
 import * as stats from './stats';
 import * as exphbs from 'express-handlebars';
 import * as shortid from 'shortid';
+import * as compression from 'compression';
 
 function renderWithClientToken(template: string, req: Request, res: Response) {
   const token = shortid.generate();
@@ -27,10 +28,11 @@ function renderWithClientToken(template: string, req: Request, res: Response) {
 
 
 export async function initRoutes(app: Express) {
-  app.set('trust proxy', 'loopback');
-  app.use(bodyParser.json());
+  console.log('Init routes...');
 
-  console.log('Init routes');
+  app.set('trust proxy', 'loopback');
+  app.use(compression());
+  app.use(bodyParser.json());
 
   await db.init();
   stats.init();
