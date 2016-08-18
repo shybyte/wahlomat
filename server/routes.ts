@@ -11,6 +11,7 @@ import * as stats from './stats';
 import * as exphbs from 'express-handlebars';
 import * as shortid from 'shortid';
 import * as compression from 'compression';
+import {isVoteValid} from './validate-vote';
 
 function renderWithClientToken(template: string, req: Request, res: Response) {
   const token = shortid.generate();
@@ -27,6 +28,7 @@ function renderWithClientToken(template: string, req: Request, res: Response) {
 }
 
 
+
 export async function initRoutes(app: Express) {
   console.log('Init routes...');
 
@@ -39,16 +41,20 @@ export async function initRoutes(app: Express) {
 
   app.post('/vote', (req, res) => {
     const vote: Vote = req.body;
-    stats.addVote(vote);
-    db.saveVote(extend(vote, {
-      date: new Date(),
-      ip: req.ip,
-      userAgent: req.get('User-Agent')
-    })).then(oldVote => {
-      if (oldVote) {
-        stats.removeVote(oldVote);
-      }
-    });
+    if (isVoteValid(vote)) {
+      stats.addVote(vote);
+      db.saveVote(extend(vote, {
+        date: new Date(),
+        ip: req.ip,
+        userAgent: req.get('User-Agent')
+      })).then(oldVote => {
+        if (oldVote) {
+          stats.removeVote(oldVote);
+        }
+      });
+    } else {
+      console.log('Invalid vote', vote);
+    }
     res.json({});
   });
 
