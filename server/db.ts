@@ -38,6 +38,13 @@ async function openDB() {
  * @return the old Vote if there is any
  */
 export async function saveVote(vote: VoteDBEntry): Promise<VoteDBEntry | null> {
+  const tokenCollection = db.collection(TOKEN_COLLECTION);
+  const token = await tokenCollection.findOne({ token: vote.sessionId });
+  if (!token) {
+    console.log('Invalid sessionId in vote', vote);
+    return null;
+  }
+
   const voteCollection = db.collection(VOTE_COLLECTION);
   const oldVote = await voteCollection.findOne({ clientToken: vote.clientToken });
   if (oldVote) {
