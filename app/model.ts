@@ -31,7 +31,7 @@ function getSimilarity(answerMap: AnswerMap, weights: WeightMap, candidate: Cand
     const candidateValue = answerToNumber(candidate.answers[id]);
     return Math.abs(myValue - candidateValue) * weight(id);
   });
-  return 1 - (R.sum(deltas) / maxDeltaSum);
+  return (1 - (R.sum(deltas) / maxDeltaSum)) || 0;
 }
 
 export function getSimilarities(answerMap: AnswerMap, weights: WeightMap, candidates: Candidate[]): NumberMap {

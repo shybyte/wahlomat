@@ -43,10 +43,18 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       if (nextQuestionIndex < AppState.getState().questions.length) {
         this.gotoQuestion(nextQuestionIndex);
       } else {
-        hashHistory.push(ROUTES.weighting);
-        AppState.setQuestionsDone();
+        this.continueToWeighting();
       }
     }, 200);
+  }
+
+  skipAll = () => {
+    this.continueToWeighting();
+  }
+
+  continueToWeighting() {
+    hashHistory.push(ROUTES.weighting);
+    AppState.setQuestionsDone();
   }
 
   question = () => AppState.getState().questions[this.state.questionIndex];
@@ -84,6 +92,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
         <div className='questionNavigation'>
           {this.renderQuestionLinks() }
           <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
+          <button className='linkButton skipAllButton' onClick={() => this.skipAll() }>Alle Fragen überspringen</button>
         </div>
 
         <button className='linkButton' onClick={() => this.toggleShowReasons() }>{toggleReasonsButtonText}</button>
@@ -112,7 +121,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
   }
 
   renderReasonsInRegion(region: Region) {
-    return <div className='reasonsInRegion'>
+    return <div key={region.id} className='reasonsInRegion'>
       <h2>{region.name}</h2>
       {
         AppState.getCandidatesInRegion(region).map(candidate =>
