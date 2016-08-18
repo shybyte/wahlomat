@@ -77,8 +77,8 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
     const regions = AppState.getSortedRegions();
     const {showReasons} = this.state;
     const toggleReasonsButtonText = showReasons ?
-      'Verstecke die Antworten der Parteien und Initiativen'
-      : 'Zeige die Antworten der Parteien und Initiativen';
+      'Verstecke die Antworten der Parteien und der Fragenden'
+      : 'Zeige die Antworten der Parteien und der Fragenden';
     const reasonsStyles = classNames('reasons', { visible: showReasons });
     if (!question) {
       return (<div>Loading</div>);
@@ -86,7 +86,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
     return (
       <div>
-        <p className='initiative'>Initiative: {question.initiative}</p>
+        <p>Frage:</p>
         <p className='questionText'>{question.text}</p>
         {this.renderAnswerButtons() }
         <div className='questionNavigation'>
@@ -110,7 +110,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       return null;
     }
     return <div className='reasonsInRegion'>
-      <h2>In­i­ti­a­ti­ve</h2>
+      <h2>Antwort der Fragenden (Initiative bzw. Bürger*in aus Friedrichshain)</h2>
       {
         this.renderReason('initiative',
           question.initiative,
