@@ -6,7 +6,7 @@ import { hashHistory } from 'react-router';
 
 
 
-import { Answer, ANSWER, Question, Candidate } from '../app-state-interfaces';
+import { Answer, ANSWER, Question, Candidate, Region } from '../app-state-interfaces';
 import { ROUTES } from '../routes';
 import * as AppState from '../app-state';
 import {AnswerDisplay} from './AnswerDisplay';
@@ -66,7 +66,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   render() {
     const question = this.question();
-    const {candidates} = AppState.getState();
+    const regions = AppState.getSortedRegions();
     const {showReasons} = this.state;
     const toggleReasonsButtonText = showReasons ?
       'Verstecke die Antworten der Parteien und Initiativen'
@@ -88,18 +88,37 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
         <button className='linkButton' onClick={() => this.toggleShowReasons() }>{toggleReasonsButtonText}</button>
         <div className={reasonsStyles}>
-          {question.initiativeReason ? this.renderReason('initiative',
-            `Initiative "${question.initiative}"`,
-            question.initiativeAnswer,
-            question.initiativeReason) : ''
-          }
-          {candidates.map(candidate =>
-            this.renderReasonCandidate(candidate))
-          }
+          {this.renderReasonsOfInitiative(question) }
+          {regions.map(region => this.renderReasonsInRegion(region)) }
           <WahlkreiseMap/>
         </div>
       </div>
     );
+  }
+
+  renderReasonsOfInitiative(question: Question) {
+    if (!question.initiativeReason) {
+      return null;
+    }
+    return <div className='reasonsInRegion'>
+      <h2>Initiave</h2>
+      {
+        this.renderReason('initiative',
+          question.initiative,
+          question.initiativeAnswer,
+          question.initiativeReason)
+      }
+    </div>;
+  }
+
+  renderReasonsInRegion(region: Region) {
+    return <div className='reasonsInRegion'>
+      <h2>{region.name}</h2>
+      {
+        AppState.getCandidatesInRegion(region).map(candidate =>
+          this.renderReasonCandidate(candidate))
+      }
+    </div>;
   }
 
   renderAnswerButtons() {
@@ -147,14 +166,12 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
   renderReasonCandidate(candidate: Candidate) {
     const question = this.question();
-    const regionById = AppState.getState().regions;
-    const regionNames = candidate.regions.map(id => regionById[id].name);
     return (
       <div key={candidate.id} className='reason'>
         <div>
           <AnswerDisplay answer={candidate.answers[question.id]}/>
           <strong> {candidate.name} </strong>
-          ({candidate.party}, {regionNames.join(', ') })
+          ({candidate.party})
         </div>
         <blockquote>{candidate.reasons[question.id]}</blockquote>
       </div>

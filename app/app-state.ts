@@ -1,5 +1,5 @@
 import {Answer, AnswerMap, WeightMap, RegionMap, Weight,
-  StoredAppState, AppState} from './app-state-interfaces';
+  StoredAppState, AppState, Region} from './app-state-interfaces';
 
 import * as webService from './web-service';
 import * as R from 'ramda';
@@ -70,6 +70,10 @@ export function getState() {
 
 export function getSortedRegions() {
   return R.sortBy(r => r.name, R.values(appState.regions));
+}
+
+export function getCandidatesInRegion(region: Region) {
+  return appState.candidates.filter(c => R.contains(region.id, c.regions));
 }
 
 

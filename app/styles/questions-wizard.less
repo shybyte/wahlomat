@@ -6,24 +6,16 @@
 
 .questionText {
   min-height: 3em;
+  font-weight: bold;
+  
 }
 
-.skipButton,
-.prevButton,
-.nextButton
+.skipButton
  {
   line-height: 2.9em;
-  float: left;
+  clear: both;
 }
 
-.prevButton,
-.skipButton {
-  margin-left: 0.5em;
-}
-
-.nextButton {
-  margin-left: 0.5em;
-}
 
 .reasons {
   margin: 1em 0 3em;
@@ -34,12 +26,26 @@
   }
 }
 
+.reasonsInRegion {
+  padding: 0.5em 2em 0.3em;
+  margin-bottom: 1em;
+  background: #ffe;
+  border-radius: 20px;
+
+  h2 {
+    font-size: 15px;
+    color: #888;
+  }
+}
+
 .reason {
   margin: 2em 0;
 }
 
+
+
+
 .questionNavigation {
-  overflow: hidden;
   margin: 1em auto 0;
   text-align: center
 }
@@ -58,3 +64,5 @@
     background: @neutral;
     color: #333;
 }
+
+
