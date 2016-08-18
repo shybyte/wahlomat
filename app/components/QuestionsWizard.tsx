@@ -101,7 +101,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       return null;
     }
     return <div className='reasonsInRegion'>
-      <h2>Initiave</h2>
+      <h2>In­i­ti­a­ti­ve</h2>
       {
         this.renderReason('initiative',
           question.initiative,
