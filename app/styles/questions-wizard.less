@@ -6,12 +6,23 @@
   
 }
 
-.skipButton, 
-.skipAllButton
- {
+
+.skipButtons {
   clear: both;
-  display: block;
-  text-align: left;
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+
+.skipButton {
+  float: left;
+}
+
+.skipAllButton {
+  float: right;
 }
 
 

@@ -86,13 +86,15 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
 
     return (
       <div>
-        <p>Frage:</p>
+        <p>Frage: </p>
         <p className='questionText'>{question.text}</p>
         {this.renderAnswerButtons() }
         <div className='questionNavigation'>
           {this.renderQuestionLinks() }
-          <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
-          <button className='linkButton skipAllButton' onClick={() => this.skipAll() }>Alle Fragen überspringen</button>
+          <div className='skipButtons'>
+            <button className='linkButton skipButton' onClick={() => this.onAnswer(skipped) }>Frage überspringen</button>
+            <button className='linkButton skipAllButton' onClick={() => this.skipAll() }>Alle Fragen überspringen</button>
+          </div>
         </div>
 
         <button className='linkButton' onClick={() => this.toggleShowReasons() }>{toggleReasonsButtonText}</button>
@@ -110,7 +112,7 @@ export class QuestionsWizard extends React.Component<{}, WizardState> {
       return null;
     }
     return <div className='reasonsInRegion'>
-      <h2>Antwort der Fragenden (Initiative bzw. Bürger*in aus Friedrichshain)</h2>
+      <h2>Antwort der Fragenden (Initiative bzw.Bürger*in aus Friedrichshain) </h2>
       {
         this.renderReason('initiative',
           question.initiative,
