@@ -1857,19 +1857,19 @@
   "regions": {
     "BVV": {
       "id": "BVV",
-      "name": "Bezirksverordnetenversammlung"
+      "name": "Bezirksverordnetenversammlung (BVV) Friedrichshain-Kreuzberg"
     },
     "WK2": {
       "id": "WK2",
-      "name": "Wahlkreis 2"
+      "name": "Direktkandidaten Wahlkreis 2 für das Abgeordnetenhaus von Berlin"
     },
     "WK4": {
       "id": "WK4",
-      "name": "Wahlkreis 4"
+      "name": "Direktkandidaten Wahlkreis 4 für das Abgeordnetenhaus von Berlin"
     },
     "WK5": {
       "id": "WK5",
-      "name": "Wahlkreis 5"
+      "name": "Direktkandidaten Wahlkreis 5 für das Abgeordnetenhaus von Berlin"
     }
   }
 }

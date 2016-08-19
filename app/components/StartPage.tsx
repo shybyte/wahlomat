@@ -15,10 +15,9 @@ informieren.</p>
 <p>Wir haben Friedrichshainer und Friedrichshainerinnen nach ihren Anliegen
 gefragt. Herausgekommen sind 38 Fragen, die du hier durchklicken kannst.</p>
 
-<p>Wir haben alle in Friedrichshain antretenden Parteien gefragt. Auf den folgenden
-Seiten siehst du die Antworten der Listen Ersten für die
-Bezirksverordnetenversammlung (BVV) und der Direktkandidaten der
-Friedrichshainer Wahlkreise: WK2, WK4, WK5.</p>
+<p>Wir haben alle in Friedrichshain antretenden Parteien gefragt.
+Auf den folgenden Seiten siehst du die Antworten der Listen Ersten für die Bezirksverordnetenversammlung (BVV) Friedrichshain-Kreuzberg
+und der Direktkandidaten der Friedrichshainer Wahlkreise 2, 4 und 5 für das Abgeordnetenhaus von Berlin.</p>
 
 <p>Am Ende hast du die Möglichkeit, deine Antworten anonym zu speichern. Damit
 können wir sehen, welche Fragen die Friedrichshainer und Friedrichshainerinnen

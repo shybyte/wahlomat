@@ -16,7 +16,7 @@ export class Results extends React.Component<{}, {}> {
     const regions = getSortedRegions();
     return (
       <div>
-        <h1>Ergebnis</h1>
+        <h2>Ergebnis</h2>
         <div>
           {regions.map(region => <RegionalResult key={region.id} region= {region} />) }
         </div>
@@ -45,7 +45,7 @@ export class RegionalResult extends React.Component<{ region: Region }, {}> {
 
     return (
       <div className='resultByRegion'>
-        <h2>{this.props.region.name}</h2>
+        <h3>{this.props.region.name}</h3>
         <table>
           <thead>
             <tr>
