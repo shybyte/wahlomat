@@ -32,7 +32,7 @@ const TableRow = (props: { rowValues: RowValues }) => {
     `( ${yes} × Ja + 0.5 × ${neutral} × Neutral) / (${yes} × Ja + ${neutral} × Neutral + ${no} × Nein) = ` + meanAgreement.toFixed(2);
   return (
     <tr>
-      <td>{question.text}</td>
+      <td title={'Frage ' + question.id}>{question.text}</td>
       <td>
         <div className='valueBar' title={'Summe der Ja/Nein Antworten wobei als wichtig markierte Antworten doppelt zählen = ' + interest}>
           <div className='valueBarValue' style={{ width: relativeInterest * 100 + '%' }}></div>

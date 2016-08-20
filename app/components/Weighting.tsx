@@ -31,7 +31,7 @@ const QuestionLine = (props: { question: Question }) => {
 
   return (
     <tr>
-      <td>{props.question.text}</td>
+      <td title={'Frage ' + questionId}>{props.question.text}</td>
       <td><AnswerDisplay answer={AppState.getState().answers[props.question.id]} /></td>
       <td>
         <input type='checkbox'
