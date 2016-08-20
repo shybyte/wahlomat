@@ -28,15 +28,17 @@ interface StatsPageState {
 
 const TableRow = (props: { rowValues: RowValues }) => {
   const {question, interest, relativeInterest, meanAgreement, yes, no, neutral} = props.rowValues;
+  const agreementTooltip =
+    `( ${yes} × Ja + 0.5 × ${neutral} × Neutral) / (${yes} × Ja + ${neutral} × Neutral + ${no} × Nein) = ` + meanAgreement.toFixed(2);
   return (
     <tr>
       <td>{question.text}</td>
       <td>
-        <div className='valueBar' title={'' + interest}>
+        <div className='valueBar' title={'Summe der Ja/Nein Antworten wobei als wichtig markierte Antworten doppelt zählen = ' + interest}>
           <div className='valueBarValue' style={{ width: relativeInterest * 100 + '%' }}></div>
         </div></td>
       <td>
-        <div className='valueBar' title={'' + meanAgreement}>
+        <div className='valueBar' title={agreementTooltip}>
           <div className='valueBarValue' style={{ width: meanAgreement * 100 + '%' }}></div>
           <div className='valueBarLabel'>{Math.round(meanAgreement * 100) } %</div>
         </div>
@@ -80,7 +82,8 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
       const questionStats = getQuestionStats(stats, question.id);
       const answerStats = questionStats.answerStats;
       const [yes, no, neutral] = [ANSWER.yes, ANSWER.no, ANSWER.neutral].map(a => answerStats[a] || 0);
-      const meanAgreement = (yes + no > 0) ? yes / (yes + no) : 0.5;
+      const allAnswerCount = yes + no + neutral;
+      const meanAgreement = (allAnswerCount > 0) ? (yes + 0.5 * neutral) / (allAnswerCount) : 0.5;
       const important = questionStats.weightStats[Weight.IMPORTANT];
       const {interest} = questionStats;
       const relativeInterest = interest / maxInterest;
@@ -97,8 +100,8 @@ export class StatsPage extends React.Component<{}, StatsPageState> {
           <thead>
             <tr>
               <th>Frage</th>
-              <th>Interesse</th>
-              <th>Gesamtposition</th>
+              <th title='Summe der Ja/Nein Antworten wobei als wichtig markierte Antworten doppelt zählen'>Interesse</th>
+              <th title='(Ja + 0.5 × Neutral) / (Ja + Neutral + Nein)'>Zustimmung</th>
               <th><AnswerDisplay answer={ANSWER.yes}/></th>
               <th><AnswerDisplay answer={ANSWER.no}/></th>
               <th><AnswerDisplay answer={ANSWER.neutral}/></th>

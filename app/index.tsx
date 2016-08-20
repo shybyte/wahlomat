@@ -52,13 +52,13 @@ const routes = <Route path='/' component={Layout}>
   <Route path='*' component={NotFound}/>
 </Route>;
 
-AppState.subscribe(appState => {
+AppState.subscribe(_appState => {
   const appElement = document.getElementById('app');
   if (!appElement) {
     console.log('Missing element with id "app"');
     return;
   }
-  console.log('Render', appState);
+  // console.log('Render', _appState);
   ReactDOM.render((
     <Router history={hashHistory} routes={routes}/>
   ), appElement);
